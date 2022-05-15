@@ -120,11 +120,11 @@
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/my-first-post/" class="color-inherit dim link">
-            My First Post
+            github &#43; hugo 搭建博客(macos)
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          hello hugo 
+          # github 配置 1. 新建仓库: killliu.github.io 2. 点击新仓库的 Settings 页签中的 Pages，设置自定义域名：note.killliu.com -&gt; save  # 配置域名DNS -&gt; DNS 管理配置中增加一条记录 CNAME	note	killliu.github.io  # 安装 hugo brew install hugo hugo version  # 拉取仓库到本地 git clone https://github.com/killliu/killliu.github.io.git # cd 到该目录内，并创建 hugo 项目 app 并将其目录内的所有文件移动到上一层，删除 app 目录 hugo new site app # 添加一个主题 git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke # 修改配置文件以指定主题 echo &#39;theme = &#34;ananke&#34;&#39; &gt;&gt; config.toml  ######## 添加文章 ######## hugo new posts/my-first-post.
         </div>
           <a href="/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
