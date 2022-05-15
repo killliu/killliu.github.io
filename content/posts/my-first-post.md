@@ -22,6 +22,8 @@ git clone https://github.com/killliu/killliu.github.io.git
 hugo new site app
 # 添加一个主题
 git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+
+git submodule add https://github.com/razonyang/hugo-theme-bootstrap.git themes/ananke
 # 修改配置文件以指定主题
 echo 'theme = "ananke"' >> config.toml
 
@@ -34,7 +36,7 @@ hugo -d docs
 
 # github 配置网页目录
 点击新仓库的 Settings 页签中的 Pages 找到 source 选择 /docs 目录 -> save
+
+### 本地预览
+hugo server
 ```
-
-
-
