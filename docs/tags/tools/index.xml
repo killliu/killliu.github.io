@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>killliu&#39;s note</title>
+    <link>https://note.killliu.com/tags/tools/</link>
+    <description></description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+      <item>
+        <title>github &#43; hugo 搭建博客(macos)</title>
+        <link>https://note.killliu.com/posts/hugo_github_blog/</link>
+        <pubDate>Sun, 15 May 2022 16:29:23 +0800</pubDate>
+        
+        <guid>https://note.killliu.com/posts/hugo_github_blog/</guid>
+        <description>A smalll description</description>
+      </item>
+    
+  </channel>
+</rss>

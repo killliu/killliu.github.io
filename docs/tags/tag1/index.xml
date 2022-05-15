@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tag1 on killliu&#39;s note</title>
+    <link>https://note.killliu.com/tags/tag1/</link>
+    <description>Recent content in tag1 on killliu&#39;s note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>github &#43; hugo 搭建博客(macos)</title>
+      <link>https://note.killliu.com/posts/hugo_github_blog/</link>
+      <pubDate>Sun, 15 May 2022 16:29:23 +0800</pubDate>
+      
+      <guid>https://note.killliu.com/posts/hugo_github_blog/</guid>
+      <description># github 配置 1. 新建仓库: killliu.github.io 2. 点击新仓库的 Settings 页签中的 Pages，设置自定义域名：note.killliu.com -&amp;gt; save  # 配置域名DNS -&amp;gt; DNS 管理配置中增加一条记录 CNAME	note	killliu.github.io  # 安装 hugo brew install hugo hugo version  # 拉取仓库到本地 git clone https://github.com/killliu/killliu.github.io.git # cd 到该目录内，并创建 hugo 项目 app 并将其目录内的所有文件移动到上一层，删除 app 目录 hugo new site app # 添加一个主题 git submodule add https://github.com/rafed/ramium.git themes/ramium # 修改配置文件以指定主题 echo &amp;#39;theme = &amp;#34;hyde&amp;#34;&amp;#39; &amp;gt;&amp;gt; config.toml  ######## 添加文章 ######## hugo new posts/my-first-post.</description>
+    </item>
+    
+  </channel>
+</rss>

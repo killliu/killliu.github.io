@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-mode="light">
+<html lang="en" data-mode="dark">
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +33,7 @@
 
 
 
-
+<meta name="description" content="A smalll description">
 
 
 <meta name="robots" content="index follow">
@@ -54,7 +54,7 @@
 
 <meta property="og:site_name" content="killliu&#39;s note">
 <meta property="og:title" content="github &#43; hugo 搭建博客(macos)">
-
+<meta property="og:description" content="A smalll description">
   <meta property="og:url" content="https://note.killliu.com/posts/hugo_github_blog/">
 
 
@@ -116,13 +116,13 @@
         "@id": "https:\/\/note.killliu.com\/"
       },
       "headline": "github + hugo 搭建博客(macos)",
-      "description": "",
+      "description": "A smalll description",
       
       "url": "https:\/\/note.killliu.com\/posts\/hugo_github_blog\/",
       "inLanguage": "en",
       "datePublished": "2022-05-15",
       "dateModified": "2022-05-15",
-      "wordCount" : "96",
+      "wordCount" : "97",
       "publisher": {
         "@type": "Person",
         "name": ""
@@ -141,7 +141,7 @@
 
 
 
-<link rel="stylesheet" href="https://note.killliu.com/css/main.min.1b397ce64f949bf1c8ebbbaebab50c4d68060e934f84b36d4e4af4b516c1f0d0.css" integrity="sha256-Gzl85k&#43;Um/HI67uuurUMTWgGDpNPhLNtTkr0tRbB8NA=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://note.killliu.com/css/main.min.0230826e9ed4ea56ac086db9a047bce26445d7fe1390af1c6fb58d0659eb2e99.css" integrity="sha256-AjCCbp7U6lasCG25oEe84mRF1/4TkK8cb7WNBlnrLpk=" crossorigin="anonymous">
 
 
 
@@ -156,7 +156,7 @@
   
 
   
-  <link rel="stylesheet" href="https://note.killliu.com/css/noscript.min.9bacd85b6f1d42296c56d3b8457d0c13a4e7f415c4ca5fc8affb6ed6b39cad72.css" integrity="sha256-m6zYW28dQilsVtO4RX0ME6Tn9BXEyl/Ir/tu1rOcrXI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://note.killliu.com/css/noscript.min.3f3b95436b19eaeb9223fb12c0b86737d53ee0a47fdba271a886c244bc03975c.css" integrity="sha256-PzuVQ2sZ6uuSI/sSwLhnN9U&#43;4KR/26JxqIbCRLwDl1w=" crossorigin="anonymous">
 
 </noscript>
 
@@ -167,6 +167,16 @@
 <link rel="preload" href="/fonts/open-sans-v17-latin-regular.woff2" as="font" crossorigin="anonymous">
 <link rel="preload" href="/fonts/oswald-v29-latin-700.woff2" as="font" crossorigin="anonymous">
 
+
+
+  
+
+
+
+<link rel="preload" href="/libs/katex@0.15.3/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/libs/katex@0.15.3/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/libs/katex@0.15.3/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/libs/katex@0.15.3/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 
 
@@ -210,6 +220,9 @@
         <h1>github + hugo 搭建博客(macos)</h1>
 
         
+          <section class="terms">
+            <ul><li><a class="btn" href="/tags/tools/">tools</a></li></ul>
+          </section>
           <p>
             
               Published on <time datetime="2022-05-15">2022-05-15</time>
@@ -284,9 +297,9 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># cd 到该目录内，并创建 hugo 项目 app 并将其目录内的所有文件移动到上一层，删除 app 目录</span>
 </span></span><span style="display:flex;"><span>hugo new site app
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加一个主题</span>
-</span></span><span style="display:flex;"><span>git clone https://gitlab.com/rmaguiar/hugo-theme-color-your-world.git themes/color-your-world
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/rafed/ramium.git themes/ramium
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 修改配置文件以指定主题</span>
-</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;theme = &#34;color-your-world&#34;&#39;</span> &gt;&gt; config.toml
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;theme = &#34;hyde&#34;&#39;</span> &gt;&gt; config.toml
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">######## 添加文章 ########</span>
 </span></span><span style="display:flex;"><span>hugo new posts/my-first-post.md
@@ -332,7 +345,7 @@
 
 
 <section class="req-js">
-  <button class="outline-dashed" title="Change to light/dark mode."><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><use xlink:href="/img/bundle.min.ae45e7a9a0a65150dd900a58f35fe84d.svg#adjust"/></svg></button><input class="outline-dashed" type="color" list="presets" value="#1f676b" title="Change accent color." aria-label="Change accent color."><datalist id="presets"><option value="#1f676b"><option value="#1dbc91"></datalist>
+  <button class="outline-dashed" title="Change to light/dark mode."><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><use xlink:href="/img/bundle.min.ae45e7a9a0a65150dd900a58f35fe84d.svg#adjust"/></svg></button><input class="outline-dashed" type="color" list="presets" value="#1dbc91" title="Change accent color." aria-label="Change accent color."><datalist id="presets"><option value="#1f676b"><option value="#1dbc91"><option value="#f3a530"><option value="#902b37"><option value="#754e85"><option value="#7fc121"><option value="#a8314a"><option value="#ff7433"><option value="#3e6728"><option value="#c063bd"></datalist>
 </section>
 
 
@@ -345,6 +358,33 @@
     
 
     
+    
+      
+
+
+
+<link rel="stylesheet" href="https://note.killliu.com/libs/katex@0.15.3/dist/katex.min.905ab7d71de262e67e0e2dc9f1f0183d5b118b044d6e02ead268607d58612934.css" integrity="sha256-kFq31x3iYuZ&#43;Di3J8fAYPVsRiwRNbgLq0mhgfVhhKTQ=" crossorigin="anonymous">
+
+
+<script defer src="https://note.killliu.com/libs/katex@0.15.3/dist/katex.min.2405db5e7cb9694468637eea0aadf4d4211be8f9d24c05b44d4e2cabd5f49da2.js" integrity="sha256-JAXbXny5aURoY37qCq301CEb6PnSTAW0TU4sq9X0naI=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script defer src="https://note.killliu.com/js/katex-custom-render.min.8303770b666742f21b8d034a970588796986a16c34c70c2509ce7bb77d1a9783.js" integrity="sha256-gwN3C2ZnQvIbjQNKlwWIeWmGoWw0xwwlCc57t30al4M=" crossorigin="anonymous"></script>
+
     
 
   </body>
