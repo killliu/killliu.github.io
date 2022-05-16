@@ -6,17 +6,7 @@
     <description>John Doe&#39;s personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021, John Doe; All rights reserved.</copyright>
-    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.killliu.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
-      <item>
-        <title>Using KaTeX</title>
-        <link>https://note.killliu.com/posts/using-katex/</link>
-        <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://note.killliu.com/posts/using-katex/</guid>
-        <description>Brief explanation of KaTeX, mhchem, copy-tex, etc.</description>
-      </item>
-    
+    <copyright>Copyright © 2021, John Doe; All rights reserved.</copyright><atom:link href="https://note.killliu.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
       <item>
         <title>Lorem Ipsum</title>
         <link>https://note.killliu.com/posts/lorem-ipsum/</link>

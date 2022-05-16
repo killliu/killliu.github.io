@@ -452,7 +452,7 @@
       "inLanguage": "en",
       "datePublished": "2022-05-15",
       "dateModified": "2022-05-15",
-      "wordCount" : "84",
+      "wordCount" : "89",
       "publisher": {
         "@type": "Person",
         "name": "John Doe"
@@ -497,16 +497,6 @@
 <link rel="preload" href="/fonts/open-sans-v17-latin-regular.woff2" as="font" crossorigin="anonymous">
 <link rel="preload" href="/fonts/oswald-v29-latin-700.woff2" as="font" crossorigin="anonymous">
 
-
-
-  
-
-
-
-<link rel="preload" href="/libs/katex@0.15.3/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/libs/katex@0.15.3/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/libs/katex@0.15.3/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/libs/katex@0.15.3/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 
 
@@ -597,6 +587,25 @@
       </header>
     
       
+<details class="toc" open>
+    <summary class="outline-dashed">
+      Contents
+    </summary>
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#配置-github">配置 github</a></li>
+    <li><a href="#配置域名-dns">配置域名 DNS</a></li>
+    <li><a href="#安装-hugo">安装 hugo</a></li>
+    <li><a href="#拉取仓库">拉取仓库</a></li>
+    <li><a href="#添加主题">添加主题</a></li>
+    <li><a href="#打包网页">打包网页</a></li>
+    <li><a href="#本地预览">本地预览</a></li>
+    <li><a href="#配置-github-目录">配置 github 目录</a></li>
+  </ul>
+</nav>
+  </details>
+
       
 
 
@@ -654,12 +663,10 @@
 
 
 
-  <h2 id="github-配置"><a class="anchor" href="#github-配置" title='Anchor for: github 配置.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> github 配置</h2> 
+  <h2 id="配置-github"><a class="anchor" href="#配置-github" title='Anchor for: 配置 github.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 配置 github</h2> 
 
-<ol>
-<li>新建仓库: killliu.github.io</li>
-<li>点击新仓库的 Settings 页签中的 Pages，设置自定义域名：note.killliu.com -&gt; save</li>
-</ol>
+<p>新建仓库: killliu.github.io
+点击新仓库的 Settings 页签中的 Pages，设置自定义域名：note.killliu.com -&gt; save</p>
 
 
 
@@ -669,11 +676,25 @@
 
 
 
-  <h2 id="配置域名dns---dns-管理配置中增加一条记录"><a class="anchor" href="#配置域名dns---dns-管理配置中增加一条记录" title='Anchor for: 配置域名DNS -&gt; DNS 管理配置中增加一条记录.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 配置域名DNS -&gt; DNS 管理配置中增加一条记录</h2> 
+  <h2 id="配置域名-dns"><a class="anchor" href="#配置域名-dns" title='Anchor for: 配置域名 DNS.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 配置域名 DNS</h2> 
 
-<blockquote>
-<p>CNAME		note		killliu.github.io</p>
-</blockquote>
+<p>DNS 管理配置中增加一条记录</p>
+<section class="scroll" tabindex="0"> <table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">资料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CNAME</td>
+<td style="text-align:center">note</td>
+<td style="text-align:center">🌟 killliu.github.io</td>
+</tr>
+</tbody>
+</table> </section>
 
 
 
@@ -685,8 +706,9 @@
 
   <h2 id="安装-hugo"><a class="anchor" href="#安装-hugo" title='Anchor for: 安装 hugo.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 安装 hugo</h2> 
 
-<p>brew install hugo
-hugo version</p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install hugo
+</span></span><span class="line"><span class="cl">hugo version
+</span></span></code></pre></div>
 
 
 
@@ -695,23 +717,12 @@ hugo version</p>
 
 
 
-
-  <h2 id="拉取仓库到本地"><a class="anchor" href="#拉取仓库到本地" title='Anchor for: 拉取仓库到本地.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 拉取仓库到本地</h2> 
+  <h2 id="拉取仓库"><a class="anchor" href="#拉取仓库" title='Anchor for: 拉取仓库.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 拉取仓库</h2> 
 
 <blockquote>
 <p>git clone <a href="https://github.com/killliu/killliu.github.io.git">https://github.com/killliu/killliu.github.io.git</a></p>
 </blockquote>
-
-
-
-
-
-
-
-
-
-  <h2 id="cd-到该目录内并创建-hugo-项目-app-并将其目录内的所有文件移动到上一层删除-app-目录"><a class="anchor" href="#cd-到该目录内并创建-hugo-项目-app-并将其目录内的所有文件移动到上一层删除-app-目录" title='Anchor for: cd 到该目录内，并创建 hugo 项目 app 并将其目录内的所有文件移动到上一层，删除 app 目录.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> cd 到该目录内，并创建 hugo 项目 app 并将其目录内的所有文件移动到上一层，删除 app 目录</h2> 
-
+<p>cd 到该目录内，创建 hugo 项目 app 后，将其目录内的所有文件移动到上一层，删除 app 目录</p>
 <blockquote>
 <p>hugo new site app</p>
 </blockquote>
@@ -724,27 +735,20 @@ hugo version</p>
 
 
 
-  <h2 id="添加一个主题"><a class="anchor" href="#添加一个主题" title='Anchor for: 添加一个主题.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 添加一个主题</h2> 
+  <h2 id="添加主题"><a class="anchor" href="#添加主题" title='Anchor for: 添加主题.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 添加主题</h2> 
 
 <blockquote>
 <p>git clone <a href="https://gitlab.com/rmaguiar/hugo-theme-color-your-world.git">https://gitlab.com/rmaguiar/hugo-theme-color-your-world.git</a> themes/color-your-world</p>
 </blockquote>
-
-
-
-
-
-
-
-
-
-  <h2 id="修改配置文件以指定主题"><a class="anchor" href="#修改配置文件以指定主题" title='Anchor for: 修改配置文件以指定主题.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 修改配置文件以指定主题</h2> 
-
+<p>修改配置文件 config.toml 以指定主题</p>
 <blockquote>
 <p>echo &rsquo;theme = &ldquo;color-your-world&rdquo;&rsquo; &raquo; config.toml</p>
 </blockquote>
-<p>######## 添加文章 ########
-hugo new posts/hugo_github_blog.md</p>
+<p>添加文章</p>
+<blockquote>
+<p>hugo new posts/hugo_github_blog.md</p>
+</blockquote>
+<p><strong>&mdash; 注意 &mdash;</strong>：draft(草稿) 对应的值要改为 false 才会被生成静态页面</p>
 
 
 
@@ -754,22 +758,9 @@ hugo new posts/hugo_github_blog.md</p>
 
 
 
-  <h2 id="注意draft草稿-对应的值要改为-false-才会被生成静态页面"><a class="anchor" href="#注意draft草稿-对应的值要改为-false-才会被生成静态页面" title='Anchor for: 注意：draft(草稿) 对应的值要改为 false 才会被生成静态页面.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 注意：draft(草稿) 对应的值要改为 false 才会被生成静态页面</h2> 
+  <h2 id="打包网页"><a class="anchor" href="#打包网页" title='Anchor for: 打包网页.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 打包网页</h2> 
 
-<p>######### 打包网页 #########
-hugo -d docs</p>
-
-
-
-
-
-
-
-
-
-  <h2 id="github-配置网页目录"><a class="anchor" href="#github-配置网页目录" title='Anchor for: github 配置网页目录.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> github 配置网页目录</h2> 
-
-<p>点击新仓库的 Settings 页签中的 Pages 找到 source 选择 /docs 目录 -&gt; save</p>
+<p>hugo -d docs</p>
 
 
 
@@ -784,6 +775,18 @@ hugo -d docs</p>
 <blockquote>
 <p>hugo server</p>
 </blockquote>
+
+
+
+
+
+
+
+
+
+  <h2 id="配置-github-目录"><a class="anchor" href="#配置-github-目录" title='Anchor for: 配置 github 目录.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.75adc8e556963d61349bb93ed391da53.svg#hashtag"/></svg></a> 配置 github 目录</h2> 
+
+<p>点击新仓库的 Settings 页签中的 Pages 找到 source 选择 /docs 目录 -&gt; save</p>
 
 
 
@@ -844,46 +847,6 @@ hugo -d docs</p>
     
 
     
-    
-      
-
-
-
-<link rel="stylesheet" href="https://note.killliu.com/libs/katex@0.15.3/dist/katex.min.905ab7d71de262e67e0e2dc9f1f0183d5b118b044d6e02ead268607d58612934.css" integrity="sha256-kFq31x3iYuZ&#43;Di3J8fAYPVsRiwRNbgLq0mhgfVhhKTQ=" crossorigin="anonymous">
-
-
-<script defer src="https://note.killliu.com/libs/katex@0.15.3/dist/katex.min.2405db5e7cb9694468637eea0aadf4d4211be8f9d24c05b44d4e2cabd5f49da2.js" integrity="sha256-JAXbXny5aURoY37qCq301CEb6PnSTAW0TU4sq9X0naI=" crossorigin="anonymous"></script>
-
-
-
-
-
-  
-  <script defer src="https://note.killliu.com/libs/katex@0.15.3/dist/contrib/mhchem.min.1f9c9c4560e88f5245ab4f24c13bc53f7a7fcf92ea0f6d92bfb57277e891dc20.js" integrity="sha256-H5ycRWDoj1JFq08kwTvFP3p/z5LqD22Sv7Vyd&#43;iR3CA=" crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-  
-  <link rel="stylesheet" href="https://note.killliu.com/libs/katex@0.15.3/dist/contrib/copy-tex.min.85d031021d653cfcef76c7150d797bf81ada89e0e72c02a62cf820f394e44c40.css" integrity="sha256-hdAxAh1lPPzvdscVDXl7&#43;BraieDnLAKmLPgg85TkTEA=" crossorigin="anonymous">
-
-  
-  <script defer src="https://note.killliu.com/libs/katex@0.15.3/dist/contrib/copy-tex.min.97fa7aabc7db24099e926fafbaea291540ac0ff8d2e1590606a7e14a491c9b35.js" integrity="sha256-l/p6q8fbJAmekm&#43;vuuopFUCsD/jS4VkGBqfhSkkcmzU=" crossorigin="anonymous"></script>
-  
-
-
-
-
-
-
-
-
-
-<script defer src="https://note.killliu.com/js/katex-custom-render.min.8303770b666742f21b8d034a970588796986a16c34c70c2509ce7bb77d1a9783.js" integrity="sha256-gwN3C2ZnQvIbjQNKlwWIeWmGoWw0xwwlCc57t30al4M=" crossorigin="anonymous"></script>
-
     
 
   </body>

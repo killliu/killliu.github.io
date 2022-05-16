@@ -5,6 +5,7 @@ date            : 2022-03-08
 katex           : true
 katexExtensions : [ mhchem, copy-tex ]
 tags            : [ chemistry, katex, markdown, math ]
+draft           : true
 ---
 
 [KaTeX](https://katex.org/) is a fast, easy-to-use JavaScript library for TeX math rendering on the web.
