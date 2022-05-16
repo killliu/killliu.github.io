@@ -1,5 +1,5 @@
 ---
-title                 : "Welcome"
+title                 : "killliu's notes"
 disableTitleSeparator : true
 ---
 
