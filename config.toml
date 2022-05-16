@@ -11,7 +11,6 @@ enableInlineShortcodes = true
 
 paginate = 3
 
-
 # TEST
 # Netlify _headers
 [outputs]
@@ -35,16 +34,11 @@ paginate = 3
 
 [params]
   
-  # Site description
   description = "killliu's personal website"
   
-  # Author
   author      = "killliu"
   authorDesc  = "Some indescribable horror."
   
-  # Footer text
-  # Each value will become a paragraph
-  # Keep it as an array
   footerText = [ "Copyright © 2022 killliu 粤ICP备14085800号-1" ]
   
   # Site cover, for Open Graph, Twitter Cards and Schema.org
@@ -78,32 +72,6 @@ paginate = 3
   # matter or disable it entirely by commenting the line below
   titleSeparator = "|"
   
-  
-  # Contact form shortcode
-  [params.contact]
-  
-    # formspree.io Form ID
-    formspreeFormId = "example"
-    
-    # Autocomplete [on/off] and min character length for message
-    autoComplete      = false # Default is false
-    messageMinLength  = 140   # Default is 140
-    
-    # Subject
-    # You can set a single value below (and it will cease to be a dropdown),
-    # BUT KEEP IT AS AN ARRAY
-    # It can also be disabled entirely (and it will turn into a text field)
-    subject = [ 'Just saying "hi"', "I know what you did last winter", "... Is that a sloth?", "お前はもう死んでいる。" ]
-
-    # Text placeholders. As usual, comment the lines if you don't want use them
-    # The "subject" below will only be used if the "subject" above doesn't exist (ie.: commented/deleted)
-    [params.contact.placeholder]
-      name    = "killliu"
-      email   = "killliu@163.com"
-      subject = 'Just saying "hi"'
-      message = "Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
-
-
   [params.search]
   
     # Enable search form (at the post list)
@@ -123,10 +91,6 @@ paginate = 3
     
 
   [params.style]
-  
-    # Dark mode as default
-    # User preferences (site/system settings) will still have priority over it
-    # The default is false
     isDark = true
 
     # Disable the use of system settings (prefers-color-scheme)
@@ -137,9 +101,6 @@ paginate = 3
     darkAccent   = "#1dbc91" # Default is "#1dbc91"
     lightAccent  = "#1f676b" # Default is "#1f676b"
 
-    # More colors, pick as many as you want (not really sure if there's a limit)
-    # Apparently these may not show up on every modern browser (ie. Firefox)
-    # There's no default value. Used here just as example
     presets = [ "#225670", "#dd587c", "#902b37", "#f3a530", "#754e85", "#7fc121", "#a8314a", "#ff7433", "#3e6728", "#c063bd" ]
 
     # Use an icon or text for footnote return links
@@ -164,8 +125,6 @@ paginate = 3
     # The default is ".5s ease"
     changeTransition = ".3s ease"
     
-    
-  # For a simple 404
   [params.notFound]
     title         = "Page not found"
     description   = "This page was not found."
