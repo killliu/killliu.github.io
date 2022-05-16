@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="dark">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Hugo 0.98.0">
+<meta name="theme" content="Color Your World -- gitlab.com/rmaguiar/hugo-theme-color-your-world">
+<link rel="icon" href="../../static/favicon.ico" type="image/x-icon">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>jira in centos | killliu&#39;s notes</title>
+
+
+<meta name="author" content="killliu">
+
+
+
+<meta name="robots" content="index follow">
+
+
+
+
+  
+    <link rel="canonical" href="https://note.killliu.com/posts/jira/">
+  
+
+
+
+
+
+
+
+
+<meta property="og:site_name" content="killliu&#39;s notes">
+<meta property="og:title" content="jira in centos">
+
+  <meta property="og:url" content="https://note.killliu.com/posts/jira/">
+
+
+
+
+
+
+
+
+  <meta property="og:type" content="article">
+  
+  
+    <meta property="article:published_time" content="2022-05-16">
+    <meta property="article:modified_time" content="2022-05-16">
+    <meta property="og:updated_time" content="2022-05-16">
+  
+
+  
+  
+  
+    <meta name="twitter:creator" content="@@killliu">
+  
+  
+
+  <meta name="twitter:site" content="@@killliu">
+
+
+
+
+
+
+
+  <meta name="twitter:dnt" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#222">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+        
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+    
+      
+        
+          
+        
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+        
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+      
+      
+    
+
+  
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebSite",
+        "@id": "https:\/\/note.killliu.com\/"
+      },
+      "headline": "jira in centos",
+      "description": "",
+      
+      "url": "https:\/\/note.killliu.com\/posts\/jira\/",
+      "inLanguage": "en",
+      "datePublished": "2022-05-16",
+      "dateModified": "2022-05-16",
+      "wordCount" : "606",
+      "publisher": {
+        "@type": "Person",
+        "name": "killliu"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "killliu",
+        "description": "Some indescribable horror.",
+        "sameAs": ["https://github.com/killliu","http://killliu.com/","https://twitter.com/@killliu"]
+      }
+    }
+  </script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://note.killliu.com/css/main.min.46d1002e02a6075a60c73555f570464349eb24e7bf78efe4503fb0ffd94bffb0.css" integrity="sha256-RtEALgKmB1pgxzVV9XBGQ0nrJOe/eO/kUD&#43;w/9lL/7A=" crossorigin="anonymous">
+
+
+
+<noscript>
+
+  
+  
+
+  
+    <meta name="theme-color" content="#1dbc91" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#1f676b" media="(prefers-color-scheme: light)">
+  
+
+  
+  <link rel="stylesheet" href="https://note.killliu.com/css/noscript.min.3f3b95436b19eaeb9223fb12c0b86737d53ee0a47fdba271a886c244bc03975c.css" integrity="sha256-PzuVQ2sZ6uuSI/sSwLhnN9U&#43;4KR/26JxqIbCRLwDl1w=" crossorigin="anonymous">
+
+</noscript>
+
+
+
+<link rel="preload" href="/fonts/open-sans-v17-latin-700.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-italic.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-regular.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/oswald-v29-latin-700.woff2" as="font" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+<link rel="me" href="https://github.com/killliu"> 
+<link rel="me" href="http://killliu.com/"> 
+<link rel="me" href="https://twitter.com/@killliu"> 
+
+
+
+
+  
+  
+
+
+<script src="https://note.killliu.com/js/main.f1da21dfea83dc0c36cea0b202c14a97e00aedab567e32702eb120f5ab8d974b.js" integrity="sha256-8doh3&#43;qD3Aw2zqCyAsFKl&#43;AK7atWfjJwLrEg9auNl0s=" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+
+    <header>
+      
+
+  <a href="/">killliu&#39;s notes</a>
+
+
+
+
+  
+    <nav aria-label="Main menu.">
+      <ul>
+        
+          <li>
+            <a class="btn" href="/posts/">Posts</a>
+          </li>
+        
+          <li>
+            <a class="btn" href="/contact/">About Me</a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+
+
+    </header>
+
+    <div class="filler">
+      
+
+  <main>
+    <article>
+      <header>
+        
+        <h1>jira in centos</h1>
+
+        
+          <section class="terms">
+            <ul><li><a class="btn" href="/tags/centos/">centos</a></li></ul>
+          </section>
+          <p>
+            
+              Published on <time datetime="2022-05-16">2022-05-16</time>
+            
+          </p>
+        
+        
+        
+        
+      </header>
+    
+      
+<details class="toc" open>
+    <summary class="outline-dashed">
+      Contents
+    </summary>
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安裝java">安裝java</a></li>
+    <li><a href="#安装-mysql-57">安装 mysql 5.7</a></li>
+    <li><a href="#安裝-jira">安裝 jira</a></li>
+    <li><a href="#破解-jira">破解 jira</a></li>
+    <li><a href="#安装-confluence">安装 confluence</a></li>
+    <li><a href="#confluence-同步-jira-用户数据">confluence 同步 jira 用户数据</a></li>
+    <li><a href="#插件破解">插件破解</a></li>
+    <li><a href="#通知方案">通知方案</a></li>
+    <li><a href="#配置黑名单">配置黑名单</a></li>
+    <li><a href="#nginx-代理">nginx 代理</a></li>
+  </ul>
+</nav>
+  </details>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<p><a href="https://www.atlassian.com/software/jira/core/download">jira core 官网下载</a></p>
+<p><a href="https://www.atlassian.com/software/jira/core/download">jira software 官网下载</a></p>
+<p><a href="https://www.atlassian.com/software/jira/service-management/download">jira service management 官网下载</a></p>
+
+
+
+
+
+
+
+
+
+  <h2 id="安裝java"><a class="anchor" href="#安裝java" title='Anchor for: 安裝java.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> 安裝java</h2> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -xvf jdk-8u101-linux-x64.tar.gz -C /usr/local
+</span></span><span class="line"><span class="cl">mv /usr/local/jdk1.8.0_101/ /usr/local/java
+</span></span><span class="line"><span class="cl">ls /usr/local/
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置环境</span>
+</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;$aJAVA_HOME=/usr/local/java\nCLASSPATH=$JAVA_HOME/lib\nPATH=$PATH:$JAVA_HOME/bin\nexport PATH JAVA_HOME CLASSPATH&#39;</span> /etc/profile
+</span></span><span class="line"><span class="cl"><span class="c1"># 重置配置</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">java -version
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="安装-mysql-57"><a class="anchor" href="#安装-mysql-57" title='Anchor for: 安装 mysql 5.7.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> 安装 mysql 5.7</h2> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -rf /var/log/mysqld.log
+</span></span><span class="line"><span class="cl">sudo dnf remove @mysql
+</span></span><span class="line"><span class="cl">sudo dnf module reset mysql <span class="o">&amp;&amp;</span> sudo dnf module disable mysql
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建新的存储库文件</span>
+</span></span><span class="line"><span class="cl">sudo vi /etc/yum.repos.d/mysql-community.repo
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>mysql57-community<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">name</span><span class="o">=</span>MySQL 5.7 Community Server
+</span></span><span class="line"><span class="cl"><span class="nv">baseurl</span><span class="o">=</span>http://repo.mysql.com/yum/mysql-5.7-community/el/7/<span class="nv">$basearch</span>/
+</span></span><span class="line"><span class="cl"><span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>mysql-connectors-community<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">name</span><span class="o">=</span>MySQL Connectors Community
+</span></span><span class="line"><span class="cl"><span class="nv">baseurl</span><span class="o">=</span>http://repo.mysql.com/yum/mysql-connectors-community/el/7/<span class="nv">$basearch</span>/
+</span></span><span class="line"><span class="cl"><span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>mysql-tools-community<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">name</span><span class="o">=</span>MySQL Tools Community
+</span></span><span class="line"><span class="cl"><span class="nv">baseurl</span><span class="o">=</span>http://repo.mysql.com/yum/mysql-tools-community/el/7/<span class="nv">$basearch</span>/
+</span></span><span class="line"><span class="cl"><span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo dnf config-manager --disable mysql80-community
+</span></span><span class="line"><span class="cl">sudo dnf config-manager --enable mysql57-community
+</span></span><span class="line"><span class="cl">sudo dnf install mysql-community-server
+</span></span><span class="line"><span class="cl"><span class="c1"># 检查 mysql 版本</span>
+</span></span><span class="line"><span class="cl">rpm -qi mysql-community-server
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置</span>
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now mysqld.service
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看密码</span>
+</span></span><span class="line"><span class="cl">sudo grep <span class="s1">&#39;A temporary password&#39;</span> /var/log/mysqld.log <span class="p">|</span>tail -1
+</span></span><span class="line"><span class="cl"><span class="c1"># 登陆</span>
+</span></span><span class="line"><span class="cl">mysql -u root -p
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改密码</span>
+</span></span><span class="line"><span class="cl">SET PASSWORD FOR <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> <span class="o">=</span> PASSWORD<span class="o">(</span><span class="s1">&#39;your_password&#39;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 授权</span>
+</span></span><span class="line"><span class="cl">GRANT ALL PRIVILEGES ON *.* TO <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;%&#39;</span>IDENTIFIED BY <span class="s1">&#39;your_password&#39;</span> WITH GRANT OPTION<span class="p">;</span>
+</span></span><span class="line"><span class="cl">FLUSH PRIVILEGES<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改配置文件</span>
+</span></span><span class="line"><span class="cl">vi /etc/my.cnf
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">default-storage-engine<span class="o">=</span>INNODB 			<span class="c1">#将默认存储引擎设置为InnoDB</span>
+</span></span><span class="line"><span class="cl"><span class="nv">character_set_server</span><span class="o">=</span>utf8mb4 			<span class="c1">#指定数据库服务器使用的字符集</span>
+</span></span><span class="line"><span class="cl"><span class="nv">innodb_large_prefix</span><span class="o">=</span>ON 					<span class="c1">#启用大前缀</span>
+</span></span><span class="line"><span class="cl"><span class="nv">innodb_default_row_format</span><span class="o">=</span>DYNAMIC 		<span class="c1">#将默认行格式设置为  DYNAMIC</span>
+</span></span><span class="line"><span class="cl"><span class="nv">innodb_file_format</span><span class="o">=</span>Barracuda 			<span class="c1">#将InnoDB文件格式设置为Barracuda</span>
+</span></span><span class="line"><span class="cl"><span class="nv">innodb_log_file_size</span><span class="o">=</span>2G 				<span class="c1">#指定值  innodb_log_file_size 至少为2G</span>
+</span></span><span class="line"><span class="cl"><span class="nv">max_allowed_packet</span> <span class="o">=</span> 256M 				<span class="c1">#将MySQL数据包大小设置为更大的值（256MB）</span>
+</span></span><span class="line"><span class="cl">transaction-isolation<span class="o">=</span>READ-COMMITTED	<span class="c1"># 解决安装confluence时“不正确的隔离级别”的保存</span>
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl"><span class="c1"># 重启</span>
+</span></span><span class="line"><span class="cl">systemctl restart mysqld
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="安裝-jira"><a class="anchor" href="#安裝-jira" title='Anchor for: 安裝 jira.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> 安裝 jira</h2> 
+
+<p><a href="https://www.atlassian.com/software/jira/core/download">jira software 官网下载</a></p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x *.bin
+</span></span><span class="line"><span class="cl">sudo ./atlassian-jira-software-8.13.3-x64.bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 安装目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /opt/atlassian/jira 
+</span></span><span class="line"><span class="cl"><span class="c1"># Home 目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /var/atlassian/application-data/jira
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看服务进程、端口号</span>
+</span></span><span class="line"><span class="cl">netstat -ntap <span class="p">|</span>grep <span class="m">8080</span>
+</span></span><span class="line"><span class="cl">ps -ef <span class="p">|</span>grep jira
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 复制 mysql 驱动</span>
+</span></span><span class="line"><span class="cl">cp ./mysql-connector-java-5.1.39-bin.jar  /opt/atlassian/jira/atlassian-jira/WEB-INF/lib/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 关闭服务</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /opt/atlassian/jira/bin
+</span></span><span class="line"><span class="cl">sh shutdown.sh
+</span></span><span class="line"><span class="cl"><span class="c1"># 破解的方式启动 jira</span>
+</span></span><span class="line"><span class="cl"><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">&#34;-javaagent:/root/jira/atlassian-agent.jar&#34;</span> /opt/atlassian/jira/bin/startup.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改 dbconfig.xml</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /opt/atlassian/jira/bin
+</span></span><span class="line"><span class="cl">sh config.sh
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置配置文件 dbconfig.xml</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入安装页面 http://192.168.91.128:8080</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="破解-jira"><a class="anchor" href="#破解-jira" title='Anchor for: 破解 jira.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> 破解 jira</h2> 
+
+<p><a href="https://gitee.com/pengzhile/atlassian-agent">atlassian-agent.jar</a></p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 破解的方式启动 jira</span>
+</span></span><span class="line"><span class="cl"><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">&#34;-javaagent:/root/jira/atlassian-agent.jar&#34;</span> /opt/atlassian/jira/bin/startup.sh
+</span></span><span class="line"><span class="cl"><span class="c1"># 验证是否配置成功：</span>
+</span></span><span class="line"><span class="cl">ps aux<span class="p">|</span>grep java <span class="c1"># 找到对应的进程看看-javaagent参数是否正确附上</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看参数</span>
+</span></span><span class="line"><span class="cl">java -jar /root/jira/atlassian-agent.jar
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 生成激活码</span>
+</span></span><span class="line"><span class="cl">java -jar atlassian-agent.jar -p jira -m sha.liu@qq.com -n liusha -o igg -s B6EG-ZAK5-UCP4-VE34
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">AAABgw0ODAoPeJx9kl9PwjAUxd/7KZb43LkxQCFpIm6NmY4/ccCDb2VcWM3o5m2H4qe3yExACEkf2
+</span></span><span class="line"><span class="cl">puec389vTepMM6zUE7gOV7QD7p9u+Hp1Gl5LZ+sEUDlZVUBuonMQGmY7ioYiQ2wcDwc8tcwHiQkR
+</span></span><span class="line"><span class="cl">BBGlioSBtheSD2fBh65IolAZyirvYrNVCE30sDSKQ4CZ7FzcmMq3b+9/c5lAa4syVBIZUAJlQH/q
+</span></span><span class="line"><span class="cl">iTumm73Perd2UXeJYo/Sr6UB+tREg/jKY/IqN4sAMermQbUjPp/cFe8KiyXdWbc/YHqcmU+BYJ7Z
+</span></span><span class="line"><span class="cl">nTlrsiM3AIzWMNJlsf15s1z67YnbhG+FUX9mydbiUIDGeNaKKkPJblek7BUxlpwG0nBdC7cQtYPH
+</span></span><span class="line"><span class="cl">x9uVm4ONJcZj7tegU6NQAPYNG9iiiOWxFHKRzTxu77f63Xuel7nPjhJ/dJHp4BbQCt/7PIn+jZ46
+</span></span><span class="line"><span class="cl">dBZOGnTOQ/al+br/OcmNWa50PB/uo7FYEcDK5S6eZ4FZRdgm+B+GW1mNrofz2YFQzAtAhR6UtINy
+</span></span><span class="line"><span class="cl">Qsb4FnEAc3y6RhTf9AwoQIVAIMczStmMAN8HWMoaJKIPDpDOjOsX02iq
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="安装-confluence"><a class="anchor" href="#安装-confluence" title='Anchor for: 安装 confluence.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> 安装 confluence</h2> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x *.bin
+</span></span><span class="line"><span class="cl">sudo ./atlassian-confluence-7.4.6-x64.bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 安装目录</span>
+</span></span><span class="line"><span class="cl">/opt/atlassian/ 
+</span></span><span class="line"><span class="cl"><span class="c1"># Home 目录</span>
+</span></span><span class="line"><span class="cl">/var/atlassian/application-data/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 复制 mysql 驱动</span>
+</span></span><span class="line"><span class="cl">cp ./mysql-connector-java-5.1.39-bin.jar  /opt/atlassian/confluence/confluence/WEB-INF/lib
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 关闭服务</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /opt/atlassian/confluence/bin
+</span></span><span class="line"><span class="cl">sh shutdown.sh
+</span></span><span class="line"><span class="cl"><span class="c1"># 破解的方式启动 confluence</span>
+</span></span><span class="line"><span class="cl"><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">&#34;-javaagent:/root/jira/atlassian-agent.jar&#34;</span> /opt/atlassian/confluence/bin/startup.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看服务进程、端口号</span>
+</span></span><span class="line"><span class="cl">netstat -ntap <span class="p">|</span>grep <span class="m">8090</span>
+</span></span><span class="line"><span class="cl">ps -ef <span class="p">|</span>grep confluence
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># http://192.168.91.128:8090/</span>
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl"><span class="c1"># MySQL ---&gt; 外部数据库 ---&gt; JDBC ---&gt; 空白站点 ---&gt; 与JIRA连接</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># jira 服务器位置：http://192.168.91.128:8080</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用 jira 账号：liusha</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用 jira 账号的密码：???</span>
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># error: 不正确的隔离级别</span>
+</span></span><span class="line"><span class="cl">vi /etc/my.cnf
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">transaction-isolation<span class="o">=</span>READ-COMMITTED
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 生成激活码</span>
+</span></span><span class="line"><span class="cl">java -jar atlassian-agent.jar -p conf -m sha.liu@igg.com -n liusha -o igg -s BZG0-H9N1-37KE-SGK5
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">AAABOw0ODAoPeJxtkFFvgjAUhd/7K5rsGWxRdJo02QbEORHN0D3srXZXaQKFtMXM/fpVYC+LSV967
+</span></span><span class="line"><span class="cl">r3nnvs95NziN67wmGASLmiwmExwku9xQAKKIg3cylrF3AK7KR6h3pig5MLLtquwEy8NoBiM0LLpl
+</span></span><span class="line"><span class="cl">IMqZSUtfOFSClAG8PGKC2sbsxiNfgpZgi9rtNVnrqTpTeT5jEStTj4XVl6AWd0Cimpl3T/ZcFkyU
+</span></span><span class="line"><span class="cl">3C/lO2T6/RFXfXdueXagh4ydFLar9xfG8h4BSzabjbJe7R6TpHzURYUVwKS70bq63DV49wjM/fQM
+</span></span><span class="line"><span class="cl">LuKWbqK8yTzUjqlASE0nE7CcIZy0BfQrvzyuSTe6zxzLGbrxMuX6/Bv+L7zrtWi4Ab+cxwAfYA2N
+</span></span><span class="line"><span class="cl">wxBf0PWVkfQ29PBOJ15FLks7E6eAVB3p2PjEP0Ca3GUvTAsAhQwq2c8qROyVlQBUOxdPMybGtWWp
+</span></span><span class="line"><span class="cl">QIUYm+OBa3ra1HgI0hf5SBfmI+azGw<span class="o">=</span>X02fn
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+    <img
+      
+      loading="lazy"
+      src="https://www.atlassian.com/software/jira/mobile-app"
+      alt="mobile-app"
+    />
+
+  
+
+</p>
+
+
+
+
+
+
+
+
+
+  <h2 id="confluence-同步-jira-用户数据"><a class="anchor" href="#confluence-同步-jira-用户数据" title='Anchor for: confluence 同步 jira 用户数据.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> confluence 同步 jira 用户数据</h2> 
+
+<p>在jira 中添加用户服务器：用户管理 &mdash;&gt;  jira 用户服务器 &mdash;&gt; 创建一个</p>
+<p>在jira 中添加白名单，并允许传入 eg. <code>http://192.168.91.128:8090</code></p>
+<p>在confluence中配置对应的链接：用户目录 &mdash;&gt; 添加目录 &mdash;&gt; Atlassian jira &mdash;&gt;</p>
+
+
+
+
+
+
+
+
+
+  <h2 id="插件破解"><a class="anchor" href="#插件破解" title='Anchor for: 插件破解.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> 插件破解</h2> 
+
+<p>查看破解参数：</p>
+<blockquote>
+<p>java -jar /root/jira/atlassian-agent.jar</p>
+</blockquote>
+<p>第三方插件将其应用密钥/插件关键字作为<code>-p</code>参数。如：<code>-p 'com.gliffy.integration.confluence'</code> , -s 是jira 的服务器ID</p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 破解 BigPicture</span>
+</span></span><span class="line"><span class="cl">java -jar atlassian-agent.jar -p <span class="s1">&#39;eu.softwareplant.bigpicture&#39;</span> -m sha.liu@qq.com -n liusha -o igg -s BCMU-4EII-52OB-A52W
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">AAABSA0ODAoPeJx9kctuwjAQRff+CktdO8SmQIpkqRCySAWkaqBdm3RILCVO8IOWfn0NhE1VIY03I
+</span></span><span class="line"><span class="cl">90zM8cPm8rhF6Ewi3A4ng5HU0Zxkm8wCxlFsQZhZasWwgI/d0hICYvQUhagDGxOHaxFAzzOVqvkL
+</span></span><span class="line"><span class="cl">U5nS5QcRe0uIb4XtQG0AFNo2V06W1XLRlr4xPWVgHcnXFnbmelg8FPJGgLZokyXQklzhciyRHGrr
+</span></span><span class="line"><span class="cl">ChsshKy5qYSQS3d8+EQFG2DwAWm3dsvoaGrhbLBTpadLKzTEPiMPAK32gHyWWVBCVVA8t1Jfepvi
+</span></span><span class="line"><span class="cl">p5IOPF1FwQ+qjstTQ/LQR9Bpws+j1db8pikKRmxbE5mI/aB1q7Zgc72WwPacEJvtv4f++p0UQkDf
+</span></span><span class="line"><span class="cl">xX3gt4946yB3d0vt0L7DXvjebLm/pElHVMaDYcTRiMa3SxePswL9B5/AfxurHIwLAIUB5UxzQIFh
+</span></span><span class="line"><span class="cl">wnEw8d9fMwa5kiq944CFDrm7CiVQs7KSt7QamMZ/QgwY2LtX02g8
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="通知方案"><a class="anchor" href="#通知方案" title='Anchor for: 通知方案.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> 通知方案</h2> 
+
+<p>（不要用邮件通知、用插件 notifications 桌面通知）</p>
+<p><a href="https://community.atlassian.com/t5/Jira-questions/Using-Gmail-as-a-JIRA-Mail-Server/qaq-p/824782">邮件通知参考</a></p>
+<p>google 生产</p>
+<p><a href="mailto:killliu@163.com">killliu@163.com</a> app password</p>
+<blockquote>
+<p>zrrhsmbeadyuggri</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+  <h2 id="配置黑名单"><a class="anchor" href="#配置黑名单" title='Anchor for: 配置黑名单.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> 配置黑名单</h2> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi /etc/hosts
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">www.atlassian.com 127.0.0.1
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="nginx-代理"><a class="anchor" href="#nginx-代理" title='Anchor for: nginx 代理.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#hashtag"/></svg></a> nginx 代理</h2> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi /opt/atlassian/jira/server.xml
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">        <span class="c1"># ==============================================================================================================</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># HTTP - Proxying Jira via Apache or Nginx over HTTP</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># ==============================================================================================================</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 注意：Connector port=&#34;8080&#34; &amp;&amp;</span>
+</span></span><span class="line"><span class="cl">	    <span class="c1"># proxyName=&#34;jira5.skyunion.net&#34; &amp;&amp;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># proxyPort=&#34;80&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;Connector <span class="nv">port</span><span class="o">=</span><span class="s2">&#34;8080&#34;</span> <span class="nv">relaxedPathChars</span><span class="o">=</span><span class="s2">&#34;[]|&#34;</span> <span class="nv">relaxedQueryChars</span><span class="o">=</span><span class="s2">&#34;[]|{}^&amp;#x5c;&amp;#x60;&amp;quot;&amp;lt;&amp;gt;&#34;</span>
+</span></span><span class="line"><span class="cl">                   <span class="nv">maxThreads</span><span class="o">=</span><span class="s2">&#34;150&#34;</span> <span class="nv">minSpareThreads</span><span class="o">=</span><span class="s2">&#34;25&#34;</span> <span class="nv">connectionTimeout</span><span class="o">=</span><span class="s2">&#34;20000&#34;</span> <span class="nv">enableLookups</span><span class="o">=</span><span class="s2">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl">                   <span class="nv">maxHttpHeaderSize</span><span class="o">=</span><span class="s2">&#34;8192&#34;</span> <span class="nv">protocol</span><span class="o">=</span><span class="s2">&#34;HTTP/1.1&#34;</span> <span class="nv">useBodyEncodingForURI</span><span class="o">=</span><span class="s2">&#34;true&#34;</span> <span class="nv">redirectPort</span><span class="o">=</span><span class="s2">&#34;8443&#34;</span>
+</span></span><span class="line"><span class="cl">                   <span class="nv">acceptCount</span><span class="o">=</span><span class="s2">&#34;100&#34;</span> <span class="nv">disableUploadTimeout</span><span class="o">=</span><span class="s2">&#34;true&#34;</span> <span class="nv">bindOnInit</span><span class="o">=</span><span class="s2">&#34;false&#34;</span> <span class="nv">scheme</span><span class="o">=</span><span class="s2">&#34;http&#34;</span>
+</span></span><span class="line"><span class="cl">                   <span class="nv">proxyName</span><span class="o">=</span><span class="s2">&#34;jira5.skyunion.net&#34;</span> <span class="nv">proxyPort</span><span class="o">=</span><span class="s2">&#34;80&#34;</span>/&gt;
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl"><span class="c1"># 注意：path=&#34;/&#34;</span>
+</span></span><span class="line"><span class="cl">&lt;Context <span class="nv">docBase</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">catalina</span><span class="p">.home</span><span class="si">}</span><span class="s2">/atlassian-jira&#34;</span> <span class="nv">path</span><span class="o">=</span><span class="s2">&#34;/&#34;</span> <span class="nv">reloadable</span><span class="o">=</span><span class="s2">&#34;false&#34;</span> <span class="nv">useHttpOnly</span><span class="o">=</span><span class="s2">&#34;true&#34;</span>&gt;
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ---------------- nginx ------------</span>
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">    server <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        listen       <span class="m">80</span> default_server<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        server_name  jira5.skyunion.net<span class="p">;</span>
+</span></span><span class="line"><span class="cl">		location /<span class="o">{</span>
+</span></span><span class="line"><span class="cl">			proxy_set_header        Host <span class="nv">$host</span>:<span class="nv">$server_port</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    		proxy_set_header        X-Real-IP <span class="nv">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    		proxy_set_header        X-Forwarded-For <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    		proxy_set_header        X-Forwarded-Proto <span class="nv">$scheme</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    		proxy_pass              http://127.0.0.1:8080<span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    		client_max_body_size    10M<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    		proxy_set_header        X-Forwarded-Host <span class="nv">$host</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    		proxy_set_header        X-Forwarded-Server <span class="nv">$host</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    		<span class="c1"># Required for new HTTP-based CLI</span>
+</span></span><span class="line"><span class="cl">    		proxy_http_version 1.1<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    		proxy_request_buffering off<span class="p">;</span>	
+</span></span><span class="line"><span class="cl">		<span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">......
+</span></span></code></pre></div><div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi /opt/atlassian/confluence/conf/server.xml
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">        &lt;Connector <span class="nv">port</span><span class="o">=</span><span class="s2">&#34;8091&#34;</span> <span class="nv">connectionTimeout</span><span class="o">=</span><span class="s2">&#34;20000&#34;</span> <span class="nv">redirectPort</span><span class="o">=</span><span class="s2">&#34;8443&#34;</span>
+</span></span><span class="line"><span class="cl">                   <span class="nv">maxThreads</span><span class="o">=</span><span class="s2">&#34;48&#34;</span> <span class="nv">minSpareThreads</span><span class="o">=</span><span class="s2">&#34;10&#34;</span>
+</span></span><span class="line"><span class="cl">                   <span class="nv">enableLookups</span><span class="o">=</span><span class="s2">&#34;false&#34;</span> <span class="nv">acceptCount</span><span class="o">=</span><span class="s2">&#34;10&#34;</span> <span class="nv">debug</span><span class="o">=</span><span class="s2">&#34;0&#34;</span> <span class="nv">URIEncoding</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span>
+</span></span><span class="line"><span class="cl">                   <span class="nv">protocol</span><span class="o">=</span><span class="s2">&#34;org.apache.coyote.http11.Http11NioProtocol&#34;</span>
+</span></span><span class="line"><span class="cl">                   <span class="nv">scheme</span><span class="o">=</span><span class="s2">&#34;http&#34;</span> <span class="nv">proxyName</span><span class="o">=</span><span class="s2">&#34;10.15.1.16&#34;</span> <span class="nv">proxyPort</span><span class="o">=</span><span class="s2">&#34;8090&#34;</span>/&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># &lt;Context path=&#34;/&#34; ......</span>
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ---------------- nginx ------------</span>
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">	server<span class="o">{</span>
+</span></span><span class="line"><span class="cl">		listen 8090<span class="p">;</span>
+</span></span><span class="line"><span class="cl">		server_name 127.0.0.1<span class="p">;</span>
+</span></span><span class="line"><span class="cl">		location / <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			proxy_pass http://127.0.0.1:8091<span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl">......
+</span></span></code></pre></div>
+
+
+    </article>
+  </main>
+
+
+    </div>
+    
+    <footer>
+      
+
+
+  
+
+    
+
+    
+      
+      
+    
+    
+    <p>Copyright © 2022 killliu 粤ICP备14085800号-1</p>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="req-js">
+  <button class="outline-dashed" title="Change to light/dark mode."><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><use xlink:href="/img/bundle.min.a18727e558dece38b417a0e83cd4638b.svg#adjust"/></svg></button><input class="outline-dashed" type="color" list="presets" value="#1dbc91" title="Change accent color." aria-label="Change accent color."><datalist id="presets"><option value="#1f676b"><option value="#1dbc91"><option value="#225670"><option value="#dd587c"><option value="#902b37"><option value="#f3a530"><option value="#754e85"><option value="#7fc121"><option value="#a8314a"><option value="#ff7433"><option value="#3e6728"><option value="#c063bd"></datalist>
+</section>
+
+
+
+  <noscript>
+    <p class="noscript">Unable to execute JavaScript. Some features were disabled.</p>
+  </noscript>
+
+
+
+    </footer>
+    
+    
+    
+
+    
+    
+
+  </body>
+</html>

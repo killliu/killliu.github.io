@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>killliu&#39;s notes</title>
-    <link>https://note.killliu.com/</link>
+    <link>https://note.killliu.com/tags/centos/</link>
     <description>killliu&#39;s personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2022 killliu 粤ICP备14085800号-1</copyright>
-    <lastBuildDate>Mon, 16 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/tags/centos/index.xml" rel="self" type="application/rss+xml" />
       <item>
         <title>jira in centos</title>
         <link>https://note.killliu.com/posts/jira/</link>
@@ -18,24 +18,6 @@
 jira software 官网下载
 jira service management 官网下载
  安裝java tar -xvf jdk-8u101-linux-x64.tar.gz -C /usr/local mv /usr/local/jdk1.8.0_101/ /usr/local/java ls /usr/local/ # 配置环境 sed -i &amp;#39;$aJAVA_HOME=/usr/local/java\nCLASSPATH=$JAVA_HOME/lib\nPATH=$PATH:$JAVA_HOME/bin\nexport PATH JAVA_HOME CLASSPATH&amp;#39; /etc/profile # 重置配置 source /etc/profile java -version   安装 mysql 5.7 rm -rf /var/log/mysqld.log sudo dnf remove @mysql sudo dnf module reset mysql &amp;amp;&amp;amp; sudo dnf module disable mysql # 创建新的存储库文件 sudo vi /etc/yum.repos.d/mysql-community.repo ... [mysql57-community] name=MySQL 5.7 Community Server baseurl=http://repo.</description>
-      </item>
-    
-      <item>
-        <title>搭建 github &#43; hugo 博客 (macos)</title>
-        <link>https://note.killliu.com/posts/hugo_github_blog/</link>
-        <pubDate>Sun, 15 May 2022 16:29:23 +0800</pubDate>
-        
-        <guid>https://note.killliu.com/posts/hugo_github_blog/</guid>
-        <description>A smalll description</description>
-      </item>
-    
-      <item>
-        <title>About Me</title>
-        <link>https://note.killliu.com/contact/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://note.killliu.com/contact/</guid>
-        <description>十多年U3D项目开发经验，五年U3D主程开发管理经验。精通U3D框架设计、开发及优化。协助美术资源制作、策划数据整合及配合服务端交互。对游戏开发有较深的理解，追求有效高效的项目开发，具备相应的分析解决问题的能力和团队管理经验。</description>
       </item>
     
   </channel>
