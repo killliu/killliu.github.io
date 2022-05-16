@@ -3,10 +3,10 @@
   <channel>
     <title>killliu&#39;s note</title>
     <link>https://note.killliu.com/tags/</link>
-    <description>John Doe&#39;s personal website</description>
+    <description>killliu&#39;s personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021, John Doe; All rights reserved.</copyright>
+    <copyright>Copyright © 2022, killliu; All rights reserved.</copyright>
     <lastBuildDate>Sun, 15 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/tags/index.xml" rel="self" type="application/rss+xml" />
       <item>
         <title>tools</title>
@@ -14,42 +14,6 @@
         <pubDate>Sun, 15 May 2022 16:29:23 +0800</pubDate>
         
         <guid>https://note.killliu.com/tags/tools/</guid>
-        <description></description>
-      </item>
-    
-      <item>
-        <title>emoji</title>
-        <link>https://note.killliu.com/tags/emoji/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://note.killliu.com/tags/emoji/</guid>
-        <description></description>
-      </item>
-    
-      <item>
-        <title>markdown</title>
-        <link>https://note.killliu.com/tags/markdown/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://note.killliu.com/tags/markdown/</guid>
-        <description></description>
-      </item>
-    
-      <item>
-        <title>shortcodes</title>
-        <link>https://note.killliu.com/tags/shortcodes/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://note.killliu.com/tags/shortcodes/</guid>
-        <description></description>
-      </item>
-    
-      <item>
-        <title>syntax highlighting</title>
-        <link>https://note.killliu.com/tags/syntax-highlighting/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://note.killliu.com/tags/syntax-highlighting/</guid>
         <description></description>
       </item>
     

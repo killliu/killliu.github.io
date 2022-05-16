@@ -5,6 +5,7 @@ toc           : true
 cover         : "amazon-branches-dawn-975771.jpg"
 coverAlt      : "Rainforest during foggy day by David Riaño Cortés."
 tags          : [ emoji, markdown, shortcodes, "syntax highlighting" ]
+draft         : true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus enim quis eros vulputate cursus. Nunc et faucibus felis, eget hendrerit dui. Nullam et enim quis odio molestie aliquet nec vitae ante.

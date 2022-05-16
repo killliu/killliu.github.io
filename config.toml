@@ -4,7 +4,7 @@ languageCode = "en"
 theme = "color-your-world"
 
 # Used only in the RSS file
-copyright = "Copyright © 2021, John Doe; All rights reserved."
+copyright = "Copyright © 2022, killliu; All rights reserved."
 
 enableEmoji = true
 enableInlineShortcodes = true
@@ -28,22 +28,18 @@ paginate = 3
   isPlainText     = true
   notAlternative  = true
 
-
-
 [markup.highlight]
   # To make use of the custom Chroma, this should be false
   # The default is true
   noClasses = false
 
-
-
 [params]
   
   # Site description
-  description = "John Doe's personal website"
+  description = "killliu's personal website"
   
   # Author
-  author      = "John Doe"
+  author      = "killliu"
   authorDesc  = "Some indescribable horror."
   
   # Footer text
@@ -102,8 +98,8 @@ paginate = 3
     # Text placeholders. As usual, comment the lines if you don't want use them
     # The "subject" below will only be used if the "subject" above doesn't exist (ie.: commented/deleted)
     [params.contact.placeholder]
-      name    = "Jane Doe"
-      email   = "janedoe@example.com"
+      name    = "killliu"
+      email   = "killliu@163.com"
       subject = 'Just saying "hi"'
       message = "Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
 
@@ -176,7 +172,7 @@ paginate = 3
     paragraph     = "Nothing to see here, buddy."
     
   [params.social.centralized]
-    facebook      = [ "killliu" ]
+    #facebook      = [ "killliu" ]
     #flickr        = [ "<username>" ]
     github        = [ "killliu" ]
     #gitlab        = [ "<username>" ]
@@ -203,28 +199,7 @@ paginate = 3
   [params.social.decentralized]
   
     [params.social.decentralized.element]
-      1 = [ "https://app.element.io/#/user/<username>:matrix.org", "matrix.org" ]
-      #entry = [ "full url", "label (required)" ]
-      
-    [params.social.decentralized.funkwhale]
-      1 = [ "https://open.audio/<username>", "open.audio" ]
-      
-    [params.social.decentralized.mastodon]
-      1 = [ "https://mastodon.social/<username>", "mastodon.social" ]
-      2 = [ "https://mastodon.too/<username>", "mastodon.too" ]
-      3 = [ "https://yet.another.one/<username>", "yet.another.one" ]
-      
-    [params.social.decentralized.matrix]
-      1 = [ "https://matrix.to/#/<username>:matrix.org", "matrix.org" ]
-      2 = [ "https://matrix.to/#/<username>:other.org", "other.org" ]
-      
-    [params.social.decentralized.peertube]
-      1 = [ "https://peertube.something/accounts/<username>", "peertube.something" ]
-      
-    [params.social.decentralized.pixelfed]
-      1 = [ "https://pixelfed.social/<username>", "pixelfed.social" ]
-      
-    # The "entry" here ISN'T important. It's used for nothing.
+      1 = [ "http://killliu.com/", "killliu" ]
     
     
 [privacy]
@@ -261,11 +236,6 @@ paginate = 3
     languageName = "English"
 
     [languages.en.menu]
-
-      [[languages.en.menu.main]]
-        name = "About"
-        weight = 1
-        url = "/"
 
       [[languages.en.menu.main]]
         name = "Posts"
@@ -311,12 +281,4 @@ paginate = 3
           name = "Contato"
           weight = 3
           url = "contact/"
-        
-        [languages.pt.params.contact]
-          subject = [ 'Só dando um "oi"', "Eu sei o que você fez no inverno passado", "... Aquilo é uma preguiça?", "お前はもう死んでいる。" ]
-        
-          [languages.pt.params.contact.placeholder]
-            name    = "Joana Ninguém"
-            email   = "me@janedoe.com"
-            subject = 'Só dando um "oi"'
-            message = "Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
+          

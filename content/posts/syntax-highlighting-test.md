@@ -3,6 +3,7 @@ title       : "Syntax Highlighting Test"
 description : "A page full of code samples."
 tags        : [ markdown, "syntax highlighting" ]
 toc         : true
+draft       : true
 ---
 
 ## Bash

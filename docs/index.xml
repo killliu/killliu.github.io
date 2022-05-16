@@ -3,13 +3,13 @@
   <channel>
     <title>killliu&#39;s note</title>
     <link>https://note.killliu.com/</link>
-    <description>John Doe&#39;s personal website</description>
+    <description>killliu&#39;s personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021, John Doe; All rights reserved.</copyright>
+    <copyright>Copyright © 2022, killliu; All rights reserved.</copyright>
     <lastBuildDate>Sun, 15 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/index.xml" rel="self" type="application/rss+xml" />
       <item>
-        <title>github &#43; hugo 搭建博客(macos)</title>
+        <title>搭建 github &#43; hugo 博客 (macos)</title>
         <link>https://note.killliu.com/posts/hugo_github_blog/</link>
         <pubDate>Sun, 15 May 2022 16:29:23 +0800</pubDate>
         
@@ -24,24 +24,6 @@
         
         <guid>https://note.killliu.com/contact/</guid>
         <description>See how to contact me.</description>
-      </item>
-    
-      <item>
-        <title>Lorem Ipsum</title>
-        <link>https://note.killliu.com/posts/lorem-ipsum/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://note.killliu.com/posts/lorem-ipsum/</guid>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus enim quis eros vulputate cursus.</description>
-      </item>
-    
-      <item>
-        <title>Syntax Highlighting Test</title>
-        <link>https://note.killliu.com/posts/syntax-highlighting-test/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://note.killliu.com/posts/syntax-highlighting-test/</guid>
-        <description>A page full of code samples.</description>
       </item>
     
   </channel>

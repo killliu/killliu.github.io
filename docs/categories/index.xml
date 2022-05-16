@@ -3,9 +3,9 @@
   <channel>
     <title>killliu&#39;s note</title>
     <link>https://note.killliu.com/categories/</link>
-    <description>John Doe&#39;s personal website</description>
+    <description>killliu&#39;s personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2021, John Doe; All rights reserved.</copyright><atom:link href="https://note.killliu.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2022, killliu; All rights reserved.</copyright><atom:link href="https://note.killliu.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

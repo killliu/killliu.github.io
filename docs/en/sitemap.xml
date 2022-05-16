@@ -19,48 +19,4 @@
     </url>
     
   
-  
-    <url>
-      <loc>https://note.killliu.com/posts/lorem-ipsum/</loc>
-      
-      
-      
-      
-      
-      
-      
-      
-        
-          <xhtml:link
-            rel="alternate"
-            hreflang="pt"
-            href="https://note.killliu.com/pt/posts/lorem-ipsum/"
-            />
-        
-        
-        <xhtml:link
-          rel="alternate"
-          hreflang="en"
-          href="https://note.killliu.com/posts/lorem-ipsum/"
-          />
-      
-      
-    </url>
-    
-  
-  
-    <url>
-      <loc>https://note.killliu.com/posts/syntax-highlighting-test/</loc>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </url>
-    
-  
 </urlset>

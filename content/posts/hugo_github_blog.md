@@ -1,5 +1,5 @@
 ---
-title       : "github + hugo 搭建博客(macos)"
+title       : "搭建 github + hugo 博客 (macos)"
 date        : 2022-05-15T16:29:23+08:00
 draft       : false
 tags        : [tools]
