@@ -4,7 +4,7 @@ languageCode = "en"
 theme = "color-your-world"
 
 # Used only in the RSS file
-copyright = "Copyright © 2022, killliu; All rights reserved."
+copyright = "Copyright © 2022 killliu 粤ICP备14085800号-1"
 
 enableEmoji = true
 enableInlineShortcodes = true
@@ -45,7 +45,7 @@ paginate = 3
   # Footer text
   # Each value will become a paragraph
   # Keep it as an array
-  footerText = [ "[killliu](http://killliu.com) @2022" ]
+  footerText = [ "Copyright © 2022 killliu 粤ICP备14085800号-1" ]
   
   # Site cover, for Open Graph, Twitter Cards and Schema.org
   # It will be used if the current page doesn't have a image cover
@@ -243,42 +243,7 @@ paginate = 3
         url = "posts/"
       
       [[languages.en.menu.main]]
-        name = "Contact"
+        name = "About Me"
         weight = 3
         url = "contact/"
-
-    [languages.pt]
-    
-      languageName  = "Português"
-      
-      copyright = "Copyright © 2008–2021, Steve Francia e os autores do Hugo; Todos os direitos reservados."
-
-      [languages.pt.params]        
-        description = "Sítio pessoal de João Ninguém"
-        
-        author      = "João Ninguém"
-        authorDesc  = "Algum horror indescritível."
-        
-        footerText = [ "[killliu](http://killliu.com) @2022" ]
-        
-        [languages.pt.params.notFound]
-          title         = "Página não encontrada"
-          description   = "Essa página não foi encontrada."
-          paragraph     = "Nada a se ver aqui, colega."
-        
-        [languages.pt.params.search]
-          enable = true
-          placeholder = "exemplo: lorem ipsum"
-
-      [languages.pt.menu]
-
-        [[languages.pt.menu.main]]
-          name = "Postagens"
-          weight = 2
-          url = "posts/"
-        
-        [[languages.pt.menu.main]]
-          name = "Contato"
-          weight = 3
-          url = "contact/"
           
