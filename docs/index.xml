@@ -10,10 +10,10 @@
     <lastBuildDate>Mon, 16 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/index.xml" rel="self" type="application/rss+xml" />
       <item>
         <title>jira in centos</title>
-        <link>https://note.killliu.com/posts/jira/</link>
+        <link>https://note.killliu.com/notes/jira/</link>
         <pubDate>Mon, 16 May 2022 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/posts/jira/</guid>
+        <guid>https://note.killliu.com/notes/jira/</guid>
         <description>jira core 官网下载
 jira software 官网下载
 jira service management 官网下载
@@ -22,19 +22,19 @@ jira service management 官网下载
     
       <item>
         <title>搭建 github &#43; hugo 博客 (macos)</title>
-        <link>https://note.killliu.com/posts/hugo_github_blog/</link>
+        <link>https://note.killliu.com/notes/hugo_github_blog/</link>
         <pubDate>Sun, 15 May 2022 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/posts/hugo_github_blog/</guid>
+        <guid>https://note.killliu.com/notes/hugo_github_blog/</guid>
         <description>A smalll description</description>
       </item>
     
       <item>
-        <title>About Me</title>
-        <link>https://note.killliu.com/contact/</link>
+        <title></title>
+        <link>https://note.killliu.com/resume/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://note.killliu.com/contact/</guid>
+        <guid>https://note.killliu.com/resume/</guid>
         <description>十多年U3D项目开发经验，五年U3D主程开发管理经验。精通U3D框架设计、开发及优化。协助美术资源制作、策划数据整合及配合服务端交互。对游戏开发有较深的理解，追求有效高效的项目开发，具备相应的分析解决问题的能力和团队管理经验。</description>
       </item>
     

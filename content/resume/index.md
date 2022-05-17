@@ -1,8 +1,3 @@
----
-title   : "About Me"
-
----
-
 ![killliu-head-icon](head.webp)
 
 

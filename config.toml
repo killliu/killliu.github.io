@@ -87,7 +87,7 @@ paginate = 3
     maxLength = 42  # Default is 32
     
     # Optional placeholder for search field
-    placeholder = "ie.: lorem ipsum"
+    placeholder = "eg. github + hugo"
     
 
   [params.style]
@@ -197,12 +197,12 @@ paginate = 3
     [languages.en.menu]
 
       [[languages.en.menu.main]]
-        name = "Posts"
+        name = "Notes"
         weight = 2
-        url = "posts/"
+        url = "notes/"
       
       [[languages.en.menu.main]]
-        name = "About Me"
+        name = "Resume"
         weight = 3
-        url = "contact/"
+        url = "resume/"
           
