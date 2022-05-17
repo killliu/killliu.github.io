@@ -13,19 +13,19 @@ paginate = 3
 
 # TEST
 # Netlify _headers
-[outputs]
-  home    = [ "HTML", "RSS", "HEADERS" ]
-  section = [ "HTML", "RSS" ]
+#[outputs]
+#  home    = [ "HTML", "RSS", "HEADERS" ]
+#  section = [ "HTML", "RSS" ]
 
-[mediaTypes."text/netlify"]
-  suffixes  = [ "" ]
-  delimiter = ""
+#[mediaTypes."text/netlify"]
+#  suffixes  = [ "" ]
+#  delimiter = ""
 
-[outputFormats.HEADERS]
-  mediaType       = "text/netlify"
-  baseName        = "_headers"
-  isPlainText     = true
-  notAlternative  = true
+#[outputFormats.HEADERS]
+#  mediaType       = "text/netlify"
+#  baseName        = "_headers"
+#  isPlainText     = true
+#  notAlternative  = true
 
 [markup.highlight]
   # To make use of the custom Chroma, this should be false
