@@ -1,5 +1,4 @@
 ---
-title                 : "Resume"
 disableTitleSeparator : true
 ---
 
