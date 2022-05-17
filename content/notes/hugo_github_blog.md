@@ -1,11 +1,10 @@
 ---
-title       : "搭建 github + hugo 博客 (macos)"
-date        : 2022-05-15T16:29:23+08:00
-draft       : false
-tags        : [tools]
-image       : "/image/tn.png"
-description : "A smalll description"
-toc         : true
+title                   : "搭建 github + hugo 博客 (macos)"
+date                    : 2022-05-15T16:29:23+08:00
+tags                    : [tools]
+toc                     : true
+disableTitleSeparator   : true
+draft                   : false
 ---
 
 ## 配置 github

@@ -1,9 +1,10 @@
 ---
-title       : "jira in centos"
-date        : 2022-05-16T16:29:23+08:00
-draft       : false
-tags        : [centos]
-toc         : true
+title       			: "jira (centos)"
+date        			: 2022-05-16T16:29:23+08:00
+tags        			: [centos]
+toc                     : true
+disableTitleSeparator   : true
+draft                   : false
 ---
 
 [jira core 官网下载](https://www.atlassian.com/software/jira/core/download)
