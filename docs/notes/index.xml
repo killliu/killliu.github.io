@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2022 killliu 粤ICP备14085800号-1</copyright>
-    <lastBuildDate>Mon, 16 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/notes/index.xml" rel="self" type="application/rss+xml" />
+      <item>
+        <title>FAQ macos</title>
+        <link>https://note.killliu.com/notes/macos/</link>
+        <pubDate>Tue, 17 May 2022 16:29:23 +0800</pubDate>
+        
+        <guid>https://note.killliu.com/notes/macos/</guid>
+        <description>端口占用 # 查看端口占用程序 sudo lsof -i tcp:2000   彻底删除某个软件 # 清除登陆项 系统偏好设置 — 用户组与群组 — 登陆项 — 移除（如果有的话） # 清除配置项 打开Finder — 前往 — 前往文件夹 — /Library/LaunchAgents 打开Finder — 前往 — 前往文件夹 — ~/Library/LaunchAgents 打开Finder — 前往 — 前往文件夹— /Library/StartupItems # 清除 钥匙串访问 数据   http server # 安装 nodejs # 安装 http-server sudo npm install http-server -g # 运行 cd xxx/targetFolder http-server   无法打开 “x x x”, 因为无法验证开发者 用一下命令增加 &amp;mdash; 安全性与隐私 &amp;mdash;&amp;gt; 任何来源</description>
+      </item>
+    
       <item>
         <title>jira (centos)</title>
         <link>https://note.killliu.com/notes/jira/</link>
