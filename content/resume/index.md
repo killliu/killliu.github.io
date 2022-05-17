@@ -1,5 +1,5 @@
 ---
-disableTitleSeparator : true
+disableTitleSeparator : false
 ---
 
 ![killliu-head-icon](head.webp)
