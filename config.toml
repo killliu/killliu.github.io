@@ -9,7 +9,7 @@ copyright = "Copyright © 2022 killliu 粤ICP备14085800号-1"
 enableEmoji = true
 enableInlineShortcodes = true
 
-paginate = 3
+paginate = 20
 
 # TEST
 # Netlify _headers
@@ -140,11 +140,11 @@ paginate = 3
 
       [[languages.en.menu.main]]
         name = "Notes"
-        weight = 2
+        weight = 1
         url = "notes/"
     
       [[languages.en.menu.main]]
         name = "Resume"
-        weight = 3
+        weight = 2
         url = "resume/"
           
