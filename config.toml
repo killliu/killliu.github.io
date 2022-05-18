@@ -73,13 +73,8 @@ paginate = 3
   titleSeparator = "|"
   
   [params.search]
-  
-    # Enable search form (at the post list)
-    # The default value is false
+
     enable = true
-  
-    # Limit search results
-    # The default value is 30
     maxResults = 15
     
     # Limit seach field input and pattern matching
@@ -87,9 +82,8 @@ paginate = 3
     maxLength = 42  # Default is 32
     
     # Optional placeholder for search field
-    placeholder = "eg. github + hugo"
+    placeholder = "eg. github"
     
-
   [params.style]
     isDark = true
 
@@ -98,10 +92,8 @@ paginate = 3
     ignoreSystemSettings = false
 
     # Accent colors for dark and light mode respectively
-    darkAccent   = "#1dbc91" # Default is "#1dbc91"
-    lightAccent  = "#1f676b" # Default is "#1f676b"
-
-    presets = [ "#225670", "#dd587c", "#902b37", "#f3a530", "#754e85", "#7fc121", "#a8314a", "#ff7433", "#3e6728", "#c063bd" ]
+    darkAccent   = "#CB8233"
+    lightAccent  = "#1f676b"
 
     # Use an icon or text for footnote return links
     # The default is false
@@ -130,56 +122,6 @@ paginate = 3
     description   = "This page was not found."
     paragraph     = "Nothing to see here, buddy."
     
-  [params.social.centralized]
-    #facebook      = [ "killliu" ]
-    #flickr        = [ "<username>" ]
-    github        = [ "killliu" ]
-    #gitlab        = [ "<username>" ]
-    #3instagram     = [ "<username>" ]
-    #keybase       = [ "<username>" ]
-    #linkedin      = [ "<username>" ]
-    #medium        = [ "<username>" ]
-    #reddit        = [ "<username>" ]
-    #snapchat      = [ "<username>" ]
-    #soundcloud    = [ "<username>" ]
-    #stackOverflow = [ "<username>" ]
-    #strava        = [ "<username>" ]
-    #telegram      = [ "<username>" ]
-    #twitch        = [ "<username>" ]
-    twitter       = [ "@killliu" ]
-    #vimeo         = [ "<username>" ]
-    #whatsapp      = [ "<number>" ]
-    #xing          = [ "<username>" ]
-    #youtube       = [ "<channelid>" ]
-    #entry         = [ "username", "label (optional)" ]
-    
-    # The "entry" here IS important. It's used to load the data.
-
-  [params.social.decentralized]
-  
-    [params.social.decentralized.element]
-      1 = [ "http://killliu.com/", "killliu" ]
-    
-    
-[privacy]
-
-  [privacy.vimeo]
-    disabled = false
-    simple = true
-
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
-
-  [privacy.instagram]
-    disabled = false
-    simple = true
-
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
-
 [services]
 
   [services.instagram]
@@ -200,7 +142,7 @@ paginate = 3
         name = "Notes"
         weight = 2
         url = "notes/"
-      
+    
       [[languages.en.menu.main]]
         name = "Resume"
         weight = 3
