@@ -123,7 +123,7 @@
       "inLanguage": "en",
       "datePublished": "2022-05-16",
       "dateModified": "2022-05-16",
-      "wordCount" : "606",
+      "wordCount" : "616",
       "publisher": {
         "@type": "Person",
         "name": "killliu"
@@ -391,14 +391,14 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># 修改配置文件</span>
 </span></span><span class="line"><span class="cl">vi /etc/my.cnf
 </span></span><span class="line"><span class="cl">......
-</span></span><span class="line"><span class="cl">default-storage-engine<span class="o">=</span>INNODB 			<span class="c1">#将默认存储引擎设置为InnoDB</span>
-</span></span><span class="line"><span class="cl"><span class="nv">character_set_server</span><span class="o">=</span>utf8mb4 			<span class="c1">#指定数据库服务器使用的字符集</span>
-</span></span><span class="line"><span class="cl"><span class="nv">innodb_large_prefix</span><span class="o">=</span>ON 					<span class="c1">#启用大前缀</span>
-</span></span><span class="line"><span class="cl"><span class="nv">innodb_default_row_format</span><span class="o">=</span>DYNAMIC 		<span class="c1">#将默认行格式设置为  DYNAMIC</span>
-</span></span><span class="line"><span class="cl"><span class="nv">innodb_file_format</span><span class="o">=</span>Barracuda 			<span class="c1">#将InnoDB文件格式设置为Barracuda</span>
-</span></span><span class="line"><span class="cl"><span class="nv">innodb_log_file_size</span><span class="o">=</span>2G 				<span class="c1">#指定值  innodb_log_file_size 至少为2G</span>
-</span></span><span class="line"><span class="cl"><span class="nv">max_allowed_packet</span> <span class="o">=</span> 256M 				<span class="c1">#将MySQL数据包大小设置为更大的值（256MB）</span>
-</span></span><span class="line"><span class="cl">transaction-isolation<span class="o">=</span>READ-COMMITTED	<span class="c1"># 解决安装confluence时“不正确的隔离级别”的保存</span>
+</span></span><span class="line"><span class="cl">default-storage-engine<span class="o">=</span>INNODB 		<span class="c1"># 将默认存储引擎设置为 InnoDB</span>
+</span></span><span class="line"><span class="cl"><span class="nv">character_set_server</span><span class="o">=</span>utf8mb4 		<span class="c1"># 指定数据库服务器使用的字符集</span>
+</span></span><span class="line"><span class="cl"><span class="nv">innodb_large_prefix</span><span class="o">=</span>ON 			<span class="c1"># 启用大前缀</span>
+</span></span><span class="line"><span class="cl"><span class="nv">innodb_default_row_format</span><span class="o">=</span>DYNAMIC 	<span class="c1"># 将默认行格式设置为  DYNAMIC</span>
+</span></span><span class="line"><span class="cl"><span class="nv">innodb_file_format</span><span class="o">=</span>Barracuda 		<span class="c1"># 将 InnoDB 文件格式设置为 Barracuda</span>
+</span></span><span class="line"><span class="cl"><span class="nv">innodb_log_file_size</span><span class="o">=</span>2G 		<span class="c1"># 指定值 innodb_log_file_size 至少为2G</span>
+</span></span><span class="line"><span class="cl"><span class="nv">max_allowed_packet</span> <span class="o">=</span> 256M 		<span class="c1"># 将 MySQL 数据包大小设置为更大的值（256MB）</span>
+</span></span><span class="line"><span class="cl">transaction-isolation<span class="o">=</span>READ-COMMITTED	<span class="c1"># 解决安装 confluence 时 “不正确的隔离级别” 的保存</span>
 </span></span><span class="line"><span class="cl">......
 </span></span><span class="line"><span class="cl"><span class="c1"># 重启</span>
 </span></span><span class="line"><span class="cl">systemctl restart mysqld
@@ -608,13 +608,7 @@
 
   <h2 id="通知方案"><a class="anchor" href="#通知方案" title='Anchor for: 通知方案.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 通知方案</h2> 
 
-<p>（不要用邮件通知、用插件 notifications 桌面通知）</p>
-<p><a href="https://community.atlassian.com/t5/Jira-questions/Using-Gmail-as-a-JIRA-Mail-Server/qaq-p/824782">邮件通知参考</a></p>
-<p>google 生产</p>
-<p><a href="mailto:killliu@163.com">killliu@163.com</a> app password</p>
-<blockquote>
-<p>zrrhsmbeadyuggri</p>
-</blockquote>
+<p>（不要用邮件通知、用插件 notifications 桌面通知）<a href="https://community.atlassian.com/t5/Jira-questions/Using-Gmail-as-a-JIRA-Mail-Server/qaq-p/824782">邮件通知参考</a></p>
 
 
 

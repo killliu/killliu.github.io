@@ -22,7 +22,7 @@ sudo lsof -i tcp:2000
 # 清除配置项
 打开Finder — 前往 — 前往文件夹 — /Library/LaunchAgents
 打开Finder — 前往 — 前往文件夹 — ~/Library/LaunchAgents
-打开Finder — 前往 — 前往文件夹— /Library/StartupItems
+打开Finder — 前往 — 前往文件夹 — /Library/StartupItems
 # 清除 钥匙串访问 数据
 ```
 
@@ -69,7 +69,7 @@ mysql start
 
 ```sh
 # cd 到某个目录
-scp root@xxx.xxx.xxx.xxx:/root/com.yahaha.lua-runtime.7z ./lua.7z
+scp root@10.211.55.6:/root/xxx.zip ./xxx.zip
 ```
 
 ## lua 环境安装

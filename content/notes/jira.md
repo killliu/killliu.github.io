@@ -76,14 +76,14 @@ FLUSH PRIVILEGES;
 # 修改配置文件
 vi /etc/my.cnf
 ......
-default-storage-engine=INNODB 			#将默认存储引擎设置为InnoDB
-character_set_server=utf8mb4 			#指定数据库服务器使用的字符集
-innodb_large_prefix=ON 					#启用大前缀
-innodb_default_row_format=DYNAMIC 		#将默认行格式设置为  DYNAMIC
-innodb_file_format=Barracuda 			#将InnoDB文件格式设置为Barracuda
-innodb_log_file_size=2G 				#指定值  innodb_log_file_size 至少为2G
-max_allowed_packet = 256M 				#将MySQL数据包大小设置为更大的值（256MB）
-transaction-isolation=READ-COMMITTED	# 解决安装confluence时“不正确的隔离级别”的保存
+default-storage-engine=INNODB 		# 将默认存储引擎设置为 InnoDB
+character_set_server=utf8mb4 		# 指定数据库服务器使用的字符集
+innodb_large_prefix=ON 			# 启用大前缀
+innodb_default_row_format=DYNAMIC 	# 将默认行格式设置为  DYNAMIC
+innodb_file_format=Barracuda 		# 将 InnoDB 文件格式设置为 Barracuda
+innodb_log_file_size=2G 		# 指定值 innodb_log_file_size 至少为2G
+max_allowed_packet = 256M 		# 将 MySQL 数据包大小设置为更大的值（256MB）
+transaction-isolation=READ-COMMITTED	# 解决安装 confluence 时 “不正确的隔离级别” 的保存
 ......
 # 重启
 systemctl restart mysqld
@@ -234,15 +234,7 @@ wnEw8d9fMwa5kiq944CFDrm7CiVQs7KSt7QamMZ/QgwY2LtX02g8
 
 ## 通知方案
 
-（不要用邮件通知、用插件 notifications 桌面通知）
-
-[邮件通知参考](https://community.atlassian.com/t5/Jira-questions/Using-Gmail-as-a-JIRA-Mail-Server/qaq-p/824782)
-
-google 生产
-
-killliu@163.com app password
-
-> zrrhsmbeadyuggri
+（不要用邮件通知、用插件 notifications 桌面通知）[邮件通知参考](https://community.atlassian.com/t5/Jira-questions/Using-Gmail-as-a-JIRA-Mail-Server/qaq-p/824782)
 
 ## 配置黑名单
 
