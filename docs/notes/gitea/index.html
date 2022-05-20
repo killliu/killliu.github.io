@@ -123,7 +123,7 @@
       "inLanguage": "en",
       "datePublished": "2021-11-13",
       "dateModified": "2021-11-13",
-      "wordCount" : "283",
+      "wordCount" : "324",
       "publisher": {
         "@type": "Person",
         "name": "killliu"
@@ -263,6 +263,7 @@
       </ul>
     </li>
     <li><a href="#gitea-本地拉取--master-推送">gitea 本地拉取 &amp; master 推送</a></li>
+    <li><a href="#配置-clashx-代理">配置 ClashX 代理</a></li>
   </ul>
 </nav>
   </details>
@@ -492,6 +493,26 @@
 </span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;add readme file&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 推送并建立远端库</span>
 </span></span><span class="line"><span class="cl">git push -u origin master
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="配置-clashx-代理"><a class="anchor" href="#配置-clashx-代理" title='Anchor for: 配置 ClashX 代理.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 配置 ClashX 代理</h2> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 查看当前代理</span>
+</span></span><span class="line"><span class="cl">git config --global --get http.proxy
+</span></span><span class="line"><span class="cl">git config --global --get https.proxy
+</span></span><span class="line"><span class="cl"><span class="c1"># 清空当前代理</span>
+</span></span><span class="line"><span class="cl">git config --global --unset http.proxy
+</span></span><span class="line"><span class="cl">git config --global --unset https.proxy
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置 clashx 代理</span>
+</span></span><span class="line"><span class="cl">git config --global http.proxy protocol://127.0.0.1:7890
+</span></span><span class="line"><span class="cl">git config --global https.proxy protocol://127.0.0.1:7890
 </span></span></code></pre></div>
 
 

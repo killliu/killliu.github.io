@@ -134,3 +134,17 @@ git commit -m "add readme file"
 # 推送并建立远端库
 git push -u origin master
 ```
+
+## 配置 ClashX 代理
+
+```sh
+# 查看当前代理
+git config --global --get http.proxy
+git config --global --get https.proxy
+# 清空当前代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+# 配置 clashx 代理
+git config --global http.proxy protocol://127.0.0.1:7890
+git config --global https.proxy protocol://127.0.0.1:7890
+```
