@@ -1,7 +1,7 @@
 ---
 title       			: "jira (centos)"
-date        			: 2022-05-16T16:29:23+08:00
-tags        			: [centos]
+date        			: 2021-11-06T16:29:23+08:00
+tags        			: [tools]
 toc                     : true
 disableTitleSeparator   : true
 draft                   : false

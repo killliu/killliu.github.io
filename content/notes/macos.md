@@ -1,6 +1,6 @@
 ---
 title                   : "FAQ macos"
-date                    : 2022-05-17T16:29:23+08:00
+date                    : 2021-01-06T16:29:23+08:00
 tags        			: [faq]
 toc                     : true
 disableTitleSeparator   : true

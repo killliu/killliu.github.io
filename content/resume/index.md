@@ -105,17 +105,17 @@ disableTitleSeparator : false
 ![title](line.webp)
 **&emsp;技能**
 
-:white_check_mark:&ensp;:white_check_mark:&ensp;:white_check_mark:&ensp;:white_check_mark:&ensp;:ballot_box_with_check:&emsp;&emsp;Unity3D
+:white_check_mark:&ensp;:white_check_mark:&ensp;:white_check_mark:&ensp;:white_check_mark:&ensp;:white_square_button:&emsp;&emsp;Unity3D
 
-:white_check_mark:&ensp;:white_check_mark:&ensp;:white_check_mark:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&emsp;&emsp;C#
+:white_check_mark:&ensp;:white_check_mark:&ensp;:white_check_mark:&ensp;:white_square_button:&ensp;:white_square_button:&emsp;&emsp;C#
 
-:white_check_mark:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&emsp;&emsp;Golang
+:white_check_mark:&ensp;:white_square_button:&ensp;:white_square_button:&ensp;:white_square_button:&ensp;:white_square_button:&emsp;&emsp;Golang
 
-:white_check_mark:&ensp;:white_check_mark:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&emsp;&emsp;Vue & gin
+:white_check_mark:&ensp;:white_check_mark:&ensp;:white_square_button:&ensp;:white_square_button:&ensp;:white_square_button:&emsp;&emsp;Vue & gin
 
-:white_check_mark:&ensp;:white_check_mark:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&emsp;&emsp;Photoshop
+:white_check_mark:&ensp;:white_check_mark:&ensp;:white_square_button:&ensp;:white_square_button:&ensp;:white_square_button:&emsp;&emsp;Photoshop
 
-:white_check_mark:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&ensp;:ballot_box_with_check:&emsp;&emsp;3DMAX
+:white_check_mark:&ensp;:white_square_button:&ensp;:white_square_button:&ensp;:white_square_button:&ensp;:white_square_button:&emsp;&emsp;3DMAX
 
 ----
 

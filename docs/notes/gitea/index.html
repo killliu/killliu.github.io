@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="dark">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Hugo 0.98.0">
+<meta name="theme" content="Color Your World -- gitlab.com/rmaguiar/hugo-theme-color-your-world">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>gitea (centos)</title>
+
+
+<meta name="author" content="killliu">
+
+
+
+<meta name="robots" content="index follow">
+
+
+
+
+  
+    <link rel="canonical" href="https://note.killliu.com/notes/gitea/">
+  
+
+
+
+
+
+
+
+
+<meta property="og:site_name" content="killliu&#39;s notes">
+<meta property="og:title" content="gitea (centos)">
+
+  <meta property="og:url" content="https://note.killliu.com/notes/gitea/">
+
+
+
+
+
+
+
+
+  <meta property="og:type" content="article">
+  
+  
+    <meta property="article:published_time" content="2021-11-13">
+    <meta property="article:modified_time" content="2021-11-13">
+    <meta property="og:updated_time" content="2021-11-13">
+  
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#222">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebSite",
+        "@id": "https:\/\/note.killliu.com\/"
+      },
+      "headline": "gitea (centos)",
+      "description": "",
+      
+      "url": "https:\/\/note.killliu.com\/notes\/gitea\/",
+      "inLanguage": "en",
+      "datePublished": "2021-11-13",
+      "dateModified": "2021-11-13",
+      "wordCount" : "283",
+      "publisher": {
+        "@type": "Person",
+        "name": "killliu"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "killliu",
+        "description": "Some indescribable horror.",
+        
+      }
+    }
+  </script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://note.killliu.com/css/main.min.27b58d8fdb657fdc3970734036e6706bb47fb893562fec6c0d1aaa61b211d8da.css" integrity="sha256-J7WNj9tlf9w5cHNANuZwa7R/uJNWL&#43;xsDRqqYbIR2No=" crossorigin="anonymous">
+
+
+
+<noscript>
+
+  
+  
+
+  
+    <meta name="theme-color" content="#CB8233" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#1f676b" media="(prefers-color-scheme: light)">
+  
+
+  
+  <link rel="stylesheet" href="https://note.killliu.com/css/noscript.min.0f208a516c4efc455594eda62b46a723654120d87060a5341b00a817b6f061c8.css" integrity="sha256-DyCKUWxO/EVVlO2mK0anI2VBINhwYKU0GwCoF7bwYcg=" crossorigin="anonymous">
+
+</noscript>
+
+
+
+<link rel="preload" href="/fonts/open-sans-v17-latin-700.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-italic.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-regular.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/oswald-v29-latin-700.woff2" as="font" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="https://note.killliu.com/js/main.7477a315965eb0a900fb319f6b6d07346f0cb9a73e4204751a25606039413777.js" integrity="sha256-dHejFZZesKkA&#43;zGfa20HNG8Muac&#43;QgR1GiVgYDlBN3c=" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+
+    <header>
+      
+
+  <a href="/">killliu&#39;s notes</a>
+
+
+
+
+  
+    <nav aria-label="Main menu.">
+      <ul>
+        
+          <li>
+            <a class="btn" href="/notes/">Notes</a>
+          </li>
+        
+          <li>
+            <a class="btn" href="/resume/">Resume</a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+
+
+    </header>
+
+    <div class="filler">
+      
+
+  <main>
+    <article>
+      <header>
+        
+        <h1>gitea (centos)</h1>
+
+        
+          <section class="terms">
+            <ul><li><a class="btn" href="/tags/tools/">tools</a></li></ul>
+          </section>
+          <p>
+            
+              Published on <time datetime="2021-11-13">2021-11-13</time>
+            
+          </p>
+        
+        
+        
+        
+      </header>
+    
+      
+<details class="toc" open>
+    <summary class="outline-dashed">
+      Contents
+    </summary>
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#配置-ssh-key">配置 ssh key</a>
+      <ul>
+        <li><a href="#macos">macos</a></li>
+        <li><a href="#windows">windows</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置-sourcetree">配置 SourceTree</a>
+      <ul>
+        <li><a href="#macos-1">macos</a></li>
+        <li><a href="#windows-1">windows</a></li>
+      </ul>
+    </li>
+    <li><a href="#gitea-本地拉取--master-推送">gitea 本地拉取 &amp; master 推送</a></li>
+  </ul>
+</nav>
+  </details>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="安装"><a class="anchor" href="#安装" title='Anchor for: 安装.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 安装</h2> 
+
+<p><a href="https://github.com/go-gitea/gitea/blob/main/contrib/systemd/gitea.service">gitea.service</a> 配置参考</p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir /root/gitea
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /root/gitea
+</span></span><span class="line"><span class="cl">wget -O gitea https://dl.gitea.io/gitea/1.14.3/gitea-1.14.3-linux-amd64
+</span></span><span class="line"><span class="cl">chmod +x gitea
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建用户</span>
+</span></span><span class="line"><span class="cl">adduser git
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建所需目录结构</span>
+</span></span><span class="line"><span class="cl">mkdir -p /var/lib/gitea/custom/
+</span></span><span class="line"><span class="cl">mkdir -p /var/lib/gitea/data/
+</span></span><span class="line"><span class="cl">mkdir -p /var/lib/gitea/log/
+</span></span><span class="line"><span class="cl">chown -R git:git /var/lib/gitea/
+</span></span><span class="line"><span class="cl">chmod -R <span class="m">750</span> /var/lib/gitea/
+</span></span><span class="line"><span class="cl">mkdir /etc/gitea
+</span></span><span class="line"><span class="cl">chown root:git /etc/gitea
+</span></span><span class="line"><span class="cl">chmod <span class="m">770</span> /etc/gitea
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置Gitea的工作目录 </span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GITEA_WORK_DIR</span><span class="o">=</span>/var/lib/gitea/
+</span></span><span class="line"><span class="cl"><span class="c1"># 复制应用文件到全局路径</span>
+</span></span><span class="line"><span class="cl">cp gitea /usr/local/bin/gitea
+</span></span><span class="line"><span class="cl"><span class="c1"># 开始启动配置 gitea.service 参考上面连接</span>
+</span></span><span class="line"><span class="cl">vi /etc/systemd/system/gitea.service
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> gitea
+</span></span><span class="line"><span class="cl">sudo systemctl start gitea
+</span></span><span class="line"><span class="cl"><span class="c1"># 启动配置</span>
+</span></span><span class="line"><span class="cl"><span class="nv">GITEA_WORK_DIR</span><span class="o">=</span>/var/lib/gitea/ /usr/local/bin/gitea web -c /etc/gitea/app.ini
+</span></span><span class="line"><span class="cl"><span class="c1"># 打开网页进行配置 eg. gitea.killliu.com</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="c1"># 重启</span>
+</span></span><span class="line"><span class="cl">systemctl restart gitea
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看进程日志</span>
+</span></span><span class="line"><span class="cl">journalctl -b <span class="m">0</span> -u gitea
+</span></span></code></pre></div><p><strong><code>error: ........ status=217/USER</code></strong></p>
+<p>将 /etc/systemd/system/gitea.service 中的 Type、User、Group这几行注释掉</p>
+
+
+
+
+
+
+
+
+
+  <h2 id="配置-ssh-key"><a class="anchor" href="#配置-ssh-key" title='Anchor for: 配置 ssh key.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 配置 ssh key</h2> 
+
+
+
+
+
+
+
+
+
+
+  <h3 id="macos"><a class="anchor" href="#macos" title='Anchor for: macos.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> macos</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># git bash</span>
+</span></span><span class="line"><span class="cl">ssh-keygen -t rsa -C <span class="s1">&#39;your_email@email.com&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 然后一路回车(-C 参数是你的邮箱地址)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看本机ssh公钥</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.ssh
+</span></span><span class="line"><span class="cl">ls
+</span></span><span class="line"><span class="cl">cat id_rsa.pub
+</span></span><span class="line"><span class="cl"><span class="c1"># 多个密钥</span>
+</span></span><span class="line"><span class="cl">ssh-keygen -t rsa -C <span class="s2">&#34;your_email@email.com&#34;</span> -f ~/.ssh/new_ssh_key_names
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="windows"><a class="anchor" href="#windows" title='Anchor for: windows.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> windows</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">cmd
+</span></span><span class="line"><span class="cl"><span class="c1"># c:\Users\admin</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> c:<span class="se">\U</span>sers<span class="se">\a</span>dmin<span class="se">\.</span>ssh
+</span></span><span class="line"><span class="cl">ssh-keygen -t rsa -C <span class="s2">&#34;sha.liu@igg.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -t 指定密钥类型，默认是rsa，可以省略</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -C 设置注释文字，比如邮箱</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -f 指定密钥文件存储文件名</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 按三次回车</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># id_rsa</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># id_rsa.pub</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 用记事本打开 id_rsa.pub，并复制其内容</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># gitlab ---&gt; Profile Settings ---&gt; SSH Keys ---&gt; add key</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="配置-sourcetree"><a class="anchor" href="#配置-sourcetree" title='Anchor for: 配置 SourceTree.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 配置 SourceTree</h2> 
+
+
+
+
+
+
+
+
+
+
+  <h3 id="macos-1"><a class="anchor" href="#macos-1" title='Anchor for: macos.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> macos</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 终端 </span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.ssh/
+</span></span><span class="line"><span class="cl">ssh-keygen -t rsa -C <span class="s2">&#34;your_username_or_email&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Enter file in which to save the key: your_new_key_name</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 将生成的文件用记事本打开并复制其所有内容 </span>
+</span></span><span class="line"><span class="cl">~/.ssh/your_new_key_name.pub
+</span></span><span class="line"><span class="cl"><span class="c1"># 打开网页添加信任（eg.）10.211.55.6</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 登陆后右上角</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># settings</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># SSH Keys</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 粘贴</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># add key</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 将网站中库的http库路径复制</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># source tree</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 新建</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 从URL克隆</span>
+</span></span></code></pre></div><p><strong><code>error: 提示想要使用储存在钥匙串...中的机密信息</code></strong></p>
+<p>打开钥匙串访问 &mdash;&gt; 双击对应的应用 eg. &hellip; Access Key for  git &mdash;&gt; 访问控制 &mdash;&gt; 允许所有应用程序访问此项目 &mdash;&gt; 储存更改</p>
+
+
+
+
+
+
+
+
+
+  <h3 id="windows-1"><a class="anchor" href="#windows-1" title='Anchor for: windows.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> windows</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 工具 -&gt; 选项 -&gt; 一般 </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># SSH客户端配置</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># SSH密钥：C:\Users\admin\Documents\gitlab_ssh_key\id_rsa</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># SSH客户端： OpenSSH</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="gitea-本地拉取--master-推送"><a class="anchor" href="#gitea-本地拉取--master-推送" title='Anchor for: gitea 本地拉取 &amp; master 推送.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> gitea 本地拉取 &amp; master 推送</h2> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 进入某个目录，右键打开 git bash</span>
+</span></span><span class="line"><span class="cl">git clone http://gitea.killliu.com/killliu/klframe.git
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入klframe目录，并新增一 README.md 空文件</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl"><span class="c1"># 提交到本地库</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;add readme file&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 推送并建立远端库</span>
+</span></span><span class="line"><span class="cl">git push -u origin master
+</span></span></code></pre></div>
+
+
+    </article>
+  </main>
+
+
+    </div>
+    
+    <footer>
+      
+
+
+  
+
+    
+
+    
+      
+      
+    
+    
+    <p>Copyright © 2022 killliu 粤ICP备14085800号-1</p>
+
+  
+
+
+
+
+
+
+
+
+    </footer>
+    
+    
+    
+
+    
+    
+
+  </body>
+</html>
