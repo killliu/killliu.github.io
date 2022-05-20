@@ -1,7 +1,7 @@
 ---
 title                   : "FAQ macos"
 date                    : 2021-01-06T16:29:23+08:00
-tags        			: [faq]
+tags        			: [FAQ]
 toc                     : true
 disableTitleSeparator   : true
 draft                   : false
