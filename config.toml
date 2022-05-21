@@ -82,7 +82,7 @@ paginate = 20
     maxLength = 42  # Default is 32
     
     # Optional placeholder for search field
-    placeholder = "eg. github"
+    placeholder = "e.g. github"
     
   [params.style]
     isDark = true
@@ -117,10 +117,10 @@ paginate = 20
     # The default is ".5s ease"
     changeTransition = ".3s ease"
     
-  [params.notFound]
-    title         = "Page not found"
-    description   = "This page was not found."
-    paragraph     = "Nothing to see here, buddy."
+[params.notFound]
+  title         = "Page not found"
+  description   = "This page was not found."
+  paragraph     = "Nothing to see here, buddy."
     
 [services]
 

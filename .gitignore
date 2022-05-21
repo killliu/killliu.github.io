@@ -2,4 +2,6 @@
 *.csproj
 *.sln
 
+.vscode
+
 **/**/.DS_Store
