@@ -10,20 +10,20 @@
     <lastBuildDate>Wed, 18 May 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/notes/index.xml" rel="self" type="application/rss+xml" />
       <item>
         <title>emoji</title>
-        <link>https://note.killliu.com/notes/emoji/</link>
+        <link>https://note.killliu.com/notes/tool_emoji/</link>
         <pubDate>Wed, 18 May 2022 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/notes/emoji/</guid>
+        <guid>https://note.killliu.com/notes/tool_emoji/</guid>
         <description>People
    :bowtie: bowtie 😄 smile 😆 laughing     😊 blush 😃 smiley ☺️ relaxed   😏 smirk 😍 heart_eyes 😘 kissing_heart   😚 kissing_closed_eyes 😳 flushed 😌 relieved   😆 satisfied 😁 grin 😉 wink   😜 stuck_out_tongue_winking_eye 😝 stuck_out_tongue_closed_eyes 😀 grinning   😗 kissing 😙 kissing_smiling_eyes 😛 stuck_out_tongue   😴 sleeping 😟 worried 😦 frowning   😧 anguished 😮 open_mouth 😬 grimacing   😕 confused 😯 hushed 😑 expressionless   😒 unamused 😅 sweat_smile 😓 sweat   😥 disappointed_relieved 😩 weary 😔 pensive   😞 disappointed 😖 confounded 😨 fearful   😰 cold_sweat 😣 persevere 😢 cry   😭 sob 😂 joy 😲 astonished   😱 scream :neckbeard: neckbeard 😫 tired_face   😠 angry 😡 rage 😤 triumph   😪 sleepy 😋 yum 😷 mask   😎 sunglasses 😵 dizzy_face 👿 imp   😈 smiling_imp 😐 neutral_face 😶 no_mouth   😇 innocent 👽 alien 💛 yellow_heart   💙 blue_heart 💜 purple_heart ❤️ heart   💚 green_heart 💔 broken_heart 💓 heartbeat   💗 heartpulse 💕 two_hearts 💞 revolving_hearts   💘 cupid 💖 sparkling_heart ✨ sparkles   ⭐ star 🌟 star2 💫 dizzy   💥 boom 💥 collision 💢 anger   ❗ exclamation ❓ question ❕ grey_exclamation   ❔ grey_question 💤 zzz 💨 dash   💦 sweat_drops 🎶 notes 🎵 musical_note   🔥 fire 💩 hankey 💩 poop   💩 shit 👍 +1 👍 thumbsup   👎 -1 👎 thumbsdown 👌 ok_hand   👊 punch 👊 facepunch ✊ fist   ✌️ v 👋 wave ✋ hand   ✋ raised_hand 👐 open_hands ☝️ point_up   👇 point_down 👈 point_left 👉 point_right   🙌 raised_hands 🙏 pray 👆 point_up_2   👏 clap 💪 muscle 🤘 metal   🖕 fu 🚶‍♂️ walking 🏃‍♂️ runner   🏃 running 👫 couple 👨‍👩‍👦 family   👬 two_men_holding_hands 👭 two_women_holding_hands 💃 dancer   👯‍♀️ dancers 🙆‍♀️ ok_woman 🙅‍♀️ no_good   💁‍♀️ information_desk_person 🙋‍♀️ raising_hand 👰 bride_with_veil   🙎‍♀️ person_with_pouting_face 🙍‍♀️ person_frowning 🙇‍♂️ bow   💏 couplekiss 💑 couple_with_heart 💆‍♀️ massage   💇‍♀️ haircut 💅 nail_care 👦 boy   👧 girl 👩 woman 👨 man   👶 baby 👵 older_woman 👴 older_man   👱‍♂️ person_with_blond_hair 👲 man_with_gua_pi_mao 👳‍♂️ man_with_turban   👷‍♂️ construction_worker 👮‍♂️ cop 👼 angel   👸 princess 😺 smiley_cat 😸 smile_cat   😻 heart_eyes_cat 😽 kissing_cat 😼 smirk_cat   🙀 scream_cat 😿 crying_cat_face 😹 joy_cat   😾 pouting_cat 👹 japanese_ogre 👺 japanese_goblin   🙈 see_no_evil 🙉 hear_no_evil 🙊 speak_no_evil   💂‍♂️ guardsman 💀 skull 🐾 feet   👄 lips 💋 kiss 💧 droplet   👂 ear 👀 eyes 👃 nose   👅 tongue 💌 love_letter 👤 bust_in_silhouette   👥 busts_in_silhouette 💬 speech_balloon 💭 thought_balloon   :feelsgood: feelsgood :finnadie: finnadie :goberserk: goberserk   :godmode: godmode :hurtrealbad: hurtrealbad :rage1: rage1   :rage2: rage2 :rage3: rage3 :rage4: rage4   :suspect: suspect :trollface: trollface     Nature</description>
       </item>
     
       <item>
         <title>搭建 github &#43; hugo 博客 (macos)</title>
-        <link>https://note.killliu.com/notes/hugo_github_blog/</link>
+        <link>https://note.killliu.com/notes/tool_github_blog/</link>
         <pubDate>Sun, 15 May 2022 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/notes/hugo_github_blog/</guid>
+        <guid>https://note.killliu.com/notes/tool_github_blog/</guid>
         <description>配置 github 新建仓库: killliu.github.io 点击新仓库的 Settings 页签中的 Pages，设置自定义域名：note.killliu.com -&amp;gt; save
  配置域名 DNS DNS 管理配置中增加一条记录
    类型 名称 资料     CNAME note 🌟 killliu.github.io     安装 hugo brew install hugo hugo version   拉取仓库  git clone https://github.com/killliu/killliu.github.io.git
@@ -34,10 +34,10 @@
     
       <item>
         <title>FAQ raspberry</title>
-        <link>https://note.killliu.com/notes/raspberry/</link>
+        <link>https://note.killliu.com/notes/faq_raspberry/</link>
         <pubDate>Tue, 01 Mar 2022 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/notes/raspberry/</guid>
+        <guid>https://note.killliu.com/notes/faq_raspberry/</guid>
         <description>Raspberry Ubuntu 官网 Raspberry 中下载树莓派的安装软件
 树莓派系统下载地址 ubuntu镜像地址
 通过 Raspberry Pi Image 软件安装 ubuntu 系统
@@ -55,20 +55,32 @@ sudo passwd root # 根据提示输入新密码（两次） # 切换到 root 用�
     
       <item>
         <title>gitea (centos)</title>
-        <link>https://note.killliu.com/notes/gitea/</link>
+        <link>https://note.killliu.com/notes/tool_gitea/</link>
         <pubDate>Sat, 13 Nov 2021 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/notes/gitea/</guid>
+        <guid>https://note.killliu.com/notes/tool_gitea/</guid>
         <description>安装 gitea.service 配置参考
 mkdir /root/gitea cd /root/gitea wget -O gitea https://dl.gitea.io/gitea/1.14.3/gitea-1.14.3-linux-amd64 chmod +x gitea # 创建用户 adduser git # 创建所需目录结构 mkdir -p /var/lib/gitea/custom/ mkdir -p /var/lib/gitea/data/ mkdir -p /var/lib/gitea/log/ chown -R git:git /var/lib/gitea/ chmod -R 750 /var/lib/gitea/ mkdir /etc/gitea chown root:git /etc/gitea chmod 770 /etc/gitea # 配置Gitea的工作目录  export GITEA_WORK_DIR=/var/lib/gitea/ # 复制应用文件到全局路径 cp gitea /usr/local/bin/gitea # 开始启动配置 gitea.service 参考上面连接 vi /etc/systemd/system/gitea.service sudo systemctl enable gitea sudo systemctl start gitea # 启动配置 GITEA_WORK_DIR=/var/lib/gitea/ /usr/local/bin/gitea web -c /etc/gitea/app.</description>
       </item>
     
       <item>
-        <title>FAQ windows</title>
-        <link>https://note.killliu.com/notes/windows/</link>
+        <title>jira (centos)</title>
+        <link>https://note.killliu.com/notes/tool_jira/</link>
         <pubDate>Sat, 06 Nov 2021 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/notes/windows/</guid>
+        <guid>https://note.killliu.com/notes/tool_jira/</guid>
+        <description>jira core 官网下载
+jira software 官网下载
+jira service management 官网下载
+ 安裝java tar -xvf jdk-8u101-linux-x64.tar.gz -C /usr/local mv /usr/local/jdk1.8.0_101/ /usr/local/java ls /usr/local/ # 配置环境 sed -i &amp;#39;$aJAVA_HOME=/usr/local/java\nCLASSPATH=$JAVA_HOME/lib\nPATH=$PATH:$JAVA_HOME/bin\nexport PATH JAVA_HOME CLASSPATH&amp;#39; /etc/profile # 重置配置 source /etc/profile java -version   安装 mysql 5.7 rm -rf /var/log/mysqld.log sudo dnf remove @mysql sudo dnf module reset mysql &amp;amp;&amp;amp; sudo dnf module disable mysql # 创建新的存储库文件 sudo vi /etc/yum.repos.d/mysql-community.repo ... [mysql57-community] name=MySQL 5.7 Community Server baseurl=http://repo.</description>
+      </item>
+    
+      <item>
+        <title>windows (FAQ)</title>
+        <link>https://note.killliu.com/notes/faq_windows/</link>
+        <pubDate>Sat, 06 Nov 2021 16:29:23 +0800</pubDate>
+        
+        <guid>https://note.killliu.com/notes/faq_windows/</guid>
         <description>telnet  telnet 121.40.132.94 80
   node 下载地址：官网
  GIF 工具 https://github.com/NickeManarin/ScreenToGif 下载链接：百度云 提取码：7w92
@@ -81,23 +93,11 @@ set cur_path=&amp;#34;%cd&amp;#34; echo cur_path rd /q /s your_target_folder_pat
       </item>
     
       <item>
-        <title>jira (centos)</title>
-        <link>https://note.killliu.com/notes/jira/</link>
-        <pubDate>Sat, 06 Nov 2021 16:29:23 +0800</pubDate>
-        
-        <guid>https://note.killliu.com/notes/jira/</guid>
-        <description>jira core 官网下载
-jira software 官网下载
-jira service management 官网下载
- 安裝java tar -xvf jdk-8u101-linux-x64.tar.gz -C /usr/local mv /usr/local/jdk1.8.0_101/ /usr/local/java ls /usr/local/ # 配置环境 sed -i &amp;#39;$aJAVA_HOME=/usr/local/java\nCLASSPATH=$JAVA_HOME/lib\nPATH=$PATH:$JAVA_HOME/bin\nexport PATH JAVA_HOME CLASSPATH&amp;#39; /etc/profile # 重置配置 source /etc/profile java -version   安装 mysql 5.7 rm -rf /var/log/mysqld.log sudo dnf remove @mysql sudo dnf module reset mysql &amp;amp;&amp;amp; sudo dnf module disable mysql # 创建新的存储库文件 sudo vi /etc/yum.repos.d/mysql-community.repo ... [mysql57-community] name=MySQL 5.7 Community Server baseurl=http://repo.</description>
-      </item>
-    
-      <item>
         <title>FAQ macos</title>
-        <link>https://note.killliu.com/notes/macos/</link>
+        <link>https://note.killliu.com/notes/faq_macos/</link>
         <pubDate>Wed, 06 Jan 2021 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/notes/macos/</guid>
+        <guid>https://note.killliu.com/notes/faq_macos/</guid>
         <description>端口占用 # 查看端口占用程序 sudo lsof -i tcp:2000   彻底删除某个软件 # 清除登陆项 系统偏好设置 — 用户组与群组 — 登陆项 — 移除（如果有的话） # 清除配置项 打开Finder — 前往 — 前往文件夹 — /Library/LaunchAgents 打开Finder — 前往 — 前往文件夹 — ~/Library/LaunchAgents 打开Finder — 前往 — 前往文件夹 — /Library/StartupItems # 清除 钥匙串访问 数据   http server # 安装 nodejs # 安装 http-server sudo npm install http-server -g # 运行 cd xxx/targetFolder http-server   无法打开 “x x x”, 因为无法验证开发者 用一下命令增加 &amp;mdash; 安全性与隐私 &amp;mdash;&amp;gt; 任何来源</description>
       </item>
     
