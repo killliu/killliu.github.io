@@ -1,5 +1,5 @@
 ---
-title                   : "FAQ macos"
+title                   : "macos"
 date                    : 2021-01-06T16:29:23+08:00
 tags        			: [FAQ]
 toc                     : true

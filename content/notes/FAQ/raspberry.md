@@ -1,7 +1,7 @@
 ---
-title                   : "FAQ raspberry"
+title                   : "raspberry"
 date                    : 2022-03-01T16:29:23+08:00
-tags        			: [FAQ]
+tags        			      : [FAQ]
 toc                     : true
 disableTitleSeparator   : true
 draft                   : false

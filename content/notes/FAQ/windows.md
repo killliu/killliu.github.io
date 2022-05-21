@@ -1,5 +1,5 @@
 ---
-title                   : "windows (FAQ)"
+title                   : "windows"
 date                    : 2021-11-06T16:29:23+08:00
 tags        			: [FAQ]
 toc                     : true
