@@ -1,5 +1,5 @@
 ---
-title                   : "raspberry"
+title                   : "raspberry (FAQ)"
 date                    : 2022-03-01T16:29:23+08:00
 tags        			      : [FAQ]
 toc                     : true
@@ -363,7 +363,7 @@ firewall-cmd --zone=public --add-port=8096/tcp --permanent
 # 访问 10.26.43.2:8096
 ```
 
-**`ERROR Couldn't find a valid ICU package installed on the system`**
+**`ERROR`** Couldn't find a valid ICU package installed on the system
 
 > yum -y install libicu
 
