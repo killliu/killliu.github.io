@@ -10,10 +10,10 @@
     <lastBuildDate>Tue, 01 Mar 2022 16:29:23 +0800</lastBuildDate><atom:link href="https://note.killliu.com/tags/faq/index.xml" rel="self" type="application/rss+xml" />
       <item>
         <title>FAQ raspberry</title>
-        <link>https://note.killliu.com/notes/faq_raspberry/</link>
+        <link>https://note.killliu.com/notes/faq/raspberry/</link>
         <pubDate>Tue, 01 Mar 2022 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/notes/faq_raspberry/</guid>
+        <guid>https://note.killliu.com/notes/faq/raspberry/</guid>
         <description>Raspberry Ubuntu 官网 Raspberry 中下载树莓派的安装软件
 树莓派系统下载地址 ubuntu镜像地址
 通过 Raspberry Pi Image 软件安装 ubuntu 系统
@@ -31,10 +31,10 @@ sudo passwd root # 根据提示输入新密码（两次） # 切换到 root 用�
     
       <item>
         <title>windows (FAQ)</title>
-        <link>https://note.killliu.com/notes/faq_windows/</link>
+        <link>https://note.killliu.com/notes/faq/windows/</link>
         <pubDate>Sat, 06 Nov 2021 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/notes/faq_windows/</guid>
+        <guid>https://note.killliu.com/notes/faq/windows/</guid>
         <description>telnet  telnet 121.40.132.94 80
   node 下载地址：官网
  GIF 工具 https://github.com/NickeManarin/ScreenToGif 下载链接：百度云 提取码：7w92
@@ -48,10 +48,10 @@ set cur_path=&amp;#34;%cd&amp;#34; echo cur_path rd /q /s your_target_folder_pat
     
       <item>
         <title>FAQ macos</title>
-        <link>https://note.killliu.com/notes/faq_macos/</link>
+        <link>https://note.killliu.com/notes/faq/macos/</link>
         <pubDate>Wed, 06 Jan 2021 16:29:23 +0800</pubDate>
         
-        <guid>https://note.killliu.com/notes/faq_macos/</guid>
+        <guid>https://note.killliu.com/notes/faq/macos/</guid>
         <description>端口占用 # 查看端口占用程序 sudo lsof -i tcp:2000   彻底删除某个软件 # 清除登陆项 系统偏好设置 — 用户组与群组 — 登陆项 — 移除（如果有的话） # 清除配置项 打开Finder — 前往 — 前往文件夹 — /Library/LaunchAgents 打开Finder — 前往 — 前往文件夹 — ~/Library/LaunchAgents 打开Finder — 前往 — 前往文件夹 — /Library/StartupItems # 清除 钥匙串访问 数据   http server # 安装 nodejs # 安装 http-server sudo npm install http-server -g # 运行 cd xxx/targetFolder http-server   无法打开 “x x x”, 因为无法验证开发者 用一下命令增加 &amp;mdash; 安全性与隐私 &amp;mdash;&amp;gt; 任何来源</description>
       </item>
     
