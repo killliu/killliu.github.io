@@ -33,6 +33,27 @@
       </item>
     
       <item>
+        <title>FAQ raspberry</title>
+        <link>https://note.killliu.com/notes/raspberry/</link>
+        <pubDate>Tue, 01 Mar 2022 16:29:23 +0800</pubDate>
+        
+        <guid>https://note.killliu.com/notes/raspberry/</guid>
+        <description>Raspberry Ubuntu 官网 Raspberry 中下载树莓派的安装软件
+树莓派系统下载地址 ubuntu镜像地址
+通过 Raspberry Pi Image 软件安装 ubuntu 系统
+高级设置中不要加任何配置
+ wifi 烧录后，修改 boot 盘符中的 network-config 文件，以启用 wifi
+wifis:wlan0:dhcp4:trueoptional:trueaccess-points:&amp;#34;your_essid&amp;#34;:password:&amp;#34;your_password&amp;#34;默认账户密码都是：ubuntu
+等界面上显示了 cliud-init 及 SSH HOST 字样时才可以登陆
+登陆后会要求修改密码，注意看提示，修改新密码
+  修改主机名
+ sudo vi /etc/hostname
+   修改 root 密码
+sudo passwd root # 根据提示输入新密码（两次） # 切换到 root 用户 su # 输入 root 密码以切换到 root 用户   修改用户名 ubuntu -&amp;gt; killliu
+# 修改 shadow vi /ect/shadow # &amp;gt;&amp;gt;&amp;gt; ubuntu 修改为 killliu # 修改开始目录 cd /home mv ubuntu killliu # 修改 passwd 文件 vi /ect/passwd # &amp;gt;&amp;gt;&amp;gt; ubuntu 修改为 killliu # 重启 reboot   root 用户切换到普通用户</description>
+      </item>
+    
+      <item>
         <title>gitea (centos)</title>
         <link>https://note.killliu.com/notes/gitea/</link>
         <pubDate>Sat, 13 Nov 2021 16:29:23 +0800</pubDate>
@@ -40,6 +61,23 @@
         <guid>https://note.killliu.com/notes/gitea/</guid>
         <description>安装 gitea.service 配置参考
 mkdir /root/gitea cd /root/gitea wget -O gitea https://dl.gitea.io/gitea/1.14.3/gitea-1.14.3-linux-amd64 chmod +x gitea # 创建用户 adduser git # 创建所需目录结构 mkdir -p /var/lib/gitea/custom/ mkdir -p /var/lib/gitea/data/ mkdir -p /var/lib/gitea/log/ chown -R git:git /var/lib/gitea/ chmod -R 750 /var/lib/gitea/ mkdir /etc/gitea chown root:git /etc/gitea chmod 770 /etc/gitea # 配置Gitea的工作目录  export GITEA_WORK_DIR=/var/lib/gitea/ # 复制应用文件到全局路径 cp gitea /usr/local/bin/gitea # 开始启动配置 gitea.service 参考上面连接 vi /etc/systemd/system/gitea.service sudo systemctl enable gitea sudo systemctl start gitea # 启动配置 GITEA_WORK_DIR=/var/lib/gitea/ /usr/local/bin/gitea web -c /etc/gitea/app.</description>
+      </item>
+    
+      <item>
+        <title>FAQ windows</title>
+        <link>https://note.killliu.com/notes/windows/</link>
+        <pubDate>Sat, 06 Nov 2021 16:29:23 +0800</pubDate>
+        
+        <guid>https://note.killliu.com/notes/windows/</guid>
+        <description>telnet  telnet 121.40.132.94 80
+  node 下载地址：官网
+ GIF 工具 https://github.com/NickeManarin/ScreenToGif 下载链接：百度云 提取码：7w92
+ images-compress https://github.com/semiromid/compress-images 下载链接：百度云 提取码：xgkp
+ vmware hyper-v not compatible 管理员打开cmd
+bcdedit /copy {default} /d &amp;#34;Windows 10 Without Hyper-V&amp;#34; bcdedit /set {xxxxx} hypervisorlaunchtype off 执行完第一条命令会得到一串id，把id替换到第二个命令中的xxxxx即可。 然后运行msconfig，在引导的设置里把超时时间设置到3~5秒以上即可。
+ 安装http服务 全局安装 npm install -g http-server 启动服务 http_folder -&amp;gt; cmd -&amp;gt; http-server
+ 软链接 可以理解为文件夹的快捷图标
+set cur_path=&amp;#34;%cd&amp;#34; echo cur_path rd /q /s your_target_folder_path # 删除目标文件夹（如果存在） mklink /J your_target_folder_path from_folder_path pause   win10 文件夹中打开cmd open_cmd_here.</description>
       </item>
     
       <item>
