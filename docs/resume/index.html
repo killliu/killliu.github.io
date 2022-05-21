@@ -114,7 +114,7 @@
 
 
 
-<link rel="stylesheet" href="https://note.killliu.com/css/main.min.27b58d8fdb657fdc3970734036e6706bb47fb893562fec6c0d1aaa61b211d8da.css" integrity="sha256-J7WNj9tlf9w5cHNANuZwa7R/uJNWL&#43;xsDRqqYbIR2No=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://note.killliu.com/css/main.min.f390cb34c40b642db9614d7f9f492d0e710e57e977bdc89c63ef9973ddd21829.css" integrity="sha256-85DLNMQLZC25YU1/n0ktDnEOV&#43;l3vcicY&#43;&#43;Zc93SGCk=" crossorigin="anonymous">
 
 
 
@@ -156,8 +156,32 @@
   
 
 
-<script src="https://note.killliu.com/js/main.7477a315965eb0a900fb319f6b6d07346f0cb9a73e4204751a25606039413777.js" integrity="sha256-dHejFZZesKkA&#43;zGfa20HNG8Muac&#43;QgR1GiVgYDlBN3c=" crossorigin="anonymous"></script>
+<script src="https://note.killliu.com/js/main.d9502fdcd0d3839197152ec89030f355b2d927cf137c5ae53a1497b65360cc44.js" integrity="sha256-2VAv3NDTg5GXFS7IkDDzVbLZJ88TfFrlOhSXtlNgzEQ=" crossorigin="anonymous"></script>
 
+
+    <style>      
+      #BackToTop {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        display: none;
+        position: fixed;
+        bottom: 5rem;
+        right: 2rem;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 0.3;
+      }
+      #BackToTop:hover {
+        background-color: #EC5108;
+      }
+    </style>
   </head>
 
   <body>
@@ -518,7 +542,7 @@
 <thead>
 <tr>
 <th style="text-align:center">姓名</th>
-<th style="text-align:center">出生</th>
+<th style="text-align:center">出生年月</th>
 <th style="text-align:center">毕业院校</th>
 <th style="text-align:center">专业</th>
 <th style="text-align:center">Email</th>
@@ -688,7 +712,7 @@
 
 
 
-
+<button onclick="topFunction()" id="back_to_top" title="Back To Top">Top</button>
 
     </footer>
     
@@ -697,6 +721,24 @@
 
     
     
+
+    <button onclick="topFunction()" id="BackToTop" title="Go to top">Top</button>
+
+    <script>
+      var mybutton = document.getElementById("BackToTop");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
 
   </body>
 </html>
