@@ -6,4 +6,4 @@ disableTitleSeparator   : true
 
 Feel free to check the [notes](/notes) to see some of the usefull article.
 
-You can also contact me to ask for some resource which in notes.
+You can also contact me to ask for some resource which in notes :fire::fire::fire:.

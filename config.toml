@@ -11,42 +11,14 @@ enableInlineShortcodes = true
 
 paginate = 20
 
-# TEST
-# Netlify _headers
-#[outputs]
-#  home    = [ "HTML", "RSS", "HEADERS" ]
-#  section = [ "HTML", "RSS" ]
-
-#[mediaTypes."text/netlify"]
-#  suffixes  = [ "" ]
-#  delimiter = ""
-
-#[outputFormats.HEADERS]
-#  mediaType       = "text/netlify"
-#  baseName        = "_headers"
-#  isPlainText     = true
-#  notAlternative  = true
-
 [markup.highlight]
-  # To make use of the custom Chroma, this should be false
-  # The default is true
   noClasses = false
 
 [params]
-  
-  description = "killliu's personal website"
-  
   author      = "killliu"
   authorDesc  = "Some indescribable horror."
-  
-  footerText = [ "Copyright © 2022 killliu 粤ICP备14085800号-1" ]
-  
-  # Site cover, for Open Graph, Twitter Cards and Schema.org
-  # It will be used if the current page doesn't have a image cover
-  # File will be picked from the "assets" directory
-  # Comment the lines if you don't want to use it
-  #cover     = "img/cover.jpg"
-  #coverAlt  = "A placeholder that doesn't deserve to be described."
+  description = "killliu's personal website"
+  footerText  = [ "Copyright © 2022 killliu", "粤ICP备14085800号-1" ]
   
   # Shows a message in the footer about JavaScript being disabled
   # The default is false
@@ -86,14 +58,12 @@ paginate = 20
     
   [params.style]
     isDark = true
+    darkColor   = "#CB8233"
+    lightColor  = "#1f676b"
 
     # Disable the use of system settings (prefers-color-scheme)
     # The default is false
     ignoreSystemSettings = false
-
-    # Accent colors for dark and light mode respectively
-    darkAccent   = "#CB8233"
-    lightAccent  = "#1f676b"
 
     # Use an icon or text for footnote return links
     # The default is false
