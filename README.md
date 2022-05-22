@@ -1,4 +1,5 @@
 # killliu.github.io
-好记性不如烂笔头
 
-note continue with github page
+A bad note is better than a good memory
+
+好记性不如烂笔头
