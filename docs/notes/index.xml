@@ -24,7 +24,8 @@
         <pubDate>Sun, 15 May 2022 16:29:23 +0800</pubDate>
         
         <guid>https://note.killliu.com/notes/tools/github_blog/</guid>
-        <description>配置 github 新建仓库: killliu.github.io 点击新仓库的 Settings 页签中的 Pages，设置自定义域名：note.killliu.com -&amp;gt; save
+        <description>配置 github 新建仓库: killliu.github.io
+点击新仓库的 Settings 页签中的 Pages，设置自定义域名：note.killliu.com -&amp;gt; save
  配置域名 DNS DNS 管理配置中增加一条记录
 （没有域名则跳过该步骤及相关步骤）
    类型 名称 资料     CNAME note 🌟 killliu.github.io     安装 hugo brew install hugo hugo version   拉取仓库  git clone https://github.com/killliu/killliu.github.io.git

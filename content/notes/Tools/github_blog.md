@@ -10,6 +10,7 @@ draft                   : false
 ## 配置 github
 
 新建仓库: killliu.github.io
+
 点击新仓库的 Settings 页签中的 Pages，设置自定义域名：note.killliu.com -> save
 
 ## 配置域名 DNS
