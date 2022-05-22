@@ -1,7 +1,7 @@
 ---
 title       			: "emoji"
 date        			: 2022-05-18T16:29:23+08:00
-tags        			: [tools]
+tags        			: [Tools]
 disableTitleSeparator   : true
 draft                   : false
 ---
