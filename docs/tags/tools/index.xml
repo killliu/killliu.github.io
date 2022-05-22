@@ -26,10 +26,11 @@
         <guid>https://note.killliu.com/notes/tools/github_blog/</guid>
         <description>配置 github 新建仓库: killliu.github.io 点击新仓库的 Settings 页签中的 Pages，设置自定义域名：note.killliu.com -&amp;gt; save
  配置域名 DNS DNS 管理配置中增加一条记录
+（没有域名则跳过该步骤及相关步骤）
    类型 名称 资料     CNAME note 🌟 killliu.github.io     安装 hugo brew install hugo hugo version   拉取仓库  git clone https://github.com/killliu/killliu.github.io.git
  cd 到该目录内，创建 hugo 项目 app 后，将其目录内的所有文件移动到上一层，删除 app 目录
  hugo new site app
-  添加主题  git clone https://gitlab.com/rmaguiar/hugo-theme-color-your-world.git themes/color-your-world</description>
+  添加主题  git clone https://gitlab.</description>
       </item>
     
       <item>

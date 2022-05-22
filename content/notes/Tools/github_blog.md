@@ -16,6 +16,8 @@ draft                   : false
 
 DNS 管理配置中增加一条记录
 
+（没有域名则跳过该步骤及相关步骤）
+
 |  类型  |  名称  |  资料  |
 |  :----:  |  :----:  |  :----:  |
 |  CNAME  |  note  |  :star2: killliu.github.io |
