@@ -48,7 +48,7 @@ cd 到该目录内，创建 hugo 项目 app 后，将其目录内的所有文件
 添加文章
 > hugo new posts/hugo_github_blog.md
 
---- **注意** --- draft(草稿) 对应的值要改为 false 才会被生成静态页面
+**`注意`** draft(草稿) 对应的值要改为 false 才会被生成静态页面
 
 ## 打包网页
 
