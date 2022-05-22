@@ -200,7 +200,7 @@ wxBf0PWVkfQ29PBOJ15FLks7E6eAVB3p2PjEP0Ca3GUvTAsAhQwq2c8qROyVlQBUOxdPMybGtWWp
 QIUYm+OBa3ra1HgI0hf5SBfmI+azGw=X02fn
 ```
 
-![mobile-app](https://www.atlassian.com/software/jira/mobile-app)
+jira [mobile-app](https://www.atlassian.com/software/jira/mobile-app)
 
 ## confluence 同步 jira 用户数据
 
