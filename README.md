@@ -2,4 +2,4 @@
 
 A bad note is better than a good memory
 
-好记性不如烂笔头
+you can read the notes on ![note.killliu.com](https://note.killliu.com):fire::fire::fire:
