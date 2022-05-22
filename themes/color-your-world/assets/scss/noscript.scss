@@ -1,0 +1,10 @@
+{{ $lightColor  := .Site.Params.Style.lightColor  | default .Site.Data.default.style.lightColor }}
+{{ $darkColor   := .Site.Params.Style.darkColor   | default .Site.Data.default.style.darkColor }}
+
+html {
+  --accent: {{ if .Site.Params.Style.isDark }}{{ $darkColor }}{{ else }}{{ $lightColor }}{{ end }};
+}
+
+.req-js {
+  display: none;
+}

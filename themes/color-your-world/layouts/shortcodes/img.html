@@ -1,0 +1,48 @@
+<!--
+  Usage:
+    img "weird_cat.jpg" "Something that can (or not) be a cat."
+    img src="weird_cat.jpg" alt="Something that can (or not) be a cat."
+    img class="border" src="weird_cat.jpg" alt="Something that can (or not) be a cat."
+    img "weird_cat.jpg" "Something that can (or not) be a cat." "border"
+
+  Default available classes:
+    border
+    borderless
+-->
+
+{{ $file    := .Get "src"   | default (.Get 0) }}
+{{ $altText := .Get "alt"   | default (.Get 1) }}
+{{ $class   := .Get "class" | default (.Get 2) }}
+
+<!-- Image processing options -->
+{{ $imageProc := (dict "highRes" (.Site.Params.imageProc.highRes | default .Site.Data.default.imageProc.highRes) "mediumRes" (.Site.Params.imageProc.mediumRes | default .Site.Data.default.imageProc.mediumRes) "lowRes" (.Site.Params.imageProc.lowRes | default .Site.Data.default.imageProc.lowRes)) }}
+
+<!-- Default image path -->
+{{ $imgPath := .Page.Param "imgPath" }}
+
+{{ if $imgPath }}
+  {{ $file = path.Join $imgPath $file }}
+{{ end }}
+
+{{ with $.Page.Resources.GetMatch $file }}
+  
+  {{ $mediumRes := (index $imageProc.mediumRes 0) }}
+  
+  {{ $outputSet := slice }}
+  {{ $inputFile := . }}
+  
+  {{ range $imageProc }}
+    {{ $outputSet = $outputSet | append (printf "%s %s" (($inputFile.Resize (index . 0)).RelPermalink) (index . 1)) }}
+  {{ end }}
+
+  <img
+    {{ with $class }}class="{{ . }}"{{ end }}
+    loading="lazy"
+    srcset='{{ delimit $outputSet ", " }}'
+    src="{{ (.Resize $mediumRes).RelPermalink }}"
+    width="{{ (.Resize $mediumRes).Width }}"
+    height="{{ (.Resize $mediumRes).Height }}"
+    {{ with $altText }}alt="{{ . }}"{{ end }}
+  />
+
+{{ end }}

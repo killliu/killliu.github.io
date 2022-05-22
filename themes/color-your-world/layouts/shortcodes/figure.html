@@ -1,0 +1,56 @@
+<!--
+  Usage:
+    figure "weird_cat.jpg" "Something that can (or not) be a cat."
+    figure src="weird_cat.jpg" alt="Something that can (or not) be a cat."
+    figure class="border" src="weird_cat.jpg" alt="Something that can (or not) be a cat."
+    figure "weird_cat.jpg" "Something that can (or not) be a cat." "border"
+    figure class="border" src="weird_cat.jpg" caption="Something that can (or not) be a cat." alt="Ask someone blind if a caption and alt text are the same thing."
+
+  Default available classes:
+    border
+    borderless
+-->
+
+{{ $file    := .Get "src"     | default (.Get 0) }}
+{{ $caption := .Get "caption" | default (.Get 1) | markdownify }}
+{{ $class   := .Get "class"   | default (.Get 2) }}
+{{ $alt     := .Get "alt"     | default $caption }}
+
+<!-- Image processing options -->
+{{ $imageProc := (dict "highRes" (.Site.Params.imageProc.highRes | default .Site.Data.default.imageProc.highRes) "mediumRes" (.Site.Params.imageProc.mediumRes | default .Site.Data.default.imageProc.mediumRes) "lowRes" (.Site.Params.imageProc.lowRes | default .Site.Data.default.imageProc.lowRes)) }}
+
+<!-- Default image path -->
+{{ $imgPath := .Page.Param "imgPath" }}
+
+{{ if $imgPath }}
+  {{ $file = path.Join $imgPath $file }}
+{{ end }}
+
+{{ with $.Page.Resources.GetMatch $file }}
+
+  {{ $mediumRes := (index $imageProc.mediumRes 0) }}
+
+  {{ $outputSet := slice }}
+  {{ $inputFile := . }}
+  
+  {{ range $imageProc }}
+    {{ $outputSet = $outputSet | append (printf "%s %s" (($inputFile.Resize (index . 0)).RelPermalink) (index . 1)) }}
+  {{ end }}
+
+  <figure>
+    <img
+      {{ with $class }}class="{{ . }}"{{ end }}
+      loading="lazy"
+      srcset='{{ delimit $outputSet ", " }}'
+      src="{{ (.Resize $mediumRes).RelPermalink }}"
+      width="{{ (.Resize $mediumRes).Width }}"
+      height="{{ (.Resize $mediumRes).Height }}"
+      {{ with $alt }}alt="{{ . }}"{{ end }}
+    />
+
+    {{ with $caption }}
+      <figcaption>{{ . }}</figcaption>
+    {{ end }}
+    
+  </figure>
+{{ end }}

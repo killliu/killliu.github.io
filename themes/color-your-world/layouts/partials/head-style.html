@@ -1,0 +1,28 @@
+<!-- Main CSS -->
+{{ $main := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $main.Permalink }}" integrity="{{ $main.Data.Integrity }}" crossorigin="anonymous">
+
+
+<!-- If JS is disabled -->
+<noscript>
+
+  {{ $darkColor   := .Site.Params.Style.darkColor   | default .Site.Data.default.style.darkColor }}
+  {{ $lightColor  := .Site.Params.Style.lightColor  | default .Site.Data.default.style.lightColor }}
+
+  {{ if .Site.Params.Style.ignoreSystemSettings }}
+
+    {{ if .Site.Params.Style.isDark }}
+      <meta name="theme-color" content="{{ $darkColor }}">
+    {{ else }}
+      <meta name="theme-color" content="{{ $lightColor }}">
+    {{ end }}
+
+  {{ else }}
+    <meta name="theme-color" content="{{ $darkColor }}" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="{{ $lightColor }}" media="(prefers-color-scheme: light)">
+  {{ end }}
+
+  {{ $noscript := resources.Get "scss/noscript.scss" | resources.ExecuteAsTemplate "css/noscript.scss" . | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $noscript.Permalink }}" integrity="{{ $noscript.Data.Integrity }}" crossorigin="anonymous">
+
+</noscript>

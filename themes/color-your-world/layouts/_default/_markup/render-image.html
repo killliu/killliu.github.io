@@ -1,0 +1,69 @@
+{{ $file    := .Destination }}
+{{ $altText := .Text }}
+{{ $class   := .Page.Param "markupImgClass" }}
+
+<!-- Get image processing options -->
+{{ $imageProc := .Page.Scratch.Get "imageProc" }}
+
+<!-- Default image path -->
+{{ $imgPath := .Page.Param "imgPath" }}
+
+{{ if $imgPath }}
+  {{ $file = path.Join $imgPath $file }}
+{{ end }}
+
+<!-- Assume file is local if found -->
+{{ with $.Page.Resources.GetMatch $file }}
+
+  <!-- If image width is equal or greater than X, process it -->
+  {{ if ge .Width $imageProc.markupAutoResizeWidth }}
+
+    {{ $mediumRes := (index $imageProc.mediumRes 0) }}
+
+    {{ $outputSet := slice }}
+    {{ $inputFile := . }}
+    
+    {{ range $imageProc }}
+      {{ if reflect.IsSlice . }}
+        {{ $outputSet = $outputSet | append (printf "%s %s" (($inputFile.Resize (index . 0)).RelPermalink) (index . 1)) }}
+      {{ end }}
+    {{ end }}
+    
+    <img
+      {{ with $class }}class="{{ . }}"{{ end }}
+      loading="lazy"
+      srcset='{{ delimit $outputSet ", " }}'
+      src="{{ (.Resize $mediumRes).RelPermalink }}"
+      width="{{ (.Resize $mediumRes).Width }}"
+      height="{{ (.Resize $mediumRes).Height }}"
+      {{ with $altText }}alt="{{ . }}"{{ end }}
+    />
+
+  {{ else }}
+
+    {{ $processed := (.Resize (printf "%vx" .Width)) }}
+
+    <img
+      {{ with $class }}class="{{ . }}"{{ end }}
+      loading="lazy"
+      src="{{ $processed.RelPermalink }}"
+      width="{{ .Width }}"
+      height="{{ .Height }}"
+      {{ with $altText }}alt="{{ . }}"{{ end }}
+    />
+
+  {{ end }}
+    
+{{ else }}
+  <!-- If local file isn't found, assume it's a remote file -->
+  {{ with (.Destination | safeURL) }}
+
+    <img
+      {{ with $class }}class="{{ . }}"{{ end }}
+      loading="lazy"
+      src="{{ . }}"
+      {{ with $altText }}alt="{{ . }}"{{ end }}
+    />
+
+  {{ end }}
+{{ end }}

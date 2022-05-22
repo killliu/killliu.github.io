@@ -1,0 +1,88 @@
+<!--
+  HACK
+  Set image processing options for render hooks
+  Currently here to avoid certain priority issues...
+-->
+
+{{- .Scratch.Set "imageProc" (dict "highRes" (.Site.Params.imageProc.highRes | default .Site.Data.default.imageProc.highRes) "mediumRes" (.Site.Params.imageProc.mediumRes | default .Site.Data.default.imageProc.mediumRes) "lowRes" (.Site.Params.imageProc.lowRes | default .Site.Data.default.imageProc.lowRes) "markupAutoResizeWidth" (.Site.Params.imageProc.markupAutoResizeWidth | default .Site.Data.default.imageProc.markupAutoResizeWidth)) -}}
+
+{{- $svgBundle := resources.Get "svg/bundle.svg" | resources.ExecuteAsTemplate "img/bundle.svg" . | minify | resources.Fingerprint "md5" -}}
+{{- .Scratch.Set "svgBundle" $svgBundle -}}
+
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" data-mode="{{ if .Site.Params.Style.isDark }}dark{{ else }}light{{ end }}">
+  <head prefix="og: http://ogp.me/ns#">
+    {{ partial "head" . }}
+
+    <style>      
+      #BackToTop {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        display: none;
+        position: fixed;
+        bottom: 7rem;
+        right: 2rem;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 0.3;
+      }
+      #BackToTop:hover {
+        background-color: #EC5108;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      {{ partialCached "header" . }}
+    </header>
+
+    <div class="filler">
+      {{ block "main" . }}
+        <!-- Stuff -->
+      {{ end }}
+    </div>
+    
+    <footer>
+      {{ partial "footer" . }}
+    </footer>
+    
+    <!-- Search -->
+    {{ if eq .Layout "search" }}
+      {{ $searchJS := resources.Get "js/search.js" | resources.ExecuteAsTemplate (printf "js/search.js" | relLangURL) . | minify | fingerprint }}
+      <script type="module" src="{{ $searchJS.Permalink }}" integrity="{{ $searchJS.Data.Integrity }}" crossorigin="anonymous"></script>
+    {{ end }}
+
+    <!-- KaTeX -->
+    {{ if or .Params.katex .Site.Params.katex .Params.math .Site.Params.math }}
+      {{ partial "katex" . }}
+    {{ end }}
+
+    <button onclick="topFunction()" id="BackToTop" title="Go to top">Top</button>
+
+    <script>
+      var mybutton = document.getElementById("BackToTop");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+  </body>
+</html>
