@@ -105,7 +105,7 @@
       "inLanguage": "en",
       "datePublished": "2021-11-13",
       "dateModified": "2021-11-13",
-      "wordCount" : "782",
+      "wordCount" : "783",
       "publisher": {
         "@type": "Person",
         "name": "killliu"
@@ -586,6 +586,9 @@
 
   <h2 id="修改登陆页面"><a class="anchor" href="#修改登陆页面" title='Anchor for: 修改登陆页面.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 修改登陆页面</h2> 
 
+<blockquote>
+<p>/templates/user/auth/signin.html</p>
+</blockquote>
 <div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;{{.Lang}}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-{{.SignedUser.Theme}}&#34;</span><span class="p">&gt;</span>
@@ -692,7 +695,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">{{end}}
 </span></span></code></pre></div><p>修改脚标</p>
+<blockquote>
 <p>/templates/user/auth/signin_inner.html 第 43 行左右，删除以下行</p>
+</blockquote>
 <div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{AppSubUrl}}/user/forgot_password&#34;</span><span class="p">&gt;</span>{{.i18n.Tr &#34;auth.forgot_password&#34;}}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span></code></pre></div>
 
