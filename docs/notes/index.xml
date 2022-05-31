@@ -78,6 +78,16 @@ jira service management 官网下载
       </item>
     
       <item>
+        <title>nps (centos)</title>
+        <link>https://note.killliu.com/notes/tools/nps/</link>
+        <pubDate>Sat, 06 Nov 2021 16:29:23 +0800</pubDate>
+        
+        <guid>https://note.killliu.com/notes/tools/nps/</guid>
+        <description>NPS 网址：nps，文档
+cd ~ mkdir nps cd nps wget https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_arm64_server.tar.gz tar -zvxf linux_amd64_server.tar.gz # 安装 sudo ./nps install # 安装路径 -&amp;gt; etc/nps # 日志路径	-&amp;gt; /var/log/nps.log # ------------------------------------------------------ vi /etc/nps/conf/nps.conf .................. appname = nps #Boot mode(dev|pro) runmode = pro #HTTP(S) proxy port, no startup if empty http_proxy_ip=0.0.0.0 http_proxy_port=9527 https_proxy_port=443 https_just_proxy=true #default https certificate setting https_default_cert_file=conf/server.pem https_default_key_file=conf/server.key ##bridge bridge_type=tcp bridge_port=9515 bridge_ip=0.0.0.0 # Public password, which clients can use to connect to the server # After the connection, the server will be able to open relevant ports and parse related domain names according to its own configuration file.</description>
+      </item>
+    
+      <item>
         <title>windows (FAQ)</title>
         <link>https://note.killliu.com/notes/faq/windows/</link>
         <pubDate>Sat, 06 Nov 2021 16:29:23 +0800</pubDate>

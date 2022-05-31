@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="dark">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Hugo 0.98.0">
+<meta name="theme" content="Color Your World -- gitlab.com/rmaguiar/hugo-theme-color-your-world">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>nps (centos)</title>
+
+
+<meta name="author" content="killliu">
+
+
+
+<meta name="robots" content="index follow">
+
+
+
+
+  
+    <link rel="canonical" href="https://note.killliu.com/notes/tools/nps/">
+  
+
+
+
+
+
+
+
+
+<meta property="og:site_name" content="killliu&#39;s notes">
+<meta property="og:title" content="nps (centos)">
+
+  <meta property="og:url" content="https://note.killliu.com/notes/tools/nps/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#222">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebSite",
+        "@id": "https:\/\/note.killliu.com\/"
+      },
+      "headline": "nps (centos)",
+      "description": "",
+      
+      "url": "https:\/\/note.killliu.com\/notes\/tools\/nps\/",
+      "inLanguage": "en",
+      "datePublished": "2021-11-06",
+      "dateModified": "2021-11-06",
+      "wordCount" : "261",
+      "publisher": {
+        "@type": "Person",
+        "name": "killliu"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "killliu",
+        "description": "Some indescribable horror.",
+        
+      }
+    }
+  </script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://note.killliu.com/css/main.min.b7d51692a5d4e22c6115fa96a1d11f164a75f59e7fe9c1eac81c54ba706fcf8a.css" integrity="sha256-t9UWkqXU4ixhFfqWodEfFkp19Z5/6cHqyBxUunBvz4o=" crossorigin="anonymous">
+
+
+
+<noscript>
+
+  
+  
+
+  
+    <meta name="theme-color" content="#CB8233" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#1f676b" media="(prefers-color-scheme: light)">
+  
+
+  
+  <link rel="stylesheet" href="https://note.killliu.com/css/noscript.min.0f208a516c4efc455594eda62b46a723654120d87060a5341b00a817b6f061c8.css" integrity="sha256-DyCKUWxO/EVVlO2mK0anI2VBINhwYKU0GwCoF7bwYcg=" crossorigin="anonymous">
+
+</noscript>
+
+
+
+<link rel="preload" href="/fonts/open-sans-v17-latin-700.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-italic.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-regular.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/oswald-v29-latin-700.woff2" as="font" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="https://note.killliu.com/js/main.d345cc65bf54eec5e407a3f088badeed1dcd325bddfd50d49bd1288081fbdd49.js" integrity="sha256-00XMZb9U7sXkB6PwiLre7R3NMlvd/VDUm9EogIH73Uk=" crossorigin="anonymous"></script>
+
+
+    <style>      
+      #BackToTop {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        display: none;
+        position: fixed;
+        bottom: 7rem;
+        right: 2rem;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 0.3;
+      }
+      #BackToTop:hover {
+        background-color: #EC5108;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      
+
+  <a href="/">killliu&#39;s notes</a>
+
+
+
+
+  
+    <nav aria-label="Main menu.">
+      <ul>
+        
+          <li>
+            <a class="btn" href="/notes/">Notes</a>
+          </li>
+        
+          <li>
+            <a class="btn" href="/resume/">Resume</a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+
+
+    </header>
+
+    <div class="filler">
+      
+
+  <main>
+    <article>
+      <header>
+        
+        <h1>nps (centos)</h1>
+
+        
+          <section class="terms">
+            <ul><li><a class="btn" href="/tags/tools/">Tools</a></li></ul>
+          </section>
+          <p>
+            
+              Published on <time datetime="2021-11-06">2021-11-06</time>
+            
+          </p>
+        
+        
+        
+        
+      </header>
+    
+      
+<details class="toc" open>
+    <summary class="outline-dashed">
+      Contents
+    </summary>
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#nps">NPS</a></li>
+    <li><a href="#windows">windows</a></li>
+  </ul>
+</nav>
+  </details>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="nps"><a class="anchor" href="#nps" title='Anchor for: NPS.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> NPS</h2> 
+
+<p>网址：<a href="https://github.com/ehang-io/nps/releases">nps</a>，<a href="https://ehang-io.github.io/nps/#/?id=nps">文档</a></p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">mkdir nps
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> nps
+</span></span><span class="line"><span class="cl">wget https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_arm64_server.tar.gz
+</span></span><span class="line"><span class="cl">tar -zvxf linux_amd64_server.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># 安装</span>
+</span></span><span class="line"><span class="cl">sudo ./nps install
+</span></span><span class="line"><span class="cl"><span class="c1"># 安装路径  -&gt; etc/nps</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 日志路径	-&gt; /var/log/nps.log</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">vi /etc/nps/conf/nps.conf
+</span></span><span class="line"><span class="cl">..................
+</span></span><span class="line"><span class="cl"><span class="nv">appname</span> <span class="o">=</span> nps
+</span></span><span class="line"><span class="cl"><span class="c1">#Boot mode(dev|pro)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">runmode</span> <span class="o">=</span> pro
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#HTTP(S) proxy port, no startup if empty</span>
+</span></span><span class="line"><span class="cl"><span class="nv">http_proxy_ip</span><span class="o">=</span>0.0.0.0
+</span></span><span class="line"><span class="cl"><span class="nv">http_proxy_port</span><span class="o">=</span><span class="m">9527</span>
+</span></span><span class="line"><span class="cl"><span class="nv">https_proxy_port</span><span class="o">=</span><span class="m">443</span>
+</span></span><span class="line"><span class="cl"><span class="nv">https_just_proxy</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#default https certificate setting</span>
+</span></span><span class="line"><span class="cl"><span class="nv">https_default_cert_file</span><span class="o">=</span>conf/server.pem
+</span></span><span class="line"><span class="cl"><span class="nv">https_default_key_file</span><span class="o">=</span>conf/server.key
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">##bridge</span>
+</span></span><span class="line"><span class="cl"><span class="nv">bridge_type</span><span class="o">=</span>tcp
+</span></span><span class="line"><span class="cl"><span class="nv">bridge_port</span><span class="o">=</span><span class="m">9515</span>
+</span></span><span class="line"><span class="cl"><span class="nv">bridge_ip</span><span class="o">=</span>0.0.0.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Public password, which clients can use to connect to the server</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># After the connection, the server will be able to open relevant ports and parse related domain names according to its own configuration file.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">public_vkey</span><span class="o">=</span><span class="m">123</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Traffic data persistence interval(minute)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#Ignorance means no persistence</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#flow_store_interval=1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># log level LevelEmergency-&gt;0  LevelAlert-&gt;1 LevelCritical-&gt;2 LevelError-&gt;3 LevelWarning-&gt;4 LevelNotice-&gt;5 LevelInformational-&gt;6 LevelDebug-&gt;7</span>
+</span></span><span class="line"><span class="cl"><span class="nv">log_level</span><span class="o">=</span><span class="m">7</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#log_path=nps.log</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Whether to restrict IP access, true or false or ignore</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#ip_limit=true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#p2p</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#p2p_ip=127.0.0.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#p2p_port=6000</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#web</span>
+</span></span><span class="line"><span class="cl"><span class="nv">web_host</span><span class="o">=</span>killliu.com
+</span></span><span class="line"><span class="cl"><span class="nv">web_username</span><span class="o">=</span>admin
+</span></span><span class="line"><span class="cl"><span class="nv">web_password</span><span class="o">=</span>your_password
+</span></span><span class="line"><span class="cl"><span class="nv">web_port</span><span class="o">=</span><span class="m">8080</span>
+</span></span><span class="line"><span class="cl"><span class="nv">web_ip</span><span class="o">=</span>0.0.0.0
+</span></span><span class="line"><span class="cl"><span class="nv">web_base_url</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="nv">web_open_ssl</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">web_cert_file</span><span class="o">=</span>conf/server.pem
+</span></span><span class="line"><span class="cl"><span class="nv">web_key_file</span><span class="o">=</span>conf/server.key
+</span></span><span class="line"><span class="cl"><span class="c1"># if web under proxy use sub path. like http://host/nps need this.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#web_base_url=/nps</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Web API unauthenticated IP address(the len of auth_crypt_key must be 16)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#Remove comments if needed</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#auth_key=test</span>
+</span></span><span class="line"><span class="cl"><span class="nv">auth_crypt_key</span> <span class="o">=</span><span class="m">1234567813332345678</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#allow_ports=9001-9009,10001,11000-12000</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Web management multi-user login</span>
+</span></span><span class="line"><span class="cl"><span class="nv">allow_user_login</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">allow_user_register</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">allow_user_change_username</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#extension</span>
+</span></span><span class="line"><span class="cl"><span class="nv">allow_flow_limit</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">allow_rate_limit</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">allow_tunnel_num_limit</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">allow_local_proxy</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">allow_connection_num_limit</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">allow_multi_ip</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">system_info_display</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#cache</span>
+</span></span><span class="line"><span class="cl"><span class="nv">http_cache</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">http_cache_length</span><span class="o">=</span><span class="m">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#get origin ip</span>
+</span></span><span class="line"><span class="cl"><span class="nv">http_add_origin_header</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#pprof debug options</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#pprof_ip=0.0.0.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#pprof_port=9999</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#client disconnect timeout</span>
+</span></span><span class="line"><span class="cl"><span class="nv">disconnect_timeout</span><span class="o">=</span><span class="m">60</span>
+</span></span><span class="line"><span class="cl">..................
+</span></span><span class="line"><span class="cl"><span class="c1">########## 启动</span>
+</span></span><span class="line"><span class="cl">sudo nps start
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="windows"><a class="anchor" href="#windows" title='Anchor for: windows.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> windows</h2> 
+
+<p>作为被远程的端</p>
+<p><a href="https://github.com/ehang-io/nps/releases">nps releases</a></p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="c1">// 下载最新的gz包 --&gt; 并解压</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 删除所有文件，除了 npc.exe</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// npc.bat</span>
+</span></span><span class="line"><span class="cl"><span class="n">npc</span> <span class="p">-</span><span class="n">server</span><span class="p">=</span><span class="n">killliu</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="m">9527</span> <span class="p">-</span><span class="n">vkey</span><span class="p">=</span><span class="m">3</span><span class="n">a8ykmawyb2na69kp</span> <span class="p">-</span><span class="n">type</span><span class="p">=</span><span class="n">tcp</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 编写后台启动的 vbs 代码， 并保存为 xxx.vbs</span>
+</span></span><span class="line"><span class="cl"><span class="n">Set</span> <span class="n">WshShell</span> <span class="p">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s">&#34;WScript.Shell&#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="n">WshShell</span><span class="p">.</span><span class="n">run</span> <span class="s">&#34;taskkill /im npc.exe /f &#34;</span><span class="p">,</span><span class="m">0</span> <span class="p">,</span><span class="k">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">WshShell</span><span class="p">.</span><span class="n">Run</span> <span class="n">chr</span><span class="p">(</span><span class="m">34</span><span class="p">)</span> <span class="p">&amp;</span> <span class="s">&#34;npc.bat&#34;</span> <span class="p">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="m">34</span><span class="p">),</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">Set</span> <span class="n">WshShell</span> <span class="p">=</span> <span class="n">Nothing</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 双击 xxx.vbs 启动本地电脑为服务端</span>
+</span></span></code></pre></div>
+
+
+    </article>
+  </main>
+
+
+    </div>
+    
+    <footer>
+      
+
+
+  
+
+    
+
+    
+      
+      
+    
+      
+      
+    
+    
+    <p>Copyright © 2022 killliu</p><p>粤ICP备14085800号-1</p>
+
+  
+
+
+
+
+
+
+
+    </footer>
+    
+    
+    
+
+    
+    
+
+    <button onclick="topFunction()" id="BackToTop" title="Go to top">Top</button>
+
+    <script>
+      var mybutton = document.getElementById("BackToTop");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+  </body>
+</html>

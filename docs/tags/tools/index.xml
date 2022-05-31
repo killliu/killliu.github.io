@@ -56,5 +56,15 @@ jira service management 官网下载
  安裝java tar -xvf jdk-8u101-linux-x64.tar.gz -C /usr/local mv /usr/local/jdk1.8.0_101/ /usr/local/java ls /usr/local/ # 配置环境 sed -i &amp;#39;$aJAVA_HOME=/usr/local/java\nCLASSPATH=$JAVA_HOME/lib\nPATH=$PATH:$JAVA_HOME/bin\nexport PATH JAVA_HOME CLASSPATH&amp;#39; /etc/profile # 重置配置 source /etc/profile java -version   安装 mysql 5.7 rm -rf /var/log/mysqld.log sudo dnf remove @mysql sudo dnf module reset mysql &amp;amp;&amp;amp; sudo dnf module disable mysql # 创建新的存储库文件 sudo vi /etc/yum.repos.d/mysql-community.repo ... [mysql57-community] name=MySQL 5.7 Community Server baseurl=http://repo.</description>
       </item>
     
+      <item>
+        <title>nps (centos)</title>
+        <link>https://note.killliu.com/notes/tools/nps/</link>
+        <pubDate>Sat, 06 Nov 2021 16:29:23 +0800</pubDate>
+        
+        <guid>https://note.killliu.com/notes/tools/nps/</guid>
+        <description>NPS 网址：nps，文档
+cd ~ mkdir nps cd nps wget https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_arm64_server.tar.gz tar -zvxf linux_amd64_server.tar.gz # 安装 sudo ./nps install # 安装路径 -&amp;gt; etc/nps # 日志路径	-&amp;gt; /var/log/nps.log # ------------------------------------------------------ vi /etc/nps/conf/nps.conf .................. appname = nps #Boot mode(dev|pro) runmode = pro #HTTP(S) proxy port, no startup if empty http_proxy_ip=0.0.0.0 http_proxy_port=9527 https_proxy_port=443 https_just_proxy=true #default https certificate setting https_default_cert_file=conf/server.pem https_default_key_file=conf/server.key ##bridge bridge_type=tcp bridge_port=9515 bridge_ip=0.0.0.0 # Public password, which clients can use to connect to the server # After the connection, the server will be able to open relevant ports and parse related domain names according to its own configuration file.</description>
+      </item>
+    
   </channel>
 </rss>
