@@ -189,6 +189,8 @@ git config --global https.proxy protocol://127.0.0.1:7890
 
 ## 修改登陆页面
 
+> /templates/user/auth/signin.html
+
 ```html
 
 <!DOCTYPE html>
@@ -300,7 +302,7 @@ git config --global https.proxy protocol://127.0.0.1:7890
 
 修改脚标
 
-/templates/user/auth/signin_inner.html 第 43 行左右，删除以下行
+> /templates/user/auth/signin_inner.html 第 43 行左右，删除以下行
 
 ```html
 <a href="{{AppSubUrl}}/user/forgot_password">{{.i18n.Tr "auth.forgot_password"}}</a>
