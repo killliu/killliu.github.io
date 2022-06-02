@@ -210,10 +210,6 @@ cmd 在进入Redis的安装目录
 
 ## 基本操作
 
-### 切换库
-
-> select index
-
 - 切换库
 
   > select 0
