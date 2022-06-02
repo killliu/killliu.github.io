@@ -114,6 +114,17 @@ set cur_path=&amp;#34;%cd&amp;#34; echo cur_path rd /q /s your_target_folder_pat
       </item>
     
       <item>
+        <title>redis</title>
+        <link>https://note.killliu.com/notes/tools/redis/</link>
+        <pubDate>Wed, 12 Feb 2020 12:29:23 +0800</pubDate>
+        
+        <guid>https://note.killliu.com/notes/tools/redis/</guid>
+        <description>centos7 官网下载地址
+redis-6.2.5
+cd ~ wget http://download.redis.io/releases/redis-6.2.5.tar.gz tar xzf redis-6.2.5.tar.gz cd redis-6.2.5 make # 指定目录安装  make install PREFIX=/usr/local/redis ###### 设置启动 ###### vi /root/redis-6.2.5/redis.conf ... # 修改如下内容，设置后台启动 daemonize yes ... :wq # 复制配置文件 cp /root/redis-6.2.5/redis.conf	/usr/local/redis # 设置开机启动(追加如下内容) vi /etc/rc.d/rc.local	/usr/local/redis/bin/redis-server /usr/local/redis/redis.conf ：wq # 设置开机启动(追加如下内容) vi /usr/lib/systemd/system/redis.service #!/bin/sh [Unit] Description=Redis After=network.target [Service] Type=forking ExecStart=/usr/local/redis/bin/redis-server /usr/local/redis/redis.conf [Install] WantedBy=multi-user.target ：wq ###### 重启 ###### systemctl daemon-reload systemctl start redis.service systemctl enable redis.</description>
+      </item>
+    
+      <item>
         <title>mysql</title>
         <link>https://note.killliu.com/notes/tools/mysql/</link>
         <pubDate>Tue, 11 Feb 2020 12:29:23 +0800</pubDate>

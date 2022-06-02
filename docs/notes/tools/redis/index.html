@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="dark">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Hugo 0.98.0">
+<meta name="theme" content="Color Your World -- gitlab.com/rmaguiar/hugo-theme-color-your-world">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>redis</title>
+
+
+<meta name="author" content="killliu">
+
+
+
+<meta name="robots" content="index follow">
+
+
+
+
+  
+    <link rel="canonical" href="https://note.killliu.com/notes/tools/redis/">
+  
+
+
+
+
+
+
+
+
+<meta property="og:site_name" content="killliu&#39;s notes">
+<meta property="og:title" content="redis">
+
+  <meta property="og:url" content="https://note.killliu.com/notes/tools/redis/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#222">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebSite",
+        "@id": "https:\/\/note.killliu.com\/"
+      },
+      "headline": "redis",
+      "description": "",
+      
+      "url": "https:\/\/note.killliu.com\/notes\/tools\/redis\/",
+      "inLanguage": "en",
+      "datePublished": "2020-02-12",
+      "dateModified": "2020-02-12",
+      "wordCount" : "322",
+      "publisher": {
+        "@type": "Person",
+        "name": "killliu"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "killliu",
+        "description": "Some indescribable horror.",
+        
+      }
+    }
+  </script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://note.killliu.com/css/main.min.b7d51692a5d4e22c6115fa96a1d11f164a75f59e7fe9c1eac81c54ba706fcf8a.css" integrity="sha256-t9UWkqXU4ixhFfqWodEfFkp19Z5/6cHqyBxUunBvz4o=" crossorigin="anonymous">
+
+
+
+<noscript>
+
+  
+  
+
+  
+    <meta name="theme-color" content="#CB8233" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#1f676b" media="(prefers-color-scheme: light)">
+  
+
+  
+  <link rel="stylesheet" href="https://note.killliu.com/css/noscript.min.0f208a516c4efc455594eda62b46a723654120d87060a5341b00a817b6f061c8.css" integrity="sha256-DyCKUWxO/EVVlO2mK0anI2VBINhwYKU0GwCoF7bwYcg=" crossorigin="anonymous">
+
+</noscript>
+
+
+
+<link rel="preload" href="/fonts/open-sans-v17-latin-700.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-italic.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-regular.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/oswald-v29-latin-700.woff2" as="font" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="https://note.killliu.com/js/main.d345cc65bf54eec5e407a3f088badeed1dcd325bddfd50d49bd1288081fbdd49.js" integrity="sha256-00XMZb9U7sXkB6PwiLre7R3NMlvd/VDUm9EogIH73Uk=" crossorigin="anonymous"></script>
+
+
+    <style>      
+      #BackToTop {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        display: none;
+        position: fixed;
+        bottom: 7rem;
+        right: 2rem;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 0.3;
+      }
+      #BackToTop:hover {
+        background-color: #EC5108;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      
+
+  <a href="/">killliu&#39;s notes</a>
+
+
+
+
+  
+    <nav aria-label="Main menu.">
+      <ul>
+        
+          <li>
+            <a class="btn" href="/notes/">Notes</a>
+          </li>
+        
+          <li>
+            <a class="btn" href="/resume/">Resume</a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+
+
+    </header>
+
+    <div class="filler">
+      
+
+  <main>
+    <article>
+      <header>
+        
+        <h1>redis</h1>
+
+        
+          <section class="terms">
+            <ul><li><a class="btn" href="/tags/tools/">Tools</a></li></ul>
+          </section>
+          <p>
+            
+              Published on <time datetime="2020-02-12">2020-02-12</time>
+            
+          </p>
+        
+        
+        
+        
+      </header>
+    
+      
+<details class="toc" open>
+    <summary class="outline-dashed">
+      Contents
+    </summary>
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#centos7">centos7</a></li>
+    <li><a href="#mac">mac</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#基本操作">基本操作</a>
+      <ul>
+        <li><a href="#切换库">切换库</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </details>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="centos7"><a class="anchor" href="#centos7" title='Anchor for: centos7.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> centos7</h2> 
+
+<p><a href="https://redis.io/download">官网下载地址</a></p>
+<p><a href="https://download.redis.io/releases/redis-6.2.5.tar.gz">redis-6.2.5</a></p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">wget http://download.redis.io/releases/redis-6.2.5.tar.gz
+</span></span><span class="line"><span class="cl">tar xzf redis-6.2.5.tar.gz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> redis-6.2.5
+</span></span><span class="line"><span class="cl">make 
+</span></span><span class="line"><span class="cl"><span class="c1"># 指定目录安装 </span>
+</span></span><span class="line"><span class="cl">make install <span class="nv">PREFIX</span><span class="o">=</span>/usr/local/redis
+</span></span><span class="line"><span class="cl"><span class="c1">###### 设置启动 ######</span>
+</span></span><span class="line"><span class="cl">vi /root/redis-6.2.5/redis.conf
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改如下内容，设置后台启动</span>
+</span></span><span class="line"><span class="cl">daemonize yes
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">:wq
+</span></span><span class="line"><span class="cl"><span class="c1"># 复制配置文件</span>
+</span></span><span class="line"><span class="cl">cp /root/redis-6.2.5/redis.conf	/usr/local/redis
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置开机启动(追加如下内容)</span>
+</span></span><span class="line"><span class="cl">vi /etc/rc.d/rc.local						
+</span></span><span class="line"><span class="cl">/usr/local/redis/bin/redis-server /usr/local/redis/redis.conf
+</span></span><span class="line"><span class="cl">：wq
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置开机启动(追加如下内容)</span>
+</span></span><span class="line"><span class="cl">vi /usr/lib/systemd/system/redis.service
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/sh</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>Redis
+</span></span><span class="line"><span class="cl"><span class="nv">After</span><span class="o">=</span>network.target
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>forking
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/usr/local/redis/bin/redis-server /usr/local/redis/redis.conf
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span><span class="line"><span class="cl">：wq
+</span></span><span class="line"><span class="cl"><span class="c1">###### 重启 ######</span>
+</span></span><span class="line"><span class="cl">systemctl daemon-reload
+</span></span><span class="line"><span class="cl">systemctl start redis.service
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> redis.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">systemctl disable firewalld.service
+</span></span><span class="line"><span class="cl">systemctl stop firewalld.service
+</span></span><span class="line"><span class="cl">init <span class="m">6</span>
+</span></span><span class="line"><span class="cl"><span class="c1">###### 设置密码 ######</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /root/redis-6.2.5/src
+</span></span><span class="line"><span class="cl">./redis-cli
+</span></span><span class="line"><span class="cl">127.0.0.1:6379&gt; config <span class="nb">set</span> requirepass <span class="s2">&#34;your_password&#34;</span>
+</span></span><span class="line"><span class="cl">127.0.0.1:6379&gt; auth your_password
+</span></span></code></pre></div><p><strong><code>error:</code></strong> cc command not found</p>
+<p>原因：没有安装 gcc 5.3 以上</p>
+<pre aria-label="Box containing code sample." tabindex=0><code>yum install gcc
+yum clean all
+yum upgrade
+yum -y install centos-release-scl
+yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils
+echo &#34;source /opt/rh/devtoolset-9/enable&#34; &gt;&gt;/etc/profile
+</code></pre><p>重新打开secureCRT 再重新 make</p>
+<p><strong><code>error:</code></strong> Permission denied</p>
+<p>关闭 SELinux</p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vi /etc/sysconfig/selinux
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="nv">SELINUX</span><span class="o">=</span>disabled
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="mac"><a class="anchor" href="#mac" title='Anchor for: mac.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> mac</h2> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">wget http://download.redis.io/releases/redis-6.0.5.tar.gz
+</span></span><span class="line"><span class="cl">tar xzf redis-6.0.5.tar.gz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> redis-6.0.5
+</span></span><span class="line"><span class="cl">make
+</span></span></code></pre></div><p><strong>开机启动</strong></p>
+<p>在/Library/LaunchDaemons下新建<strong>com.redis.plist</strong>，内容如下：</p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34; &#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&#34;&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&#34;1.0&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;dict&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;string&gt;</span>redis<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;array&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;string&gt;</span>/usr/local/bin/redis-server<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;string&gt;</span>/usr/local/etc/redis.conf<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/array&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;key&gt;</span>RunAtLoad<span class="nt">&lt;/key&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;true/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dict&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/plist&gt;</span> 
+</span></span></code></pre></div><p>载入开机启动配置</p>
+<blockquote>
+<p>sudo launchctl load /Library/LaunchDaemons/com.redis.plist</p>
+</blockquote>
+<p>启用开机启动</p>
+<blockquote>
+<p>sudo launchctl start redis</p>
+</blockquote>
+<p>关闭开机启动</p>
+<blockquote>
+<p>sudo launchctl stop redis</p>
+</blockquote>
+<p>启动</p>
+<blockquote>
+<p>./src/redis-server ../redis.conf</p>
+</blockquote>
+<p>测试</p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ src/redis-cli
+</span></span><span class="line"><span class="cl">redis&gt; <span class="nb">set</span> foo bar
+</span></span><span class="line"><span class="cl">OK
+</span></span><span class="line"><span class="cl">redis&gt; ping
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;pong&#34;</span>
+</span></span></code></pre></div><p>设置密码，修改 redis.conf 中的reqquirepass 项，或</p>
+<blockquote>
+<p>config set requirepass Rtx123456()</p>
+</blockquote>
+<p>查询密码</p>
+<blockquote>
+<p>auth Rtx123456() 			# 密码验证</p>
+<p>config get requirepass</p>
+</blockquote>
+<p><strong><code>error:</code></strong> path had bad ownership/permissions</p>
+<blockquote>
+<p>sudo chown root /Library/LaunchDaemons/com.redis.plist</p>
+</blockquote>
+<p><strong><code>注意</code></strong>：启用开机启动务必要确定 xxx/redis-server xxx/redis.conf 可以启动服务（<strong>权限</strong>和<strong>可执行</strong>）</p>
+<p>其他电脑访问</p>
+<blockquote>
+<p>vi /usr/local/etc/redis.conf</p>
+<p>bind 0.0.0.0</p>
+</blockquote>
+<p>重启 redis</p>
+
+
+
+
+
+
+
+
+
+  <h1 id="win10">win10</h1> 
+
+<p><a href="https://github.com/tporadowski/redis/releases">下载地址</a></p>
+<p>设置环境变量</p>
+<p><strong>eg. 此电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt; 系统变量 -&gt; path -&gt; 编辑 -&gt; 增加路径 C:\redis-5.0.9</strong></p>
+<p>设置密码 cmd</p>
+<blockquote>
+<p>redis-cli -h 127.0.0.1 -p 6379</p>
+<p>127.0.0.1:6379&gt; config set requirepass iGG2020RD5()</p>
+<p>127.0.0.1:6379&gt; config get requirepass</p>
+</blockquote>
+<p>设置密码 (永久修改)</p>
+<blockquote>
+<p>cd C:\Program Files\Redis</p>
+<p>**修改 redis.windows-service.conf 文件 **</p>
+<p># requirepass your_password</p>
+</blockquote>
+<p>密码登录</p>
+<blockquote>
+<p>redis-cli -p 6379 -a iGG2020RD5()</p>
+</blockquote>
+<p>启动</p>
+<p>cmd 在进入Redis的安装目录</p>
+<blockquote>
+<p>redis-server &ndash;service-install redis.windows.conf &ndash;loglevel verbose  ( 安装redis服务 )</p>
+<p>redis-server &ndash;service-start ( 启动服务 )</p>
+<p>redis-server &ndash;service-stop ( 停止服务 ）</p>
+</blockquote>
+<p>启动指定的配置文件 redis-server &ndash;service-start redis.windows-service.conf</p>
+
+
+
+
+
+
+
+
+
+  <h2 id="基本操作"><a class="anchor" href="#基本操作" title='Anchor for: 基本操作.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 基本操作</h2> 
+
+
+
+
+
+
+
+
+
+
+  <h3 id="切换库"><a class="anchor" href="#切换库" title='Anchor for: 切换库.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 切换库</h3> 
+
+<blockquote>
+<p>select index</p>
+</blockquote>
+<ul>
+<li>
+<p>切换库</p>
+<blockquote>
+<p>select 0</p>
+</blockquote>
+</li>
+<li>
+<p>清空当前库</p>
+<blockquote>
+<p>flushdb</p>
+</blockquote>
+</li>
+</ul>
+
+
+
+    </article>
+  </main>
+
+
+    </div>
+    
+    <footer>
+      
+
+
+  
+
+    
+
+    
+      
+      
+    
+      
+      
+    
+    
+    <p>Copyright © 2022 killliu</p><p>粤ICP备14085800号-1</p>
+
+  
+
+
+
+
+
+
+
+    </footer>
+    
+    
+    
+
+    
+    
+
+    <button onclick="topFunction()" id="BackToTop" title="Go to top">Top</button>
+
+    <script>
+      var mybutton = document.getElementById("BackToTop");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+  </body>
+</html>
