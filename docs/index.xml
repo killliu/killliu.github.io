@@ -114,6 +114,29 @@ set cur_path=&amp;#34;%cd&amp;#34; echo cur_path rd /q /s your_target_folder_pat
       </item>
     
       <item>
+        <title>mysql</title>
+        <link>https://note.killliu.com/notes/tools/mysql/</link>
+        <pubDate>Tue, 11 Feb 2020 12:29:23 +0800</pubDate>
+        
+        <guid>https://note.killliu.com/notes/tools/mysql/</guid>
+        <description>centos7  卸载清除  yum remove mysql-community-server
+ 找出 mysql 软件包
+ rpm -pa|grep mysql
+ 使用 rpm -e pacakge_name 或 yum remove package_name 依次删除
+eg. rpm -e pacakge_name
+找出 mysql 配置文件
+ find / -name mysql
+ 使用 rm -rf 依次删除配置文件 config_path
+eg. rm -rf config_path
+找出 MariaDB 软件包
+ rpm -pa|grep mariadb
+ 使用 rpm -e mariadb_name
+error: 提示被 postfix 需要
+使用强制删除
+ rpm -e &amp;ndash;nodeps mariadb_name</description>
+      </item>
+    
+      <item>
         <title></title>
         <link>https://note.killliu.com/resume/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

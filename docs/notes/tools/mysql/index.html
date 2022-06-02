@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="dark">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Hugo 0.98.0">
+<meta name="theme" content="Color Your World -- gitlab.com/rmaguiar/hugo-theme-color-your-world">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>mysql</title>
+
+
+<meta name="author" content="killliu">
+
+
+
+<meta name="robots" content="index follow">
+
+
+
+
+  
+    <link rel="canonical" href="https://note.killliu.com/notes/tools/mysql/">
+  
+
+
+
+
+
+
+
+
+<meta property="og:site_name" content="killliu&#39;s notes">
+<meta property="og:title" content="mysql">
+
+  <meta property="og:url" content="https://note.killliu.com/notes/tools/mysql/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#222">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebSite",
+        "@id": "https:\/\/note.killliu.com\/"
+      },
+      "headline": "mysql",
+      "description": "",
+      
+      "url": "https:\/\/note.killliu.com\/notes\/tools\/mysql\/",
+      "inLanguage": "en",
+      "datePublished": "2020-02-11",
+      "dateModified": "2020-02-11",
+      "wordCount" : "293",
+      "publisher": {
+        "@type": "Person",
+        "name": "killliu"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "killliu",
+        "description": "Some indescribable horror.",
+        
+      }
+    }
+  </script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://note.killliu.com/css/main.min.b7d51692a5d4e22c6115fa96a1d11f164a75f59e7fe9c1eac81c54ba706fcf8a.css" integrity="sha256-t9UWkqXU4ixhFfqWodEfFkp19Z5/6cHqyBxUunBvz4o=" crossorigin="anonymous">
+
+
+
+<noscript>
+
+  
+  
+
+  
+    <meta name="theme-color" content="#CB8233" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#1f676b" media="(prefers-color-scheme: light)">
+  
+
+  
+  <link rel="stylesheet" href="https://note.killliu.com/css/noscript.min.0f208a516c4efc455594eda62b46a723654120d87060a5341b00a817b6f061c8.css" integrity="sha256-DyCKUWxO/EVVlO2mK0anI2VBINhwYKU0GwCoF7bwYcg=" crossorigin="anonymous">
+
+</noscript>
+
+
+
+<link rel="preload" href="/fonts/open-sans-v17-latin-700.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-italic.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/open-sans-v17-latin-regular.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/fonts/oswald-v29-latin-700.woff2" as="font" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="https://note.killliu.com/js/main.d345cc65bf54eec5e407a3f088badeed1dcd325bddfd50d49bd1288081fbdd49.js" integrity="sha256-00XMZb9U7sXkB6PwiLre7R3NMlvd/VDUm9EogIH73Uk=" crossorigin="anonymous"></script>
+
+
+    <style>      
+      #BackToTop {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        display: none;
+        position: fixed;
+        bottom: 7rem;
+        right: 2rem;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 0.3;
+      }
+      #BackToTop:hover {
+        background-color: #EC5108;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      
+
+  <a href="/">killliu&#39;s notes</a>
+
+
+
+
+  
+    <nav aria-label="Main menu.">
+      <ul>
+        
+          <li>
+            <a class="btn" href="/notes/">Notes</a>
+          </li>
+        
+          <li>
+            <a class="btn" href="/resume/">Resume</a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+
+
+    </header>
+
+    <div class="filler">
+      
+
+  <main>
+    <article>
+      <header>
+        
+        <h1>mysql</h1>
+
+        
+          <section class="terms">
+            <ul><li><a class="btn" href="/tags/tools/">Tools</a></li></ul>
+          </section>
+          <p>
+            
+              Published on <time datetime="2020-02-11">2020-02-11</time>
+            
+          </p>
+        
+        
+        
+        
+      </header>
+    
+      
+<details class="toc" open>
+    <summary class="outline-dashed">
+      Contents
+    </summary>
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#centos7">centos7</a>
+      <ul>
+        <li><a href="#卸载清除">卸载清除</a></li>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#开启服务">开启服务</a></li>
+        <li><a href="#开机启动">开机启动</a></li>
+        <li><a href="#创建数据库">创建数据库</a></li>
+        <li><a href="#增加表">增加表</a></li>
+        <li><a href="#增加字段">增加字段</a></li>
+        <li><a href="#增加数据">增加数据</a></li>
+      </ul>
+    </li>
+    <li><a href="#mac">Mac</a></li>
+    <li><a href="#errors"><strong><code>Errors</code></strong></a>
+      <ul>
+        <li><a href="#host-tclient-is-not-allowed-to-connect-to-this-mysql-server">host &rsquo;tclient&rsquo; is not allowed to connect to this mysql server</a></li>
+        <li><a href="#plugin-caching_sha2_password-could-not-be-loaded">Plugin caching_sha2_password could not be loaded</a></li>
+        <li><a href="#operation-alter-user-failed-for-rootlocalhost">operation alter user failed for &lsquo;root&rsquo;@&rsquo;localhost&rsquo;</a></li>
+        <li><a href="#sqlyog-plugin-caching_sha2_password-could-not-be-loaded">SQLyog: Plugin caching_sha2_password could not be loaded</a></li>
+        <li><a href="#1045access-denied-for-userrootlocalhost">1045：Access denied for user &lsquo;root&rsquo;@&rsquo;localhost&rsquo;</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </details>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="centos7"><a class="anchor" href="#centos7" title='Anchor for: centos7.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> centos7</h2> 
+
+
+
+
+
+
+
+
+
+
+  <h3 id="卸载清除"><a class="anchor" href="#卸载清除" title='Anchor for: 卸载清除.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 卸载清除</h3> 
+
+<blockquote>
+<p>yum remove mysql-community-server</p>
+</blockquote>
+<p>找出 mysql 软件包</p>
+<blockquote>
+<p>rpm -pa|grep mysql</p>
+</blockquote>
+<p>使用 rpm -e pacakge_name 或 yum remove package_name 依次删除</p>
+<p><strong><code>eg.</code></strong>  rpm -e pacakge_name</p>
+<p>找出 mysql 配置文件</p>
+<blockquote>
+<p>find / -name mysql</p>
+</blockquote>
+<p>使用 rm -rf 依次删除配置文件 config_path</p>
+<p><strong><code>eg.</code></strong> rm -rf config_path</p>
+<p>找出 MariaDB 软件包</p>
+<blockquote>
+<p>rpm -pa|grep mariadb</p>
+</blockquote>
+<p>使用 rpm -e mariadb_name</p>
+<p><strong><code>error:</code></strong> 提示被 postfix 需要</p>
+<p>使用强制删除</p>
+<blockquote>
+<p>rpm -e &ndash;nodeps mariadb_name</p>
+</blockquote>
+<p>继续删除， 最后一列带@符号的是已经安装的，base是系统自带的</p>
+<blockquote>
+<p>yum list | grep mysql</p>
+</blockquote>
+<p>移除</p>
+<blockquote>
+<p>yum remove 第一列的名字</p>
+<p>yum clean all</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+  <h3 id="安装"><a class="anchor" href="#安装" title='Anchor for: 安装.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 安装</h3> 
+
+<p><a href="https://downloads.mysql.com/archives/community/">下载地址</a></p>
+<p><a href="https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.32-1.el7.x86_64.rpm-bundle.tar">mysql-5.7.32-1.el7.x86_64.rpm-bundle.tar</a></p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir /root/mysql
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /root/mysql
+</span></span><span class="line"><span class="cl">tar -vxf mysql-8.0.18-1.el7.x86_64.rpm-bundle.tar
+</span></span><span class="line"><span class="cl">rpm -ivh mysql-community-common-8.0.18-1.el7.x86_64.rpm
+</span></span><span class="line"><span class="cl">rpm -ivh mysql-community-libs-8.0.18-1.el7.x86_64.rpm
+</span></span><span class="line"><span class="cl">rpm -ivh mysql-community-client-8.0.18-1.el7.x86_64.rpm
+</span></span><span class="line"><span class="cl">rpm -ivh mysql-community-server-8.0.18-1.el7.x86_64.rpm
+</span></span></code></pre></div><p><strong><code>error:</code></strong> libcrypto.so.10 is needed</p>
+<blockquote>
+<p>dnf install compat-openssl10</p>
+</blockquote>
+<p><strong><code>error:</code>4</strong> mariadb-libs is obsoleted by mysql-community-libs-8.0.18-1.el7.x86_6</p>
+<p>清除之前安装过的依赖</p>
+<blockquote>
+<p>yum remove mysql-libs</p>
+</blockquote>
+<p><strong><code>error:</code></strong> net-tools is needed by mysql-community-server-8.0.18-1.el7.x86_64</p>
+<blockquote>
+<p>yum install net-tools</p>
+</blockquote>
+<p><strong><code>error:</code></strong> perl is needed &hellip;</p>
+<blockquote>
+<p>yum install -y perl</p>
+</blockquote>
+<p><strong><code>error:</code></strong> libncurses.so.5 is needed &hellip;</p>
+<blockquote>
+<p>yum install libncurses*</p>
+</blockquote>
+<p><strong><code>error:</code></strong> libc.so.6(GLIBC_2.14)(64bit) is needed &hellip;</p>
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir /root/lib
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /root/lib
+</span></span><span class="line"><span class="cl">wget http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz
+</span></span><span class="line"><span class="cl">tar zxvf glibc-2.14.tar.gz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> glibc-2.14
+</span></span><span class="line"><span class="cl">mkdir build
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">../configure --prefix<span class="o">=</span>/opt/glibc-2.14
+</span></span><span class="line"><span class="cl">make
+</span></span><span class="line"><span class="cl">make install
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="开启服务"><a class="anchor" href="#开启服务" title='Anchor for: 开启服务.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 开启服务</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 初始密码</span>
+</span></span><span class="line"><span class="cl">systemctl start mysqld.service
+</span></span><span class="line"><span class="cl"><span class="c1"># 登录 mysql</span>
+</span></span><span class="line"><span class="cl">cat /var/log/mysqld.log <span class="p">|</span> grep password
+</span></span><span class="line"><span class="cl">mysql -u root -p
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改初始密码</span>
+</span></span><span class="line"><span class="cl">mysql&gt; ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED BY <span class="s1">&#39;your_password&#39;</span><span class="p">;</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="开机启动"><a class="anchor" href="#开机启动" title='Anchor for: 开机启动.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 开机启动</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> mysqld.service
+</span></span><span class="line"><span class="cl">systemctl restart mysqld.service
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="创建数据库"><a class="anchor" href="#创建数据库" title='Anchor for: 创建数据库.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 创建数据库</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">create</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">your_database_name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">your_database_name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">set</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="n">utf8</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">source</span><span class="w"> </span><span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">xxx</span><span class="p">.</span><span class="k">sql</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="增加表"><a class="anchor" href="#增加表" title='Anchor for: 增加表.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 增加表</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">USE</span><span class="w"> </span><span class="o">`</span><span class="n">pm</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="k">user</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="k">user</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="kt">INT</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="kp">AUTO_INCREMENT</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;ID&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">uid</span><span class="o">`</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;UID&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">loginname</span><span class="o">`</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;Loginname&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;Name&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">department</span><span class="o">`</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;Department&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">job</span><span class="o">`</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;Job&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="k">group</span><span class="o">`</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;Group&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">password</span><span class="o">`</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">alive</span><span class="o">`</span><span class="w"> </span><span class="kt">INT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;Alive&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">created</span><span class="o">`</span><span class="w"> </span><span class="kt">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w"> </span><span class="kp">ENGINE</span><span class="o">=</span><span class="n">INNODB</span><span class="w"> </span><span class="kp">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">2</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w"> </span><span class="o">`</span><span class="k">user</span><span class="o">`</span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">uid</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">loginname</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">password</span><span class="o">`</span><span class="w"> </span><span class="p">,</span><span class="o">`</span><span class="n">department</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">job</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="k">group</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">alive</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">created</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;7850101313536&#39;</span><span class="p">,</span><span class="s1">&#39;killliu&#39;</span><span class="p">,</span><span class="s1">&#39;刘沙&#39;</span><span class="p">,</span><span class="s1">&#39;4b95d6e9931e6fd86d0f1fd13d3d232d&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;2020-02-11 12:22:55&#39;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">USE</span><span class="w"> </span><span class="o">`</span><span class="n">pm</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="k">group</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="k">group</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="kt">INT</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="kp">AUTO_INCREMENT</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;ID&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="o">`</span><span class="n">department</span><span class="o">`</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;Department&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;Name&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w"> </span><span class="kp">ENGINE</span><span class="o">=</span><span class="n">INNODB</span><span class="w"> </span><span class="kp">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">2</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w"> </span><span class="o">`</span><span class="k">group</span><span class="o">`</span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">department</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;打杂组&#39;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="增加字段"><a class="anchor" href="#增加字段" title='Anchor for: 增加字段.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 增加字段</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">USE</span><span class="w"> </span><span class="o">`</span><span class="n">pm</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1"># 删除列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">users</span><span class="o">`</span><span class="w"> </span><span class="k">drop</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">`</span><span class="n">avatar</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1"># 在 password 列后面插入 avatar 数据列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">users</span><span class="o">`</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">`</span><span class="n">avatar</span><span class="o">`</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">AFTER</span><span class="w"> </span><span class="o">`</span><span class="n">password</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="增加数据"><a class="anchor" href="#增加数据" title='Anchor for: 增加数据.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 增加数据</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">`</span><span class="n">users</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">uid</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">loginname</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">department</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">job</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="k">group</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">password</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">alive</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">created</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;7850101313536&#39;</span><span class="p">,</span><span class="s1">&#39;killliu&#39;</span><span class="p">,</span><span class="s1">&#39;刘沙&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;99&#39;</span><span class="p">,</span><span class="s1">&#39;99&#39;</span><span class="p">,</span><span class="s1">&#39;4b95d6e9931e6fd86d0f1fd13d3d232d&#39;</span><span class="p">,</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2020-02-11 12:22:55&#39;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="mac"><a class="anchor" href="#mac" title='Anchor for: Mac.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> Mac</h2> 
+
+<p><a href="https://dev.mysql.com/downloads/mysql/">官网</a> 下载DMG安装包</p>
+<p>偏好设置 -&gt; 设置管理</p>
+<p><strong><code>error:</code></strong> mysql command not found</p>
+<blockquote>
+<p>PATH=$PATH:/usr/local/mysql/bin</p>
+</blockquote>
+<p>登陆 mysql</p>
+<p>mysql -u root -p</p>
+
+
+
+
+
+
+
+
+
+  <h2 id="errors"><a class="anchor" href="#errors" title='Anchor for: Errors.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> <strong><code>Errors</code></strong></h2> 
+
+
+
+
+
+
+
+
+
+
+  <h3 id="host-tclient-is-not-allowed-to-connect-to-this-mysql-server"><a class="anchor" href="#host-tclient-is-not-allowed-to-connect-to-this-mysql-server" title='Anchor for: host &rsquo;tclient&rsquo; is not allowed to connect to this mysql server.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> host &rsquo;tclient&rsquo; is not allowed to connect to this mysql server</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">use</span><span class="w"> </span><span class="n">mysql</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">update</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="kt">set</span><span class="w"> </span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="plugin-caching_sha2_password-could-not-be-loaded"><a class="anchor" href="#plugin-caching_sha2_password-could-not-be-loaded" title='Anchor for: Plugin caching_sha2_password could not be loaded.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> Plugin caching_sha2_password could not be loaded</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1">#修改加密规则
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="k">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;iGG2021RD5(666)&#39;</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="n">EXPIRE</span><span class="w"> </span><span class="n">NEVER</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">#更新用户的密码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="k">IDENTIFIED</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">mysql_native_password</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;iGG2020RD5()&#39;</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">#刷新权限
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">#重置密码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="k">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;your_password&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="operation-alter-user-failed-for-rootlocalhost"><a class="anchor" href="#operation-alter-user-failed-for-rootlocalhost" title='Anchor for: operation alter user failed for &lsquo;root&rsquo;@&rsquo;localhost&rsquo;.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> operation alter user failed for &lsquo;root&rsquo;@&rsquo;localhost&rsquo;</h3> 
+
+
+
+
+
+
+
+
+
+
+  <h3 id="sqlyog-plugin-caching_sha2_password-could-not-be-loaded"><a class="anchor" href="#sqlyog-plugin-caching_sha2_password-could-not-be-loaded" title='Anchor for: SQLyog: Plugin caching_sha2_password could not be loaded.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> SQLyog: Plugin caching_sha2_password could not be loaded</h3> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">use</span><span class="w"> </span><span class="n">mysql</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">user</span><span class="p">,</span><span class="n">host</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">user</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="k">IDENTIFIED</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">mysql_native_password</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;iGG2021RD5(666)&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h3 id="1045access-denied-for-userrootlocalhost"><a class="anchor" href="#1045access-denied-for-userrootlocalhost" title='Anchor for: 1045：Access denied for user &lsquo;root&rsquo;@&rsquo;localhost&rsquo;.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> 1045：Access denied for user &lsquo;root&rsquo;@&rsquo;localhost&rsquo;</h3> 
+
+<p>注：如果 select user,host from user; 显示 root 是 %，则不能用localhost或127.0.0.1登陆，要改为本地的IP地址</p>
+<blockquote>
+<p>ALTER USER &lsquo;root&rsquo;@&rsquo;localhost&rsquo; IDENTIFIED WITH MYSQL_NATIVE_PASSWORD BY &lsquo;your_password&rsquo;;</p>
+</blockquote>
+
+
+
+    </article>
+  </main>
+
+
+    </div>
+    
+    <footer>
+      
+
+
+  
+
+    
+
+    
+      
+      
+    
+      
+      
+    
+    
+    <p>Copyright © 2022 killliu</p><p>粤ICP备14085800号-1</p>
+
+  
+
+
+
+
+
+
+
+    </footer>
+    
+    
+    
+
+    
+    
+
+    <button onclick="topFunction()" id="BackToTop" title="Go to top">Top</button>
+
+    <script>
+      var mybutton = document.getElementById("BackToTop");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+  </body>
+</html>
