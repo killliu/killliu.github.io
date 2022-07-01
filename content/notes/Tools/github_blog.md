@@ -67,6 +67,6 @@ cd 到该目录内，创建 hugo 项目 app 后，将其目录内的所有文件
 
 [下载地址](https://github.com/gohugoio/hugo/releases)
 
-配置环境变量 >>> 我的电脑 >>> 属性 >>> 高级系统设置 >>> 环境变量 >>> 系统变量 >>> 
+配置环境变量 >> 我的电脑 >> 属性 >> 高级系统设置 >> 环境变量 >> 系统变量 >> 
 
-Path >>> 增加解压出来的文件 hugo.exe 的所在目录路径 >>> 重启电脑 >>> cmd >>> hugo version
+Path >> 增加解压出来的文件 hugo.exe 的所在目录路径 >> 重启电脑 >> cmd >> hugo version
