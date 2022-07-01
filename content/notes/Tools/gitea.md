@@ -309,3 +309,11 @@ git config --global https.proxy protocol://127.0.0.1:7890
 ```
 
 
+## error fatal: Exiting because of unfinished merge.
+
+```sh
+# 保留本地更改 >>> 中止合并 >>> 重新合并 >>> 重新拉取
+git merge --abort
+git reset --merge
+git pull
+```
