@@ -3,7 +3,7 @@
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Hugo 0.98.0">
+<meta name="generator" content="Hugo 0.101.0">
 <meta name="theme" content="Color Your World -- gitlab.com/rmaguiar/hugo-theme-color-your-world">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -105,7 +105,7 @@
       "inLanguage": "en",
       "datePublished": "2021-11-13",
       "dateModified": "2021-11-13",
-      "wordCount" : "783",
+      "wordCount" : "806",
       "publisher": {
         "@type": "Person",
         "name": "killliu"
@@ -273,6 +273,7 @@
     <li><a href="#配置-clashx-代理">配置 ClashX 代理</a></li>
     <li><a href="#macos-中编译-linux">macos 中编译 linux</a></li>
     <li><a href="#修改登陆页面">修改登陆页面</a></li>
+    <li><a href="#error-fatal-exiting-because-of-unfinished-merge">error fatal: Exiting because of unfinished merge.</a></li>
   </ul>
 </nav>
   </details>
@@ -699,6 +700,21 @@
 <p>/templates/user/auth/signin_inner.html 第 43 行左右，删除以下行</p>
 </blockquote>
 <div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{AppSubUrl}}/user/forgot_password&#34;</span><span class="p">&gt;</span>{{.i18n.Tr &#34;auth.forgot_password&#34;}}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+  <h2 id="error-fatal-exiting-because-of-unfinished-merge"><a class="anchor" href="#error-fatal-exiting-because-of-unfinished-merge" title='Anchor for: error fatal: Exiting because of unfinished merge..'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> error fatal: Exiting because of unfinished merge.</h2> 
+
+<div class="highlight"><pre aria-label="Box containing code sample." tabindex=0 class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 保留本地更改 &gt;&gt;&gt; 中止合并 &gt;&gt;&gt; 重新合并 &gt;&gt;&gt; 重新拉取</span>
+</span></span><span class="line"><span class="cl">git merge --abort
+</span></span><span class="line"><span class="cl">git reset --merge
+</span></span><span class="line"><span class="cl">git pull
 </span></span></code></pre></div>
 
 

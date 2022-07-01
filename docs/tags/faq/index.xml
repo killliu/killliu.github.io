@@ -18,15 +18,15 @@
 树莓派系统下载地址 ubuntu镜像地址
 通过 Raspberry Pi Image 软件安装 ubuntu 系统
 高级设置中不要加任何配置
- wifi 烧录后，修改 boot 盘符中的 network-config 文件，以启用 wifi
-wifis:wlan0:dhcp4:trueoptional:trueaccess-points:&amp;#34;your_essid&amp;#34;:password:&amp;#34;your_password&amp;#34;默认账户密码都是：ubuntu
+wifi 烧录后，修改 boot 盘符中的 network-config 文件，以启用 wifi
+wifis: wlan0: dhcp4: true optional: true access-points: &amp;#34;your_essid&amp;#34;: password: &amp;#34;your_password&amp;#34; 默认账户密码都是：ubuntu
 等界面上显示了 cliud-init 及 SSH HOST 字样时才可以登陆
 登陆后会要求修改密码，注意看提示，修改新密码
-  修改主机名
- sudo vi /etc/hostname
-   修改 root 密码
-sudo passwd root # 根据提示输入新密码（两次） # 切换到 root 用户 su # 输入 root 密码以切换到 root 用户   修改用户名 ubuntu -&amp;gt; killliu
-# 修改 shadow vi /ect/shadow # &amp;gt;&amp;gt;&amp;gt; ubuntu 修改为 killliu # 修改开始目录 cd /home mv ubuntu killliu # 修改 passwd 文件 vi /ect/passwd # &amp;gt;&amp;gt;&amp;gt; ubuntu 修改为 killliu # 重启 reboot   root 用户切换到普通用户</description>
+修改主机名
+sudo vi /etc/hostname
+修改 root 密码
+sudo passwd root # 根据提示输入新密码（两次） # 切换到 root 用户 su # 输入 root 密码以切换到 root 用户 修改用户名 ubuntu -&amp;gt; killliu
+# 修改 shadow vi /ect/shadow # &amp;gt;&amp;gt;&amp;gt; ubuntu 修改为 killliu # 修改开始目录 cd /home mv ubuntu killliu # 修改 passwd 文件 vi /ect/passwd # &amp;gt;&amp;gt;&amp;gt; ubuntu 修改为 killliu # 重启 reboot root 用户切换到普通用户</description>
       </item>
     
       <item>
@@ -35,15 +35,16 @@ sudo passwd root # 根据提示输入新密码（两次） # 切换到 root 用�
         <pubDate>Sat, 06 Nov 2021 16:29:23 +0800</pubDate>
         
         <guid>https://note.killliu.com/notes/faq/windows/</guid>
-        <description>telnet  telnet 121.40.132.94 80
-  node 下载地址：官网
- GIF 工具 https://github.com/NickeManarin/ScreenToGif 下载链接：百度云 提取码：7w92
- images-compress https://github.com/semiromid/compress-images 下载链接：百度云 提取码：xgkp
- vmware hyper-v not compatible 管理员打开cmd
+        <description>telnet telnet 121.40.132.94 80
+node 下载地址：官网
+GIF 工具 https://github.com/NickeManarin/ScreenToGif 下载链接：百度云 提取码：7w92
+images-compress https://github.com/semiromid/compress-images 下载链接：百度云 提取码：xgkp
+vmware hyper-v not compatible 管理员打开cmd
 bcdedit /copy {default} /d &amp;#34;Windows 10 Without Hyper-V&amp;#34; bcdedit /set {xxxxx} hypervisorlaunchtype off 执行完第一条命令会得到一串id，把id替换到第二个命令中的xxxxx即可。 然后运行msconfig，在引导的设置里把超时时间设置到3~5秒以上即可。
- 安装http服务 全局安装 npm install -g http-server 启动服务 http_folder -&amp;gt; cmd -&amp;gt; http-server
- 软链接 可以理解为文件夹的快捷图标
-set cur_path=&amp;#34;%cd&amp;#34; echo cur_path rd /q /s your_target_folder_path # 删除目标文件夹（如果存在） mklink /J your_target_folder_path from_folder_path pause   win10 文件夹中打开cmd open_cmd_here.</description>
+安装http服务 全局安装 npm install -g http-server 启动服务 http_folder -&amp;gt; cmd -&amp;gt; http-server
+软链接 可以理解为文件夹的快捷图标
+set cur_path=&amp;#34;%cd&amp;#34; echo cur_path rd /q /s your_target_folder_path # 删除目标文件夹（如果存在） mklink /J your_target_folder_path from_folder_path pause win10 文件夹中打开cmd open_cmd_here.reg
+Windows Registry Editor Version 5.</description>
       </item>
     
       <item>
@@ -52,7 +53,7 @@ set cur_path=&amp;#34;%cd&amp;#34; echo cur_path rd /q /s your_target_folder_pat
         <pubDate>Wed, 06 Jan 2021 16:29:23 +0800</pubDate>
         
         <guid>https://note.killliu.com/notes/faq/macos/</guid>
-        <description>端口占用 # 查看端口占用程序 sudo lsof -i tcp:2000   彻底删除某个软件 # 清除登陆项 系统偏好设置 — 用户组与群组 — 登陆项 — 移除（如果有的话） # 清除配置项 打开Finder — 前往 — 前往文件夹 — /Library/LaunchAgents 打开Finder — 前往 — 前往文件夹 — ~/Library/LaunchAgents 打开Finder — 前往 — 前往文件夹 — /Library/StartupItems # 清除 钥匙串访问 数据   http server # 安装 nodejs # 安装 http-server sudo npm install http-server -g # 运行 cd xxx/targetFolder http-server   无法打开 “x x x”, 因为无法验证开发者 用一下命令增加 &amp;mdash; 安全性与隐私 &amp;mdash;&amp;gt; 任何来源</description>
+        <description>端口占用 # 查看端口占用程序 sudo lsof -i tcp:2000 彻底删除某个软件 # 清除登陆项 系统偏好设置 — 用户组与群组 — 登陆项 — 移除（如果有的话） # 清除配置项 打开Finder — 前往 — 前往文件夹 — /Library/LaunchAgents 打开Finder — 前往 — 前往文件夹 — ~/Library/LaunchAgents 打开Finder — 前往 — 前往文件夹 — /Library/StartupItems # 清除 钥匙串访问 数据 http server # 安装 nodejs # 安装 http-server sudo npm install http-server -g # 运行 cd xxx/targetFolder http-server 无法打开 “x x x”, 因为无法验证开发者 用一下命令增加 &amp;mdash; 安全性与隐私 &amp;mdash;&amp;gt; 任何来源</description>
       </item>
     
   </channel>
