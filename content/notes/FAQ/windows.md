@@ -144,4 +144,32 @@ for /f "delims=" %%i in ('dir /b *.*') do (
 
 ## findstr with cmd
 
-> findstr /S "target_string" \*.\*
+| 参数 | 说明 | 
+| :-----| :---- |
+| /B | 在一行的开始时匹配 |
+| /E | 在一行的结尾时匹配 |
+| /L | 按字使用搜索字符串 |
+| /R | 将搜索字符串作为一般表达式使用 |
+| /S | 在当前目录和所有子目录中搜索匹配文件 |
+| /I | 指定搜索不分大小写 |
+| /X | 打印完全匹配的行 |
+| /V | 只打印不包含匹配的行 |
+| /N | 在匹配的每行前打印行数 |
+| /M | 如果文件含有匹配项，只打印其文件名 |
+| /O | 在每个匹配行前打印字符偏移量 |
+| /P | 忽略有不可打印字符的文件 |
+| /OFF[LINE] | 不跳过带有脱机属性集的文件 |
+| /A:attr | 指定有十六进位数字的颜色属性 |
+| /F:file | 从指定文件读文件列表 (/ 代表控制台) |
+| /C:string | 使用指定字符串作为文字搜索字符串 |
+| /G:file | 从指定的文件获得搜索字符串。 (/ 代表控制台) |
+| /D:dir  | 查找以分号为分隔符的目录列表　strings 要查找的文字 |
+| [drive:][path]filename | 指定要查找的文件。除非参数有 /C 前缀，请使用空格隔开搜索字符串 |
+
+e.g.
+
+    findstr "hello there" x.y           // 在文件 x.y 中寻找 "hello" 或"there" 
+    findstr /C:"hello there" x.y        // 在文件 x.y 中寻找 "hello there"
+    findstr /s /i Windows *.*           // 当前目录及其子目录找查找包含不区分大小写的“Windows”的文件
+    findstr /b /n /r /c:"^ *FOR" *.bas  // 查找没有或有多个空格开头的且包含“FOR”字符的行，并显示行号
+    findstr /s /i /m "\<comp.*" *.*     // 查找包含单词 "computer"或"comp"开头的单词的文件

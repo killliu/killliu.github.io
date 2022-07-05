@@ -105,7 +105,7 @@
       "inLanguage": "en",
       "datePublished": "2021-11-06",
       "dateModified": "2021-11-06",
-      "wordCount" : "272",
+      "wordCount" : "362",
       "publisher": {
         "@type": "Person",
         "name": "killliu"
@@ -534,9 +534,98 @@ http_folder -&gt; cmd -&gt; http-server</p>
 
   <h2 id="findstr-with-cmd"><a class="anchor" href="#findstr-with-cmd" title='Anchor for: findstr with cmd.'><svg aria-hidden="true"><use xlink:href="/img/bundle.min.fc89b321aa39dfb355170fc007ce5b94.svg#hashtag"/></svg></a> findstr with cmd</h2> 
 
-<blockquote>
-<p>findstr /S &ldquo;target_string&rdquo; *.*</p>
-</blockquote>
+<section class="scroll" tabindex="0"> <table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">/B</td>
+<td style="text-align:left">在一行的开始时匹配</td>
+</tr>
+<tr>
+<td style="text-align:left">/E</td>
+<td style="text-align:left">在一行的结尾时匹配</td>
+</tr>
+<tr>
+<td style="text-align:left">/L</td>
+<td style="text-align:left">按字使用搜索字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">/R</td>
+<td style="text-align:left">将搜索字符串作为一般表达式使用</td>
+</tr>
+<tr>
+<td style="text-align:left">/S</td>
+<td style="text-align:left">在当前目录和所有子目录中搜索匹配文件</td>
+</tr>
+<tr>
+<td style="text-align:left">/I</td>
+<td style="text-align:left">指定搜索不分大小写</td>
+</tr>
+<tr>
+<td style="text-align:left">/X</td>
+<td style="text-align:left">打印完全匹配的行</td>
+</tr>
+<tr>
+<td style="text-align:left">/V</td>
+<td style="text-align:left">只打印不包含匹配的行</td>
+</tr>
+<tr>
+<td style="text-align:left">/N</td>
+<td style="text-align:left">在匹配的每行前打印行数</td>
+</tr>
+<tr>
+<td style="text-align:left">/M</td>
+<td style="text-align:left">如果文件含有匹配项，只打印其文件名</td>
+</tr>
+<tr>
+<td style="text-align:left">/O</td>
+<td style="text-align:left">在每个匹配行前打印字符偏移量</td>
+</tr>
+<tr>
+<td style="text-align:left">/P</td>
+<td style="text-align:left">忽略有不可打印字符的文件</td>
+</tr>
+<tr>
+<td style="text-align:left">/OFF[LINE]</td>
+<td style="text-align:left">不跳过带有脱机属性集的文件</td>
+</tr>
+<tr>
+<td style="text-align:left">/A:attr</td>
+<td style="text-align:left">指定有十六进位数字的颜色属性</td>
+</tr>
+<tr>
+<td style="text-align:left">/F:file</td>
+<td style="text-align:left">从指定文件读文件列表 (/ 代表控制台)</td>
+</tr>
+<tr>
+<td style="text-align:left">/C:string</td>
+<td style="text-align:left">使用指定字符串作为文字搜索字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">/G:file</td>
+<td style="text-align:left">从指定的文件获得搜索字符串。 (/ 代表控制台)</td>
+</tr>
+<tr>
+<td style="text-align:left">/D:dir</td>
+<td style="text-align:left">查找以分号为分隔符的目录列表　strings 要查找的文字</td>
+</tr>
+<tr>
+<td style="text-align:left">[drive:][path]filename</td>
+<td style="text-align:left">指定要查找的文件。除非参数有 /C 前缀，请使用空格隔开搜索字符串</td>
+</tr>
+</tbody>
+</table> </section>
+<p>e.g.</p>
+<pre aria-label="Box containing code sample." tabindex=0><code>findstr &quot;hello there&quot; x.y           // 在文件 x.y 中寻找 &quot;hello&quot; 或&quot;there&quot; 
+findstr /C:&quot;hello there&quot; x.y        // 在文件 x.y 中寻找 &quot;hello there&quot;
+findstr /s /i Windows *.*           // 当前目录及其子目录找查找包含不区分大小写的“Windows”的文件
+findstr /b /n /r /c:&quot;^ *FOR&quot; *.bas  // 查找没有或有多个空格开头的且包含“FOR”字符的行，并显示行号
+findstr /s /i /m &quot;\&lt;comp.*&quot; *.*     // 查找包含单词 &quot;computer&quot;或&quot;comp&quot;开头的单词的文件</code></pre>
 
 
 
