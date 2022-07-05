@@ -141,3 +141,7 @@ for /f "delims=" %%i in ('dir /b *.*') do (
 	set "var=%%i" & ren "%%i" "!var:%str%=!"
 )
 ```
+
+## findstr with cmd
+
+> findstr /S "target_string" \*.\*
